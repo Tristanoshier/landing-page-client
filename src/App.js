@@ -1,10 +1,13 @@
-import './App.css';
-
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Home } from './components/Navigation/Home'
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <Fragment>
+      <Router>
+        <Home />
+      </Router>
+    </Fragment>
   );
 }
 
