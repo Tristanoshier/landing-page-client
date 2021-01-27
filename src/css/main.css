@@ -1,0 +1,14 @@
+@import './nav.css';
+
+:root {
+    /* color variables */
+    --orange:#EE6B5C;
+    --blue:#1E3342;
+    --gray:#8C8C8C;
+    --white:#F9F8F8;
+}
+
+.app {
+    margin: 0;
+}
+

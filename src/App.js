@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Home } from './components/Navigation/Home'
+import { Home } from './components/Navigation/Home';
+import './css/main.css'
 function App() {
   return (
-    <Fragment>
+    <div class="app">
       <Router>
         <Home />
       </Router>
-    </Fragment>
+    </div>
   );
 }
 
