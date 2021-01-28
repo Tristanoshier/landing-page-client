@@ -1,14 +1,21 @@
-@import './nav.css';
-
-:root {
-    /* color variables */
-    --orange:#EE6B5C;
-    --blue:#1E3342;
-    --gray:#8C8C8C;
-    --white:#F9F8F8;
+.main {
+    display: flex;
+    margin: 20% 0 0 30%;
 }
 
-.app {
-    margin: 0;
+.intro-lightmode {
+    font-size: 30px;
+    color: var(--gray);
+    font-weight: bold;
+    font-family: var(--text);
 }
+
+.intro-darkmode {
+    font-size: 30px;
+    color: var(--white);
+    font-weight: bold;
+    font-family: var(--text);
+}
+
+
 

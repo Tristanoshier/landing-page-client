@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 export const Contact = () => {
     return (
-        <Fragment>
-            Contact
-        </Fragment>
+        <div className="contact">
+              <p id="main-header">Contact</p>
+        </div>
     )
 }

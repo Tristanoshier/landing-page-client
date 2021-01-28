@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 export const Music = () => {
     return (
-        <Fragment>
-            Music
-        </Fragment>
+        <div className="music">
+            <p id="main-header">Music</p>
+        </div>
     )
 }

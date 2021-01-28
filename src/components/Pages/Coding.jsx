@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 export const Coding = () => {
     return (
-        <Fragment>
-            Coding
-        </Fragment>
+        <div className="coding">
+             <p id="main-header">Coding</p>
+        </div>
     )
 }

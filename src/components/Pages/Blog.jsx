@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 export const Blog = () => {
     return (
-        <Fragment>
-            Blog
-        </Fragment>
+        <div className="blog">
+           <p id="main-header">Blog</p>
+        </div>
     )
 }

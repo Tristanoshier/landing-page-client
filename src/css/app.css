@@ -1,0 +1,51 @@
+@import './nav.css';
+@import './main.css';
+@import './about.css';
+@import './coding.css';
+@import './music.css';
+@import './blog.css';
+@import './contact.css';
+@import './colorMode.css';
+
+
+/* font imports */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Playfair+Display&display=swap');
+
+:root {
+    /* color variables */
+    --orange:#EE6B5C;
+    --blue:#1E3342;
+    --gray:#8C8C8C;
+    --white:#F9F8F8;
+
+    /* font variables */
+    --main: 'Playfair Display', serif;
+    --text: 'Lato', sans-serif;
+}
+
+/* shared design */
+body {
+    margin: 0;
+}
+
+.app-darkmode {
+    background-color: var(--blue);
+    transition: background-color 0.25s ease-out;
+}
+
+.app-lightmode {
+    background-color: var(--white);
+    transition: background-color 0.25s ease-out;
+}
+
+.home {
+    margin: 0 20% 0 20%;
+}
+
+#main-header {
+    font-size: 60px;
+    color: var(--orange);
+    font-weight: bold;
+    font-family: var(--text);
+} 
+

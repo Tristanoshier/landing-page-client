@@ -1,10 +1,12 @@
-import React, { Fragment } from 'react';
-import { Navbar } from './Navbar';
+import React from 'react';
+import Navbar from './Navbar';
 
-export const Home = () => {
+const Home = (props) => {
     return (
-        <Fragment>
-            <Navbar />
-        </Fragment>
+        <div className="home">
+            <Navbar darkMode={props.darkMode} setDarkMode={props.setDarkMode} />
+        </div>
     )
 }
+
+export default Home;
