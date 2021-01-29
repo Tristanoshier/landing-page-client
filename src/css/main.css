@@ -6,7 +6,7 @@
 
 .intro-lightmode {
     font-size: 30px;
-    color: var(--gray);
+    color: var(--darkergray);
     font-weight: bold;
     font-family: var(--text);
 }

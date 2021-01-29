@@ -8,7 +8,6 @@ import { Routes } from './Routes';
 const Navbar = (props) => {
     return (
         <div className="main-nav">
-
             <Nav className="nav">
                 <NavItem className="main-nav-item">
                     <Link className={props.darkMode ? "main-nav-link-darkmode" : "main-nav-link-lightmode"} to="/">Tristan Oshier</Link>
@@ -55,10 +54,13 @@ const Navbar = (props) => {
                             to="/Contact">Contact
                         </NavLink>
                     </NavItem>
+                    {/* social media links */}
                     <div className="social-media">
                         <li><a className={props.darkMode ? "social-link-dark" : "social-link-light"} href="https://www.linkedin.com/in/tristan-oshier-678420196/" target="_linkedin" ><FontAwesomeIcon icon={faLinkedin} size="2x"></FontAwesomeIcon></a></li>
                         <li><a className={props.darkMode ? "social-link-dark" : "social-link-light"} href="https://github.com/Tristanoshier" target="_github" ><FontAwesomeIcon icon={faGithubSquare} size="2x"></FontAwesomeIcon></a></li>
                     </div>
+
+                    {/* light mode / dark mode toggle */}
                     <div className="toggle-container">
                         <span className="sun" style={{ color: props.darkMode ? "var(--gray)" : "var(--orange)" }}>☀︎</span>
                         <span className="toggle">
@@ -72,12 +74,13 @@ const Navbar = (props) => {
                         </span>
                         <span className="moon" style={{ color: props.darkMode ? "var(--white)" : "var(--gray)" }}>☾</span>
                     </div>
-                   
+                    <div>
+                        <p className={props.darkMode ? "copyright-dark" : "copyright-light"}>© Tristan Oshier 2021</p>
+                    </div>
 
                 </div>
             </Nav>
             <Routes darkMode={props.darkMode} />
-
         </div>
     )
 }

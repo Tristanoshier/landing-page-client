@@ -1,5 +1,29 @@
 .about {
     display: flex;
-    margin: 5% 10% 0 0;
+    margin: 0 10% 0 0;
     flex-direction: column;
+}
+
+.sub-heading-light {
+    color: var(--blue);
+    font-family: var(--main);
+    font-size: 34px;
+}
+
+.sub-heading-dark {
+    color: var(--white);
+    font-family: var(--main);
+    font-size: 34px;
+}
+
+.about-text-light {
+    font-size: 22px;
+    color: var(--darkergray);
+    font-family: var(--text);
+}
+
+.about-text-dark {
+    font-size: 22px;
+    color: var(--white);
+    font-family: var(--text);
 }
