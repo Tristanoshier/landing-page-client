@@ -1,6 +1,8 @@
 import React from 'react';
-import { Nav, NavItem } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { NavLink as RRNavLink, Link } from 'react-router-dom';
+import { Nav, NavItem, NavLink } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { Routes } from './Routes';
 
 const Navbar = (props) => {
@@ -14,20 +16,49 @@ const Navbar = (props) => {
 
                 <div className="nav-items-section">
                     <NavItem className="nav-item">
-                        <Link className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"} to="/About">About</Link>
+                        <NavLink
+                            activeClassName={props.darkMode ? "active-dark" : "active-light"}
+                            tag={RRNavLink}
+                            className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
+                            to="/About">About
+                        </NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
-                        <Link className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"} to="/Coding">Coding</Link>
+                        <NavLink
+                            activeClassName={props.darkMode ? "active-dark" : "active-light"}
+                            tag={RRNavLink}
+                            className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
+                            to="/Coding">Coding
+                        </NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
-                        <Link className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"} to="/Music">Music</Link>
+                        <NavLink
+                            activeClassName={props.darkMode ? "active-dark" : "active-light"}
+                            tag={RRNavLink}
+                            className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
+                            to="/Music">Music
+                        </NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
-                        <Link className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"} to="/Blog">Blog</Link>
+                        <NavLink
+                            activeClassName={props.darkMode ? "active-dark" : "active-light"}
+                            tag={RRNavLink}
+                            className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
+                            to="/Blog">Blog
+                        </NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
-                        <Link className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"} to="/Contact">Contact</Link>
+                        <NavLink
+                            activeClassName={props.darkMode ? "active-dark" : "active-light"}
+                            tag={RRNavLink}
+                            className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
+                            to="/Contact">Contact
+                        </NavLink>
                     </NavItem>
+                    <div className="social-media">
+                        <li><a className={props.darkMode ? "social-link-dark" : "social-link-light"} href="https://www.linkedin.com/in/tristan-oshier-678420196/" target="_linkedin" ><FontAwesomeIcon icon={faLinkedin} size="2x"></FontAwesomeIcon></a></li>
+                        <li><a className={props.darkMode ? "social-link-dark" : "social-link-light"} href="https://github.com/Tristanoshier" target="_github" ><FontAwesomeIcon icon={faGithubSquare} size="2x"></FontAwesomeIcon></a></li>
+                    </div>
                     <div className="toggle-container">
                         <span className="sun" style={{ color: props.darkMode ? "var(--gray)" : "var(--orange)" }}>☀︎</span>
                         <span className="toggle">
@@ -41,6 +72,8 @@ const Navbar = (props) => {
                         </span>
                         <span className="moon" style={{ color: props.darkMode ? "var(--white)" : "var(--gray)" }}>☾</span>
                     </div>
+                   
+
                 </div>
             </Nav>
             <Routes darkMode={props.darkMode} />

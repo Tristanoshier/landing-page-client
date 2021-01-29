@@ -9,14 +9,14 @@ import { Contact } from '../Pages/Contact';
 
 export const Routes = (props) => {
     return (
-        <div>
+        <div className="routes">
             <Switch>
                 <Route exact path="/"><Main darkMode={props.darkMode} /></Route>
-                <Route exact path="/About"><About /></Route>
-                <Route exact path="/Coding"><Coding /></Route>
-                <Route exact path="/Music"><Music /></Route>
-                <Route exact path="/Blog"><Blog /></Route>
-                <Route exact path="/Contact"><Contact /></Route>
+                <Route exact path="/About"><About darkMode={props.darkMode} /></Route>
+                <Route exact path="/Coding"><Coding darkMode={props.darkMode} /></Route>
+                <Route exact path="/Music"><Music darkMode={props.darkMode} /></Route>
+                <Route exact path="/Blog"><Blog darkMode={props.darkMode} /></Route>
+                <Route exact path="/Contact"><Contact darkMode={props.darkMode} /></Route>
             </Switch>
         </div>
     )

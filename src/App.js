@@ -4,7 +4,7 @@ import Home from './components/Navigation/Home';
 import './css/app.css';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const getIntitialMode = useCallback(() =>  {
     const isReturningUser = "dark" in localStorage;

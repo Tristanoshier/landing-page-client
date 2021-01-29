@@ -31,21 +31,30 @@ body {
 .app-darkmode {
     background-color: var(--blue);
     transition: background-color 0.25s ease-out;
+    min-height: 100vh;
 }
 
 .app-lightmode {
     background-color: var(--white);
     transition: background-color 0.25s ease-out;
+
 }
 
 .home {
     margin: 0 20% 0 20%;
 }
 
+.routes {
+    margin-left: 10%;
+}
+
 #main-header {
-    font-size: 60px;
+    font-size: 70px;
     color: var(--orange);
     font-weight: bold;
-    font-family: var(--text);
-} 
+    font-family: var(--main);
+    margin-bottom: 0;
+}
+
+
 

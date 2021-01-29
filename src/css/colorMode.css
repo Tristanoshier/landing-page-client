@@ -23,10 +23,7 @@
     left: 30px;
   }
 
-  input[type="checkbox"].checkbox:focus-visible {
-    outline: solid 2px var(--white);
-  }
-
+ 
   input[type="checkbox"].checkbox+label {
     display: inline-block;
     width: 18px;
