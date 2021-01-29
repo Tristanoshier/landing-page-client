@@ -18,5 +18,11 @@
     font-family: var(--text);
 }
 
+.abstract-mountains {
+    position: fixed;
+    bottom: 0;
+    left: 235px;
+}
+
 
 

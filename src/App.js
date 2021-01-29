@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+
 import Home from './components/Navigation/Home';
 import './css/app.css';
 
@@ -32,9 +32,7 @@ function App() {
 
   return (
     <div className={darkMode ? "app-darkmode" : "app-lightmode"}>
-      <Router>
         <Home darkMode={darkMode} setDarkMode={setDarkMode} />
-      </Router>
     </div>
   );
 }
