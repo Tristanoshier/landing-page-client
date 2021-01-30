@@ -3,7 +3,7 @@ import React from 'react';
 export const Main = (props) => {
     return (
         <div className="main">
-            <p className={props.darkMode ? "intro-darkmode" : "intro-lightmode"}><span id="main-header">Welcome!</span><br />I'm Tristan,<br />a software engineer<br />specializing in<br />front-end.</p>
+            <p className={props.darkMode ? "intro-darkmode" : "intro-lightmode"}><span id="welcome-header">Welcome!</span><br />I'm Tristan,<br />a software engineer<br />specializing in<br />front-end.</p>
 
             {/* svg mountains */}
             <svg className="abstract-mountains" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

@@ -49,6 +49,14 @@ body {
     margin-left: 10%;
 }
 
+#welcome-header {
+    font-size: 100px;
+    color: var(--orange);
+    font-weight: bold;
+    font-family: var(--main);
+    margin-bottom: 0;
+}
+
 #main-header {
     font-size: 70px;
     color: var(--orange);

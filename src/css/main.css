@@ -5,14 +5,14 @@
 }
 
 .intro-lightmode {
-    font-size: 30px;
+    font-size: 40px;
     color: var(--darkergray);
     font-weight: bold;
     font-family: var(--text);
 }
 
 .intro-darkmode {
-    font-size: 30px;
+    font-size: 40px;
     color: var(--white);
     font-weight: bold;
     font-family: var(--text);
