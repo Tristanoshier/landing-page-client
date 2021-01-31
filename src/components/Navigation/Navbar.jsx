@@ -1,22 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink as RRNavLink, Link } from 'react-router-dom';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Routes } from './Routes';
 
 const Navbar = (props) => {
+    const [sidebar, setSidebar] = useState(false);
+
+    const openSidebar = () => setSidebar(!sidebar);
+
     return (
         <div className="main-nav">
-            <Nav className="nav">
-                <NavItem className="main-nav-item">
-                    <Link className={props.darkMode ? "main-nav-link-darkmode" : "main-nav-link-lightmode"} to="/">Tristan Oshier</Link>
-                </NavItem>
-
+            <button className={sidebar && props.darkMode ? "hamburger-dark active" : sidebar && !props.darkMode ? " hamburger-light active" : !sidebar && props.darkMode ? "hamburger-dark" : "hamburger-light"} onClick={openSidebar}><FontAwesomeIcon icon={faBars} size="2x"></FontAwesomeIcon></button>
+            <Nav className={sidebar && props.darkMode ? "nav-dark active" : sidebar && !props.darkMode ? "nav-light active" : !sidebar && props.darkMode ? "nav-dark" : "nav-light"}>
+                <span className="mobile-main-nav-section">
+                    <NavItem className="nav-item">
+                        <NavLink
+                            activeClassName={props.darkMode ? "active-dark" : "active-light"}
+                            tag={RRNavLink}
+                            onClick={openSidebar}
+                            className={props.darkMode ? "mobile-home-link-darkmode" : "mobile-home-link-lightmode"}
+                            to="/">Tristan Oshier
+                        </NavLink>
+                    </NavItem>
+                    <NavItem className="main-nav-item">
+                        <Link className={props.darkMode ? "main-nav-link-darkmode" : "main-nav-link-lightmode"} to="/">Tristan Oshier</Link>
+                        <button className={props.darkMode ? "mobile-exit-button-dark" : "mobile-exit-button-light"} onClick={openSidebar}><FontAwesomeIcon icon={faTimes} size="2x"></FontAwesomeIcon></button>
+                    </NavItem>
+                </span>
                 <div className="nav-items-section">
                     <NavItem className="nav-item">
                         <NavLink
                             activeClassName={props.darkMode ? "active-dark" : "active-light"}
+                            onClick={openSidebar}
                             tag={RRNavLink}
                             className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
                             to="/About">About
@@ -25,6 +43,7 @@ const Navbar = (props) => {
                     <NavItem className="nav-item">
                         <NavLink
                             activeClassName={props.darkMode ? "active-dark" : "active-light"}
+                            onClick={openSidebar}
                             tag={RRNavLink}
                             className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
                             to="/Coding">Coding
@@ -33,6 +52,7 @@ const Navbar = (props) => {
                     <NavItem className="nav-item">
                         <NavLink
                             activeClassName={props.darkMode ? "active-dark" : "active-light"}
+                            onClick={openSidebar}
                             tag={RRNavLink}
                             className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
                             to="/Music">Music
@@ -41,6 +61,7 @@ const Navbar = (props) => {
                     <NavItem className="nav-item">
                         <NavLink
                             activeClassName={props.darkMode ? "active-dark" : "active-light"}
+                            onClick={openSidebar}
                             tag={RRNavLink}
                             className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
                             to="/Blog">Blog
@@ -49,6 +70,7 @@ const Navbar = (props) => {
                     <NavItem className="nav-item">
                         <NavLink
                             activeClassName={props.darkMode ? "active-dark" : "active-light"}
+                            onClick={openSidebar}
                             tag={RRNavLink}
                             className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
                             to="/Contact">Contact

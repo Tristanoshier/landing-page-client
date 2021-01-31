@@ -98,6 +98,53 @@ body {
     }
 }
 
+/* Surface Duo */
+@media(width: 540px),
+(height: 720px) {
+
+    #main-header {
+        font-size: 70px;
+    }
+
+    .home {
+        margin: 0 0 0 35%;
+    }
+
+    .app-darkmode {
+        min-height: 107vh;
+        min-width: 107vw;
+    }
+    
+    .app-lightmode {
+        min-height: 107vh;
+        min-width: 107vw;
+    }
+}
+
+/* Moto G4 */
+@media(width: 360px),
+(height: 640px) {
+
+    #main-header {
+        font-size: 60px;
+    }
+
+    .home {
+        margin: 0 0 0 0;
+    }
+
+    .app-darkmode {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+    
+    .app-lightmode {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+}
+
+
 
 
 

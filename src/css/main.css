@@ -115,7 +115,6 @@
         min-width: 500px;
     }
     .abstract-mountains {
-     
         left: 268px;
     }
 }
@@ -140,4 +139,58 @@
         font-size: 50px;
         min-width: 500px;
     }
+}
+
+/* Surface Duo */
+@media(width: 540px),
+(height: 720px) {
+    .main {
+        margin: 10% 0 0 0;
+    }
+
+    #welcome-header {
+        font-size: 60px;
+    }
+
+    .intro-lightmode {
+        font-size: 30px;
+        min-width: 300px;
+    }
+
+    .intro-darkmode {
+        font-size: 30px;
+        min-width: 300px;
+    }
+
+    .abstract-mountains {
+        left: 203px;
+    }
+    
+}
+
+/* Moto G4 */
+@media(width: 360px),
+(height: 640px) {
+    .main {
+        margin: 10% 0 0 0;
+    }
+
+    #welcome-header {
+        font-size: 60px;
+    }
+
+    .intro-lightmode {
+        font-size: 30px;
+        min-width: 300px;
+    }
+
+    .intro-darkmode {
+        font-size: 30px;
+        min-width: 300px;
+    }
+
+    .abstract-mountains {
+        left: 0px;
+    }
+    
 }
