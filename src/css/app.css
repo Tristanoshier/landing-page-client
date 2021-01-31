@@ -236,6 +236,29 @@ body {
     }
 }
 
+/* Galaxy Fold */
+@media(width: 280px),
+(height: 653px) {
+
+    #main-header {
+        font-size: 50px;
+    }
+
+    .home {
+        margin: 0 0 0 0;
+    }
+
+    .app-darkmode {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+    
+    .app-lightmode {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+}
+
 
 
 
