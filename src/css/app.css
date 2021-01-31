@@ -121,7 +121,7 @@ body {
     }
 }
 
-/* Moto G4 */
+/* Moto G4 & Galaxy S5 */
 @media(width: 360px),
 (height: 640px) {
 
@@ -143,6 +143,30 @@ body {
         min-width: 100vw;
     }
 }
+
+/* Pixel 2 & Pixel XL */
+@media(width: 411px),
+(height: 731px) {
+
+    #main-header {
+        font-size: 60px;
+    }
+
+    .home {
+        margin: 0 0 0 0;
+    }
+
+    .app-darkmode {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+    
+    .app-lightmode {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+}
+
 
 
 

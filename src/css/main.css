@@ -168,7 +168,7 @@
     
 }
 
-/* Moto G4 */
+/* Moto G4 & Galaxy S5 */
 @media(width: 360px),
 (height: 640px) {
     .main {
@@ -186,6 +186,33 @@
 
     .intro-darkmode {
         font-size: 30px;
+        min-width: 300px;
+    }
+
+    .abstract-mountains {
+        left: 0px;
+    }
+    
+}
+
+/* Pixel 2 & Pixel XL */
+@media(width: 411px),
+(height: 731px) {
+    .main {
+        margin: 10% 0 0 0;
+    }
+
+    #welcome-header {
+        font-size: 70px;
+    }
+
+    .intro-lightmode {
+        font-size: 35px;
+        min-width: 300px;
+    }
+
+    .intro-darkmode {
+        font-size: 35px;
         min-width: 300px;
     }
 
