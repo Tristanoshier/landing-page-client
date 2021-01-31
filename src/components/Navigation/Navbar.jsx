@@ -77,7 +77,6 @@ const Navbar = (props) => {
                     <div>
                         <p className={props.darkMode ? "copyright-dark" : "copyright-light"}>© Tristan Oshier 2021</p>
                     </div>
-
                 </div>
             </Nav>
             <Routes darkMode={props.darkMode} />

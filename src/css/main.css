@@ -4,6 +4,15 @@
     flex-direction: column;
 }
 
+
+#welcome-header {
+    font-size: 100px;
+    color: var(--orange);
+    font-weight: bold;
+    font-family: var(--main);
+    margin-bottom: 0;
+}
+
 .intro-lightmode {
     font-size: 40px;
     color: var(--darkergray);
@@ -24,5 +33,111 @@
     left: 235px;
 }
 
+@media(max-width: 1054px),
+(max-height: 723px) {
 
+    .main {
+        margin-left: 10%;
+    }
 
+    #welcome-header {
+        font-size: 90px;
+    }
+
+    .intro-lightmode {
+        font-size: 36px;
+    }
+
+    .intro-darkmode {
+        font-size: 36px;
+    }
+}
+
+@media(max-width: 917px),
+(max-height: 723px) {
+
+    .main {
+        margin: 5% 0 0 20%;
+    }
+
+    #welcome-header {
+        font-size: 80px;
+    }
+
+    .intro-lightmode {
+        font-size: 32px;
+    }
+
+    .intro-darkmode {
+        font-size: 32px;
+    }
+}
+
+@media(max-width: 756px),
+(max-height: 723px) {
+
+    .main {
+        margin: 10% 0 0 30%;
+    }
+
+    #welcome-header {
+        font-size: 70px;
+    }
+
+    .intro-lightmode {
+        font-size: 28px;
+    }
+
+    .intro-darkmode {
+        font-size: 28px;
+    }
+}
+
+/* iPad Pro */
+@media(width: 1024px),
+(height: 1366px) {
+
+   .main {
+        margin: 10% 0 0 0;
+    }
+
+    #welcome-header {
+        font-size: 120px;
+    }
+
+    .intro-lightmode {
+        font-size: 50px;
+        min-width: 500px;
+    }
+
+    .intro-darkmode {
+        font-size: 50px;
+        min-width: 500px;
+    }
+    .abstract-mountains {
+     
+        left: 268px;
+    }
+}
+
+/* iPad */
+@media(width: 768px),
+(height: 1024px) {
+    .main {
+        margin: 10% 0 0 0;
+    }
+
+    #welcome-header {
+        font-size: 100px;
+    }
+
+    .intro-lightmode {
+        font-size: 50px;
+        min-width: 500px;
+    }
+
+    .intro-darkmode {
+        font-size: 50px;
+        min-width: 500px;
+    }
+}

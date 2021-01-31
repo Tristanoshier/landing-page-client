@@ -122,5 +122,20 @@
     color: var(--darkergray);
 }
 
+/* iPad Pro */
+@media(width: 1024px),
+(height: 1366px) {
 
+    .nav-item {
+        font-size: 35px;
+    }
+}
 
+/* iPad */
+@media(width: 768px),
+(height: 1024px) {
+
+    .nav-item {
+        font-size: 30px;
+    }
+}

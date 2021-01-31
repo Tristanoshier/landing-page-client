@@ -27,3 +27,45 @@
     color: var(--white);
     font-family: var(--text);
 }
+
+/* iPad Pro */
+@media(width: 1024px),
+(height: 1366px) {
+
+    .about-text-light {
+        font-size: 35px;
+    }
+    
+    .about-text-dark {
+        font-size: 35px;
+    }
+
+    .sub-heading-light {
+        font-size: 50px;
+    }
+    
+    .sub-heading-dark {
+        font-size: 50px;
+    }
+}
+
+/* iPad */
+@media(width: 768px),
+(height: 1024px) {
+
+    .about-text-light {
+        font-size: 30px;
+    }
+    
+    .about-text-dark {
+        font-size: 30px;
+    }
+
+    .sub-heading-light {
+        font-size: 50px;
+    }
+    
+    .sub-heading-dark {
+        font-size: 50px;
+    }
+}

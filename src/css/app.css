@@ -24,6 +24,10 @@
     --text: 'Lato', sans-serif;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 /* shared design */
 body {
     margin: 0;
@@ -49,14 +53,6 @@ body {
     margin-left: 10%;
 }
 
-#welcome-header {
-    font-size: 100px;
-    color: var(--orange);
-    font-weight: bold;
-    font-family: var(--main);
-    margin-bottom: 0;
-}
-
 #main-header {
     font-size: 70px;
     color: var(--orange);
@@ -64,6 +60,46 @@ body {
     font-family: var(--main);
     margin-bottom: 0;
 }
+
+/* iPad Pro */
+@media(width: 1024px),
+(height: 1366px) {
+
+    #main-header {
+        font-size: 100px;
+    }
+
+    .home {
+        margin: 0 10% 0 30%;
+    }
+}
+
+/* iPad */
+@media(width: 768px),
+(height: 1024px) {
+
+    #main-header {
+        font-size: 80px;
+    
+    }
+
+    .home {
+        margin: 0 10% 0 30%;
+    }
+
+    .app-darkmode {
+        min-height: 107vh;
+        min-width: 107vw;
+    }
+    
+    .app-lightmode {
+        min-height: 107vh;
+        min-width: 107vw;
+    }
+}
+
+
+
 
 
 
