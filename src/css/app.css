@@ -167,6 +167,30 @@ body {
     }
 }
 
+/* iPhone 5/SE */
+@media(width: 320px),
+(height: 568px) {
+
+    #main-header {
+        font-size: 60px;
+    }
+
+    .home {
+        margin: 0 0 0 0;
+    }
+
+    .app-darkmode {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+    
+    .app-lightmode {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+}
+
+
 
 
 
