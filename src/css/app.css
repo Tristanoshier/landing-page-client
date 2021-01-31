@@ -213,6 +213,30 @@ body {
     }
 }
 
+/* iPhone 6/7/8/ Plus */
+@media(width: 414px),
+(height: 736px) {
+
+    #main-header {
+        font-size: 60px;
+    }
+
+    .home {
+        margin: 0 0 0 0;
+    }
+
+    .app-darkmode {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+    
+    .app-lightmode {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+}
+
+
 
 
 

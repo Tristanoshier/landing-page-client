@@ -274,3 +274,30 @@
     }
     
 }
+
+/* iPhone 6/7/8/ Plus */
+@media(width: 414px),
+(height: 736px) {
+    .main {
+        margin: 20% 0 0 0;
+    }
+
+    #welcome-header {
+        font-size: 70px;
+    }
+
+    .intro-lightmode {
+        font-size: 35px;
+        min-width: 300px;
+    }
+
+    .intro-darkmode {
+        font-size: 35px;
+        min-width: 300px;
+    }
+
+    .abstract-mountains {
+        left: 0;
+    }
+    
+}
