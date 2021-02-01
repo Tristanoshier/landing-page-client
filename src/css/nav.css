@@ -157,11 +157,155 @@
     display: none;
 }
 
+@media(max-width: 1000px) {
+    .nav-dark {
+        left: -100%;
+        background-color: var(--blue);
+        z-index: 1;
+        transition: 250ms;
+        border-right: 1px solid var(--gray);
+        margin-top: 0;
+    }
 
+    .nav-light {
+        left: -100%;
+        background-color: var(--white);
+        z-index: 1;
+        transition: 250ms;
+        border-right: 1px solid var(--gray);
+        margin-top: 0;
+    }
+
+
+    .nav-items-section {
+        border-right: none;
+    }
+
+    .hamburger-dark {
+        display: block;
+        position: absolute;
+        top: 3%;
+        left: 4%;
+        background: none;
+        color: var(--white);
+        border: none;
+    }
+
+    .hamburger-light {
+        display: block;
+        position: absolute;
+        top: 3%;
+        left: 4%;
+        background: none;
+        color: var(--blue);
+        border: none;
+    }
+
+    .hamburger-dark.active {
+        display: none;
+    }
+
+    .hamburger-light.active {
+        display: none;
+    }
+
+    .nav-dark.active {
+        left: 0;
+        padding-left: 20px;
+        transition: 250ms;
+        min-width: 40%;
+        border-right: 1px solid var(--gray);
+    }
+
+    .nav-light.active {
+        left: 0;
+        padding-left: 20px;
+        transition: 250ms;
+        min-width: 40%;
+        border-right: 1px solid var(--gray);
+    }
+
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .main-nav-link-darkmode {
+        display: none;
+    }
+
+    .main-nav-link-lightmode {
+        display: none;
+    }
+
+    .mobile-main-nav-link-darkmode {
+        display: block;
+        color: var(--white);
+        text-decoration: none;
+        border-bottom: 5px solid var(--orange);
+        font-size: 20px;
+    }
+
+    .mobile-main-nav-link-lightmode {
+        display: block;
+        color: var(--blue);
+        text-decoration: none;
+        border-bottom: 5px solid var(--orange);
+        font-size: 20px;
+    }
+
+    .mobile-main-nav-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 5%;
+    }
+
+    .mobile-exit-button-dark {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--white);
+        margin-right: 5px;
+    }
+
+    .mobile-exit-button-light {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--blue);
+        margin-right: 5px;
+    }
+
+    .nav-item {
+        font-size: 24px;
+    }
+
+    .nav-items-section {
+        margin-top: 90px;
+    }
+
+
+    .mobile-home-link-darkmode {
+        display: block;
+        color: var(--white);
+        text-decoration: none;
+        font-size: 28px;
+        margin-right: 7px;
+    }
+
+    .mobile-home-link-lightmode {
+        display: block;
+        color: var(--blue);
+        text-decoration: none;
+        font-size: 28px;
+        margin-right: 7px;
+    }
+}
 
 /* iPad Pro */
-@media(width: 1024px),
-(height: 1366px) {
+@media(width: 1024px) {
 
     .nav-item {
         font-size: 35px;
@@ -171,24 +315,6 @@
 /* iPad */
 @media(width: 768px),
 (height: 1024px) {
-
-    .nav-item {
-        font-size: 30px;
-    }
-}
-
-/* Surface Duo */
-@media(width: 540px),
-(height: 720px) {
-
-    .nav-item {
-        font-size: 25px;
-    }
-}
-
-/* Moto G4 & Galaxy S5 */
-@media(width: 360px),
-(height: 640px) {
 
     .nav-dark {
         left: -100%;
@@ -229,7 +355,305 @@
         top: 3%;
         left: 4%;
         background: none;
-        color: var(--darkergray);
+        color: var(--blue);
+        border: none;
+    }
+
+    .hamburger-dark.active {
+        display: none;
+    }
+
+    .hamburger-light.active {
+        display: none;
+    }
+
+    .nav-dark.active {
+        left: 0;
+        padding-left: 20px;
+        transition: 250ms;
+        min-width: 50%;
+        border-right: 1px solid var(--gray);
+    }
+
+    .nav-light.active {
+        left: 0;
+        padding-left: 20px;
+        transition: 250ms;
+        min-width: 50%;
+        border-right: 1px solid var(--gray);
+    }
+
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .main-nav-link-darkmode {
+        display: none;
+    }
+
+    .main-nav-link-lightmode {
+        display: none;
+    }
+
+    .mobile-main-nav-link-darkmode {
+        display: block;
+        color: var(--white);
+        text-decoration: none;
+        border-bottom: 5px solid var(--orange);
+        font-size: 20px;
+    }
+
+    .mobile-main-nav-link-lightmode {
+        display: block;
+        color: var(--blue);
+        text-decoration: none;
+        border-bottom: 5px solid var(--orange);
+        font-size: 20px;
+    }
+
+    .mobile-main-nav-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 5%;
+    }
+
+    .mobile-exit-button-dark {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--white);
+        margin-right: 5px;
+    }
+
+    .mobile-exit-button-light {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--blue);
+        margin-right: 5px;
+    }
+
+    .nav-item {
+        font-size: 20px;
+    }
+
+    .nav-items-section {
+        margin-top: 90px;
+    }
+
+
+    .mobile-home-link-darkmode {
+        display: block;
+        color: var(--white);
+        text-decoration: none;
+        font-size: 22px;
+        margin-right: 7px;
+    }
+
+    .mobile-home-link-lightmode {
+        display: block;
+        color: var(--blue);
+        text-decoration: none;
+        font-size: 22px;
+        margin-right: 7px;
+    }
+}
+
+/* Surface Duo */
+@media(width: 540px) {
+
+    .nav-dark {
+        left: -100%;
+        background-color: var(--blue);
+        z-index: 1;
+        transition: 250ms;
+        border-right: 1px solid var(--gray);
+        margin-top: 0;
+    }
+
+    .nav-light {
+        left: -100%;
+        background-color: var(--white);
+        z-index: 1;
+        transition: 250ms;
+        border-right: 1px solid var(--gray);
+        margin-top: 0;
+    }
+
+
+    .nav-items-section {
+        border-right: none;
+    }
+
+    .hamburger-dark {
+        display: block;
+        position: absolute;
+        top: 3%;
+        left: 4%;
+        background: none;
+        color: var(--white);
+        border: none;
+    }
+
+    .hamburger-light {
+        display: block;
+        position: absolute;
+        top: 3%;
+        left: 4%;
+        background: none;
+        color: var(--blue);
+        border: none;
+    }
+
+    .hamburger-dark.active {
+        display: none;
+    }
+
+    .hamburger-light.active {
+        display: none;
+    }
+
+    .nav-dark.active {
+        left: 0;
+        padding-left: 20px;
+        transition: 250ms;
+        min-width: 50%;
+        border-right: 1px solid var(--gray);
+    }
+
+    .nav-light.active {
+        left: 0;
+        padding-left: 20px;
+        transition: 250ms;
+        min-width: 50%;
+        border-right: 1px solid var(--gray);
+    }
+
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .main-nav-link-darkmode {
+        display: none;
+    }
+
+    .main-nav-link-lightmode {
+        display: none;
+    }
+
+    .mobile-main-nav-link-darkmode {
+        display: block;
+        color: var(--white);
+        text-decoration: none;
+        border-bottom: 5px solid var(--orange);
+        font-size: 20px;
+    }
+
+    .mobile-main-nav-link-lightmode {
+        display: block;
+        color: var(--blue);
+        text-decoration: none;
+        border-bottom: 5px solid var(--orange);
+        font-size: 20px;
+    }
+
+    .mobile-main-nav-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 5%;
+    }
+
+    .mobile-exit-button-dark {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--white);
+        margin-right: 5px;
+    }
+
+    .mobile-exit-button-light {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--blue);
+        margin-right: 5px;
+    }
+
+    .nav-item {
+        font-size: 20px;
+    }
+
+    .nav-items-section {
+        margin-top: 90px;
+    }
+
+
+    .mobile-home-link-darkmode {
+        display: block;
+        color: var(--white);
+        text-decoration: none;
+        font-size: 22px;
+        margin-right: 7px;
+    }
+
+    .mobile-home-link-lightmode {
+        display: block;
+        color: var(--blue);
+        text-decoration: none;
+        font-size: 22px;
+        margin-right: 7px;
+    }
+}
+
+/* Moto G4 & Galaxy S5 */
+@media(width: 360px) {
+
+    .nav-dark {
+        left: -100%;
+        background-color: var(--blue);
+        z-index: 1;
+        transition: 250ms;
+        border-right: 1px solid var(--gray);
+        margin-top: 0;
+    }
+
+    .nav-light {
+        left: -100%;
+        background-color: var(--white);
+        z-index: 1;
+        transition: 250ms;
+        border-right: 1px solid var(--gray);
+        margin-top: 0;
+    }
+
+
+    .nav-items-section {
+        border-right: none;
+    }
+
+    .hamburger-dark {
+        display: block;
+        position: absolute;
+        top: 3%;
+        left: 4%;
+        background: none;
+        color: var(--white);
+        border: none;
+    }
+
+    .hamburger-light {
+        display: block;
+        position: absolute;
+        top: 3%;
+        left: 4%;
+        background: none;
+        color: var(--blue);
         border: none;
     }
 
@@ -307,7 +731,7 @@
         display: block;
         background: none;
         border: none;
-        color: var(--darkergray);
+        color: var(--blue);
         margin-right: 5px;
     }
 
@@ -339,8 +763,7 @@
 }
 
 /* Pixel 2 & Pixel XL */
-@media(width: 411px),
-(height: 731px) {
+@media(width: 411px) {
 
     .nav-dark {
         left: -100%;
@@ -381,7 +804,7 @@
         top: 3%;
         left: 4%;
         background: none;
-        color: var(--darkergray);
+        color: var(--blue);
         border: none;
     }
 
@@ -459,7 +882,7 @@
         display: block;
         background: none;
         border: none;
-        color: var(--darkergray);
+        color: var(--blue);
         margin-right: 5px;
     }
 
@@ -490,8 +913,7 @@
 }
 
 /* iPhone 5/SE */
-@media(width: 320px),
-(height: 568px) {
+@media(width: 320px) {
 
     .nav-dark {
         left: -100%;
@@ -532,7 +954,7 @@
         top: 3%;
         left: 4%;
         background: none;
-        color: var(--darkergray);
+        color: var(--blue);
         border: none;
     }
 
@@ -610,7 +1032,7 @@
         display: block;
         background: none;
         border: none;
-        color: var(--darkergray);
+        color: var(--blue);
         margin-right: 5px;
     }
 
@@ -642,8 +1064,7 @@
 }
 
 /* iPhone 6/7/8/X */
-@media(width: 375px),
-(height: 667px) {
+@media(width: 375px) {
 
     .nav-dark {
         left: -100%;
@@ -684,7 +1105,7 @@
         top: 3%;
         left: 4%;
         background: none;
-        color: var(--darkergray);
+        color: var(--blue);
         border: none;
     }
 
@@ -762,7 +1183,7 @@
         display: block;
         background: none;
         border: none;
-        color: var(--darkergray);
+        color: var(--blue);
         margin-right: 5px;
     }
 
@@ -794,8 +1215,7 @@
 }
 
 /* iPhone 6/7/8/ Plus */
-@media(width: 414px),
-(height: 736px) {
+@media(width: 414px) {
 
     .nav-dark {
         left: -100%;
@@ -836,7 +1256,7 @@
         top: 3%;
         left: 4%;
         background: none;
-        color: var(--darkergray);
+        color: var(--blue);
         border: none;
     }
 
@@ -914,7 +1334,7 @@
         display: block;
         background: none;
         border: none;
-        color: var(--darkergray);
+        color: var(--blue);
         margin-right: 5px;
     }
 
@@ -946,8 +1366,7 @@
 }
 
 /* Galaxy Fold */
-@media(width: 280px),
-(height: 653px) {
+@media(width: 280px) {
 
     .nav-dark {
         left: -100%;
@@ -988,7 +1407,7 @@
         top: 3%;
         left: 4%;
         background: none;
-        color: var(--darkergray);
+        color: var(--blue);
         border: none;
     }
 
@@ -1066,7 +1485,7 @@
         display: block;
         background: none;
         border: none;
-        color: var(--darkergray);
+        color: var(--blue);
         margin-right: 5px;
     }
 
