@@ -1,0 +1,38 @@
+
+
+/* customize antd classes for Tabs component */
+.ant-tabs {
+    color: var(--white);
+    font-family: var(--text);
+}
+
+.ant-tabs-nav-list {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px var(--white) solid;
+    line-height: 2;
+}
+
+
+.ant-tabs-nav-operations {
+    display: none;
+}
+
+.ant-tabs-tab {
+     font-size: 25px ;
+     margin: 0 10% 0 10%;
+     /* do something with this on active */
+     /* border-bottom : 5px var(--orange) solid;  */
+}
+
+.ant-tabs-tab-btn:hover {
+    font-weight: bold;
+}
+
+.ant-tabs-tab-btn:focus {
+    outline: none; 
+}
+
+.ant-tabs-tabpane:focus {
+    outline: none;
+}

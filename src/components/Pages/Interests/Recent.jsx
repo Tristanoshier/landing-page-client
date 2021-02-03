@@ -1,7 +1,7 @@
-export const Recent = () => {
+export const Recent = (props) => {
     return (
         <div>
-            Recent
+             <h2 className={props.darkMode ? "sub-heading-dark" : "sub-heading-light"}>Recent</h2>
         </div>
     )
 }

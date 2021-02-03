@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { NavLink as RRNavLink, Link } from 'react-router-dom';
-import { Nav, NavItem, NavLink } from 'reactstrap';
+import { Tabs } from 'antd';
 import { Recent } from './Recent'
 import { Search } from './Search'
 import { Projects } from './Projects'
 
 export const Interests = (props) => {
+    const { TabPane } = Tabs;
+    
     const [posts, setPosts] = useState([]);
     const [musicPosts, setMusicPosts] = useState([]);
     const [moviePosts, setMoviePosts] = useState([]);
@@ -27,16 +27,27 @@ export const Interests = (props) => {
             })
     }, [])
 
+    const Demo = () => (
+        <Tabs defaultActiveKey="1">
+            <TabPane tab="Recent" key="1">
+                <Recent darkMode={props.darkMode} />
+            </TabPane>
+            <TabPane tab="Search" key="2">
+                <Search darkMode={props.darkMode} />
+            </TabPane>
+            <TabPane tab="Projects" key="3">
+                <Projects darkMode={props.darkMode} />
+            </TabPane>
+        </Tabs>
+    );
+
     return (
         <div className="blog">
             <p id="main-header">Interests</p>
-
-           {/* <Link to="/Interests/Recent">Recent</Link>
-            <Switch>
-                <Route exact path="/Interests/Recent"><Recent /></Route>
-                <Route exact path="/Interests/Search"><Search /></Route>
-                <Route exact path="/Interests/Projects"><Projects /></Route>
-            </Switch> */}
+            <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
+            </p>
+            {Demo()}
         </div>
     )
 }
