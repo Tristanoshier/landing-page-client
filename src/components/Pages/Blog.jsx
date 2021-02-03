@@ -1,24 +1,38 @@
-import React from 'react'
+import { useEffect, useState } from 'react';
 
 export const Blog = (props) => {
+    const [blogPosts, setBlogPosts] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:3001/site/blog`, {
+            method: 'GET',
+            headers: new Headers({
+                'Content-Type': 'application/json'
+            })
+        }).then((res) => res.json())
+            .then((posts) => {
+                setBlogPosts(posts);
+            })
+    }, [])
+
+    const blogMapper = () => {
+        return blogPosts.map((post, index) => {
+            return (
+                <div key={index}>
+                    <h2 className={props.darkMode ? "sub-heading-dark" : "sub-heading-light"}>- {post.title} -</h2>
+                    <h5>{post.createdAt}</h5>
+                    <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
+                        {post.body}
+                    </p>
+                </div>
+            )
+        })
+    }
+
     return (
         <div className="blog">
             <p id="main-header">Blog</p>
-            <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.
-            </p>
-            <h2 className={props.darkMode ? "sub-heading-dark" : "sub-heading-light"}>- Something -</h2>
-            <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-            <h2 className={props.darkMode ? "sub-heading-dark" : "sub-heading-light"}>- Something -</h2>
-            <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-            <h2 className={props.darkMode ? "sub-heading-dark" : "sub-heading-light"}>- Something -</h2>
-            <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
+            {blogMapper()}
         </div>
     )
 }

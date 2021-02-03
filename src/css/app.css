@@ -1,8 +1,6 @@
 @import './nav.css';
 @import './main.css';
-@import './about.css';
-@import './coding.css';
-@import './music.css';
+@import './page.css';
 @import './blog.css';
 @import './contact.css';
 @import './colorMode.css';

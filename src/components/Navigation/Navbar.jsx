@@ -37,25 +37,7 @@ const Navbar = (props) => {
                             onClick={openSidebar}
                             tag={RRNavLink}
                             className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
-                            to="/About">About
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink
-                            activeClassName={props.darkMode ? "active-dark" : "active-light"}
-                            onClick={openSidebar}
-                            tag={RRNavLink}
-                            className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
-                            to="/Coding">Coding
-                        </NavLink>
-                    </NavItem>
-                    <NavItem className="nav-item">
-                        <NavLink
-                            activeClassName={props.darkMode ? "active-dark" : "active-light"}
-                            onClick={openSidebar}
-                            tag={RRNavLink}
-                            className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
-                            to="/Music">Music
+                            to="/Interests">Interests
                         </NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
@@ -65,7 +47,7 @@ const Navbar = (props) => {
                             tag={RRNavLink}
                             className={props.darkMode ? "nav-link-darkmode" : "nav-link-lightmode"}
                             to="/Blog">Blog
-                        </NavLink>
+                        </NavLink>  
                     </NavItem>
                     <NavItem className="nav-item">
                         <NavLink
