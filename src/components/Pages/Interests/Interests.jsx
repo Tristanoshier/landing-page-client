@@ -20,17 +20,17 @@ export const Interests = (props) => {
             })
         }).then((res) => res.json())
             .then((posts) => {
-                setPosts(posts)
-                setMusicPosts(posts.filter(x => x.topic === 'music'))
-                setMoviePosts(posts.filter(x => x.topic === 'movies'))
-                setProgrammingPosts(posts.filter(x => x.topic === 'programming'))
+                setPosts(posts);
+                setMusicPosts(posts.filter(x => x.topic === 'music'));
+                setMoviePosts(posts.filter(x => x.topic === 'movies'));
+                setProgrammingPosts(posts.filter(x => x.topic === 'programming'));
             })
     }, [])
 
-    const Demo = () => (
+    const InterestCategoryTabs = () => (
         <Tabs defaultActiveKey="1">
             <TabPane tab="Recent" key="1">
-                <Recent darkMode={props.darkMode} />
+                <Recent posts={posts} darkMode={props.darkMode} />
             </TabPane>
             <TabPane tab="Search" key="2">
                 <Search darkMode={props.darkMode} />
@@ -47,7 +47,7 @@ export const Interests = (props) => {
             <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
             </p>
-            {Demo()}
+            {InterestCategoryTabs()}
         </div>
     )
 }
