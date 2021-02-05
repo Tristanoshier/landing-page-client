@@ -3,14 +3,14 @@ import { Tabs } from 'antd';
 import { Recent } from './Recent'
 import { Search } from './Search'
 import { Projects } from './Projects'
-
+ 
 export const Interests = (props) => {
     const { TabPane } = Tabs;
     
     const [posts, setPosts] = useState([]);
     const [musicPosts, setMusicPosts] = useState([]);
     const [moviePosts, setMoviePosts] = useState([]);
-    const [programmingPosts, setProgrammingPosts] = useState([]);
+    const [programmingPosts, setProgrammingPosts] = useState([]); 
 
     useEffect(() => {
         fetch(`http://localhost:3001/site/interests`, {
@@ -33,7 +33,12 @@ export const Interests = (props) => {
                 <Recent posts={posts} darkMode={props.darkMode} />
             </TabPane>
             <TabPane tab="Search" key="2">
-                <Search darkMode={props.darkMode} />
+                <Search 
+                    posts={posts} 
+                    musicPosts={musicPosts}
+                    moviePosts={moviePosts}
+                    programmingPosts={programmingPosts}
+                    darkMode={props.darkMode} />
             </TabPane>
             <TabPane tab="Projects" key="3">
                 <Projects darkMode={props.darkMode} />
