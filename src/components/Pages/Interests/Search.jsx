@@ -17,7 +17,7 @@ export const Search = (props) => {
         let entry = document.getElementById('search').value.toLowerCase();
         if (entry === '') {
             setNoResults(false)
-           
+
             if (topic === 'music') {
                 setFilteredPosts(props.musicPosts);
             } else if (topic === 'movies') {
@@ -81,19 +81,26 @@ export const Search = (props) => {
                 </h2>
             )
         } else {
-            return posts.map((post, index) => {
+            if (posts.length > 0) {
+                return posts.map((post, index) => {
+                    return (
+                        <div key={index}>
+                            <h2 className={props.darkMode ? "sub-heading-dark" : "sub-heading-light"}>- {post.title} -</h2>
+                            <h5>{post.createdAt}</h5>
+                            <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
+                                {post.body}
+                            </p>
+                        </div>
+                    )
+                })
+            } else {
                 return (
-                    <div key={index}>
-                        <h2 className={props.darkMode ? "sub-heading-dark" : "sub-heading-light"}>- {post.title} -</h2>
-                        <h5>{post.createdAt}</h5>
-                        <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
-                            {post.body}
-                        </p>
-                    </div>
+                    <h2 className={props.darkMode ? "about-text-dark" : "about-text-light"}>
+                        Nothing is currently posted
+                    </h2>
                 )
-            })
+            }
         }
-
     }
 
     const chooseTopic = (e) => {

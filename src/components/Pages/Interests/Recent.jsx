@@ -2,7 +2,7 @@ export const Recent = (props) => {
     let recentPosts = props.posts;
 
     const recentPostsMapper = () => {
-        if(recentPosts){
+        if(recentPosts.length > 0){
             return recentPosts.map((post, index) => {
                 return (
                     <div key={index}>
