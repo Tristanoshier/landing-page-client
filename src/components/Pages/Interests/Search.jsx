@@ -5,62 +5,59 @@ export const Search = (props) => {
     const [filteredPosts, setFilteredPosts] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [topic, setTopic] = useState('');
-    
-    useEffect(() => {
-        filterSearch();
-    }, [topic, searchTerm])
 
     const handleSubmit = (e) => e.preventDefault();
-
-    const filterSearch = () => {
-
-        if (topic === 'music') {
-            setFilteredPosts(props.musicPosts);
-        } else if (topic === 'movies') {
-            setFilteredPosts(props.moviePosts);
-        } else if (topic === 'programming') {
-            setFilteredPosts(props.programmingPosts);
-        } else if (topic === '') {
-            setFilteredPosts(props.posts);
+    
+    useEffect(() => {
+        const filterSearch = () => {
+            if (topic === 'music') {
+                setFilteredPosts(props.musicPosts);
+            } else if (topic === 'movies') {
+                setFilteredPosts(props.moviePosts);
+            } else if (topic === 'programming') {
+                setFilteredPosts(props.programmingPosts);
+            } else if (topic === '') {
+                setFilteredPosts(props.posts);
+            }
+    
+            let filtered;
+            if (topic === 'music') {
+                filtered = props.musicPosts.filter(post => {
+                    if (searchTerm === '') {
+                        return props.musicPosts;
+                    } else if (post.title.toLowerCase().includes(searchTerm.toLowerCase().trim())) {
+                        return post;
+                    } return null;
+                })
+            } else if (topic === 'movies') {
+                filtered = props.moviePosts.filter(post => {
+                    if (searchTerm === '') {
+                        return props.moviePosts;
+                    } else if (post.title.toLowerCase().includes(searchTerm.toLowerCase().trim())) {
+                        return post;
+                    } return null;
+                })
+            } else if (topic === 'programming') {
+                filtered = props.programmingPosts.filter(post => {
+                    if (searchTerm === '') {
+                        return props.programmingPosts;
+                    } else if (post.title.toLowerCase().includes(searchTerm.toLowerCase().trim())) {
+                        return post;
+                    } return null;
+                })
+            } else if (topic === '') {
+                filtered = props.posts.filter(post => {
+                    if (searchTerm === '') {
+                        return props.posts;
+                    } else if (post.title.toLowerCase().includes(searchTerm.toLowerCase().trim())) {
+                        return post;
+                    } return null;
+                })
+            }
+            setFilteredPosts(filtered);
         }
-
-        let filtered;
-        if (topic === 'music') {
-            filtered = props.musicPosts.filter(post => {
-                if (searchTerm === '') {
-                    return props.musicPosts;
-                } else if (post.title.toLowerCase().includes(searchTerm.toLowerCase().trim())) {
-                    return post;
-                } return null;
-            })
-        } else if (topic === 'movies') {
-            filtered = props.moviePosts.filter(post => {
-                if (searchTerm === '') {
-                    return props.moviePosts;
-                } else if (post.title.toLowerCase().includes(searchTerm.toLowerCase().trim())) {
-                    return post;
-                } return null;
-            })
-        } else if (topic === 'programming') {
-            filtered = props.programmingPosts.filter(post => {
-                if (searchTerm === '') {
-                    return props.programmingPosts;
-                } else if (post.title.toLowerCase().includes(searchTerm.toLowerCase().trim())) {
-                    return post;
-                } return null;
-            })
-        } else if (topic === '') {
-            filtered = props.posts.filter(post => {
-                if (searchTerm === '') {
-                    return props.posts;
-                } else if (post.title.toLowerCase().includes(searchTerm.toLowerCase().trim())) {
-                    return post;
-                } return null;
-            })
-        }
-        setFilteredPosts(filtered);
-    }
-
+        filterSearch();
+    }, [topic, searchTerm, props.musicPosts, props.moviePosts, props.posts, props.programmingPosts])
 
     const postMapper = () => {
         if (filteredPosts.length > 0) {

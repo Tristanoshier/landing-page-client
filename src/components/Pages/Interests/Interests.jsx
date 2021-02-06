@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Tabs } from 'antd';
+import  Tabs from 'antd/lib/tabs';
 import { Recent } from './Recent'
 import { Search } from './Search'
 import { Projects } from './Projects'
