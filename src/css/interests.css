@@ -1,5 +1,3 @@
-
-
 /* customize antd classes for Tabs component */
 .ant-tabs {
     color: var(--white);
@@ -21,14 +19,18 @@
 
 .ant-tabs-tab {
      font-size: 25px ;
-     margin: 0 10% 0 10%;
-     /* do something with this on active */
-     /* border-bottom : 5px var(--orange) solid;  */
+     margin: 0 10% 0 10%;    
 }
+
+.ant-tabs-tab.ant-tabs-tab-active {
+    border-bottom : 4px var(--orange) solid !important;
+    z-index: 2;
+  }
 
 .ant-tabs-tab-btn:hover {
     font-weight: bold;
 }
+
 
 .ant-tabs-tab-btn:focus {
     outline: none; 
