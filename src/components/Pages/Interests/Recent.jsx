@@ -1,8 +1,9 @@
 export const Recent = (props) => {
-    let recentPosts = props.posts;
 
     const recentPostsMapper = () => {
-        if(recentPosts.length > 0){
+    
+        if(props.posts.length > 0){
+            let recentPosts = props.posts.length < 3 ? props.posts : props.posts.slice(0, 3);
             return recentPosts.map((post, index) => {
                 return (
                     <div key={index}>
