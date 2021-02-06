@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import convertDate from '../Shared/DateConverter';
 
 export const Blog = (props) => {
     const [blogPosts, setBlogPosts] = useState([]);
@@ -19,10 +20,12 @@ export const Blog = (props) => {
         if (blogPosts.length > 0) {
             return blogPosts.map((post, index) => {
                 return (
-                    <div key={index}>
-                        <h2 className={props.darkMode ? "sub-heading-dark" : "sub-heading-light"}>- {post.title} -</h2>
-                        <h5>{post.createdAt}</h5>
-                        <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
+                    <div className="card" key={index}>
+                        <div className="card-header">
+                            <p className="card-title">{post.title}</p>
+                            <p className="card-date">{convertDate(post.createdAt)}</p>
+                        </div>
+                        <p className="card-body">
                             {post.body}
                         </p>
                     </div>
@@ -41,7 +44,7 @@ export const Blog = (props) => {
         <div className="blog">
             <p id="main-header">Blog</p>
             <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
             </p>
             {blogMapper()}
         </div>
