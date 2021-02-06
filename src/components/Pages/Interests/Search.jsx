@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Input, Form } from 'reactstrap';
+import convertDate from '../../Shared/DateConverter';
 
 export const Search = (props) => {
     const [filteredPosts, setFilteredPosts] = useState([]);
@@ -7,7 +8,7 @@ export const Search = (props) => {
     const [topic, setTopic] = useState('');
 
     const handleSubmit = (e) => e.preventDefault();
-    
+
     useEffect(() => {
         const filterSearch = () => {
             if (topic === 'music') {
@@ -19,7 +20,7 @@ export const Search = (props) => {
             } else if (topic === '') {
                 setFilteredPosts(props.posts);
             }
-    
+
             let filtered;
             if (topic === 'music') {
                 filtered = props.musicPosts.filter(post => {
@@ -63,12 +64,18 @@ export const Search = (props) => {
         if (filteredPosts.length > 0) {
             return filteredPosts.map((post, index) => {
                 return (
-                    <div key={index}>
-                        <h2 className={props.darkMode ? "sub-heading-dark" : "sub-heading-light"}>- {post.title} -</h2>
-                        <h5>{post.createdAt}</h5>
-                        <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
+                    <div className="card" key={index}>
+                        <div className="interest-card-header">
+                            <span className="top-row">
+                                <p className="card-title">{post.title}</p>
+                                <p className="card-date">{convertDate(post.createdAt)}</p>
+                            </span>
+                            <span className="card-topic">{post.topic}</span>
+                        </div>
+
+                        <div className="card-body">
                             {post.body}
-                        </p>
+                        </div>
                     </div>
                 )
             })
@@ -92,14 +99,14 @@ export const Search = (props) => {
 
     return (
         <div>
-            <Form onSubmit={handleSubmit}>
-                <Input type='select' name="topic" value={topic} onChange={(e) => chooseTopic(e)} >
+            <Form className="search-form" onSubmit={handleSubmit}>
+                <Input className="topic-filter" type='select' name="topic" value={topic} onChange={(e) => chooseTopic(e)} >
                     <option value="">All</option>
                     <option value="programming">Programming</option>
                     <option value="music">Music</option>
                     <option value="movies">Movies</option>
                 </Input>
-                <input onChange={(e) => userSearch(e)} id="search" type="text" placeholder="Search by title" />
+                <input className="searchbar" onChange={(e) => userSearch(e)} id="search" type="text" placeholder="Search..." />
             </Form>
             {postMapper()}
         </div>

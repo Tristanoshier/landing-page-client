@@ -3,7 +3,7 @@
     font-family: var(--text);
     font-size: 22px;
     background-color: #192a35;
-    margin-bottom: 30px;
+    margin: 20px 0 10px 0;
     padding-top: 0;
     border-radius: .5em
 }
@@ -24,11 +24,30 @@
 }
 
 .card-date {
-    color: #c4c4c4;
+    color: #bdbcbc;
     font-size: 14px;
-    
+    font-weight: bold;
 }
 
 .card-body {
+    padding: 10px 30px 30px 30px;
+}
+
+.interest-card-header {
+    background-color: #121e25;
     padding: 20px;
+    border-radius: .5em .5em 0 0;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-topic {
+    background-color: var(--blue);
+    padding: .3em .6em;
+    border-radius: .3em;
+    font-size: 16px;
+    font-weight: bold;
 }
