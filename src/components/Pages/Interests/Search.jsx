@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Input, Form } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import convertDate from '../../Shared/DateConverter';
 
 export const Search = (props) => {
@@ -72,10 +73,11 @@ export const Search = (props) => {
                             </span>
                             <span className="card-topic">{post.topic}</span>
                         </div>
-
-                        <div className="card-body">
-                            {post.body}
-                        </div>
+                        {
+                            post.body.length > 400 ?
+                            <p className="card-body">{post.body.substr(1, 400)}. . . <Link className="card-link" to={{pathname: `/Focused/${post}`, post: post}}>Read More</Link></p>
+                                : <p className="card-body">{post.body}</p>
+                        }
                     </div>
                 )
             })
@@ -106,7 +108,7 @@ export const Search = (props) => {
                     <option value="music">Music</option>
                     <option value="movies">Movies</option>
                 </Input>
-                <input className="searchbar" onChange={(e) => userSearch(e)} id="search" type="text" placeholder="Search..." />
+                <input className="searchbar" onChange={(e) => userSearch(e)} id="search" type="text" placeholder="Search..." autoComplete="off" />
             </Form>
             {postMapper()}
         </div>

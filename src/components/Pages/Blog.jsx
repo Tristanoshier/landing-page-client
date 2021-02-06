@@ -28,7 +28,7 @@ const Blog = (props) => {
                         </div>
                         {
                             post.body.length > 400 ?
-                            <p className="card-body">{post.body.substr(1, 400)}... <Link to={{pathname: `/Focused/${post}`, post: post}}>Read More</Link></p>
+                            <p className="card-body">{post.body.substr(1, 400)}. . . <Link className="card-link" to={{pathname: `/Focused/${post}`, post: post}}>Read More</Link></p>
                                 : <p className="card-body">{post.body}</p>
                         }
                     </div>
