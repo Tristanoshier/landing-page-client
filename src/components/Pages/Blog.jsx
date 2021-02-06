@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import convertDate from '../Shared/DateConverter';
+import { Link, withRouter } from 'react-router-dom';
 
-export const Blog = (props) => {
+const Blog = (props) => {
     const [blogPosts, setBlogPosts] = useState([]);
 
     useEffect(() => {
@@ -25,9 +26,11 @@ export const Blog = (props) => {
                             <p className="card-title">{post.title}</p>
                             <p className="card-date">{convertDate(post.createdAt)}</p>
                         </div>
-                        <p className="card-body">
-                            {post.body}
-                        </p>
+                        {
+                            post.body.length > 400 ?
+                            <p className="card-body">{post.body.substr(1, 400)}... <Link to={{pathname: `/Focused/${post}`, post: post}}>Read More</Link></p>
+                                : <p className="card-body">{post.body}</p>
+                        }
                     </div>
                 )
             })
@@ -50,3 +53,5 @@ export const Blog = (props) => {
         </div>
     )
 }
+
+export default withRouter(Blog);
