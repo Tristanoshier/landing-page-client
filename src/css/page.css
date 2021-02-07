@@ -28,6 +28,32 @@
     font-family: var(--text);
 }
 
+.back-to-top-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #bdbcbc;
+    border-bottom: 2px#bdbcbc solid;
+    margin: 5% 0 5% 0;
+    margin-left: 34%;
+}
+
+.back-to-top-btn.focused {
+    margin-left: 42%;
+}
+
+
+.back-to-top-btn:focus {
+    outline: none;
+}
+
+.back-to-top-btn:hover {
+    color: var(--white);
+    border-bottom: 2px solid var(--orange);
+    transition: color 0.25s ease-out;
+    transition: border-bottom 0.25s ease-out;
+}
+
 /* iPad Pro */
 @media(width: 1024px),
 (height: 1366px) {
@@ -73,5 +99,12 @@
 @media(max-width: 414px) {
     .about-text-dark {
         font-size: 20px;
+    }
+    .back-to-top-btn {
+        margin-left: 25%;
+    }
+
+    .back-to-top-btn.focused {
+        margin-left: 25%;
     }
 }

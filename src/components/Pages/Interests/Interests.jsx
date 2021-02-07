@@ -1,18 +1,19 @@
 import { useEffect, useState } from 'react';
-import  Tabs from 'antd/lib/tabs';
-import { Recent } from './Recent'
-import { Search } from './Search'
-import { Projects } from './Projects'
- 
+import Tabs from 'antd/lib/tabs';
+import { Recent } from './Recent';
+import { Search } from './Search';
+import { Projects } from './Projects';
+import backToTop from '../../Shared/BackToTop';
+
 export const Interests = (props) => {
     const { TabPane } = Tabs;
-    
+
     const [posts, setPosts] = useState([]);
     const [musicPosts, setMusicPosts] = useState([]);
     const [moviePosts, setMoviePosts] = useState([]);
     const [programmingPosts, setProgrammingPosts] = useState([]);
-  
-    
+
+
     useEffect(() => {
         fetch(`http://localhost:3001/site/interests`, {
             method: 'GET',
@@ -34,8 +35,8 @@ export const Interests = (props) => {
                 <Recent posts={posts} darkMode={props.darkMode} />
             </TabPane>
             <TabPane tab="Search" key="2">
-                <Search 
-                    posts={posts} 
+                <Search
+                    posts={posts}
                     musicPosts={musicPosts}
                     moviePosts={moviePosts}
                     programmingPosts={programmingPosts}
@@ -48,13 +49,15 @@ export const Interests = (props) => {
     );
 
     return (
-        <div className="blog">
-            <p id="main-header">Interests</p>
-            <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
+        <>
+            <div className="blog">
+                <p id="main-header">Interests</p>
+                <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
             </p>
-           
-            {InterestCategoryTabs()}
-        </div>
+                {InterestCategoryTabs()}
+            </div>
+            <button className={props.darkMode ? "back-to-top-btn" : "back-to-top-btn light"} onClick={() => backToTop()}>Back to top</button>
+        </>
     )
 }
