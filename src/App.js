@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-
 import Home from './components/Navigation/Home';
 import './css/app.css';
 
