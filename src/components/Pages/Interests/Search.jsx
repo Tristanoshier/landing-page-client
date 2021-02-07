@@ -65,17 +65,17 @@ export const Search = (props) => {
         if (filteredPosts.length > 0) {
             return filteredPosts.map((post, index) => {
                 return (
-                    <div className="card" key={index}>
-                        <div className="interest-card-header">
+                    <div className={props.darkMode ? "card" : "card light"} key={index}>
+                        <div className={props.darkMode ? "interest-card-header" : "interest-card-header light"}>
                             <span className="top-row">
-                                <p className="card-title">{post.title}</p>
-                                <p className="card-date">{convertDate(post.createdAt)}</p>
+                                <p className={props.darkMode ? "card-title" : "card-title light"}>{post.title}</p>
+                                <p className={props.darkMode ? "card-date" : "card-date light"}>{convertDate(post.createdAt)}</p>
                             </span>
-                            <span className="card-topic">{post.topic}</span>
+                            <span className={props.darkMode ? "card-topic" : "card-topic light"}>{post.topic}</span>
                         </div>
                         {
                             post.body.length > 400 ?
-                            <p className="card-body">{post.body.substr(1, 400)}. . . <Link className="card-link" to={{pathname: `/Focused/${post}`, post: post}}>Read More</Link></p>
+                                <p className="card-body">{post.body.substr(1, 400)}. . . <Link className={props.darkMode ? "card-link" : "card-link light"} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
                                 : <p className="card-body">{post.body}</p>
                         }
                     </div>
@@ -102,13 +102,13 @@ export const Search = (props) => {
     return (
         <div>
             <Form className="search-form" onSubmit={handleSubmit}>
-                <Input className="topic-filter" type='select' name="topic" value={topic} onChange={(e) => chooseTopic(e)} >
+                <Input className={props.darkMode ? "topic-filter" : "topic-filter light"} type='select' name="topic" value={topic} onChange={(e) => chooseTopic(e)} >
                     <option value="">All</option>
                     <option value="programming">Programming</option>
                     <option value="music">Music</option>
                     <option value="movies">Movies</option>
                 </Input>
-                <input className="searchbar" onChange={(e) => userSearch(e)} id="search" type="text" placeholder="Search..." autoComplete="off" />
+                <input className={props.darkMode ? "searchbar" : "searchbar light"} onChange={(e) => userSearch(e)} id="search" type="text" placeholder="Search..." autoComplete="off" />
             </Form>
             {postMapper()}
         </div>

@@ -13,7 +13,7 @@
     margin-top: 10%;
 }
 
-.back-button-dark {
+.back-button {
     background-color: var(--blue);
     color: #bdbcbc;
     border-bottom: 2px solid #bdbcbc;
@@ -22,10 +22,22 @@
     max-width: 43px;
 }
 
-.back-button-dark:hover {
+.back-button.light {
+    background-color: var(--white);
+    color: var(--blue);
+    border-bottom: 2px var(--blue) solid;
+}
+
+.back-button:hover {
     color: var(--white);
     font-weight: bold;
     border-bottom: 2px solid var(--orange);
     transition: color 0.25s ease-out;
     transition: border-bottom 0.25s ease-out;
 }
+
+.back-button.light:hover {
+    color: var(--blue);
+
+}
+

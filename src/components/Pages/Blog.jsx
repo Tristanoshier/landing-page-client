@@ -21,14 +21,14 @@ const Blog = (props) => {
         if (blogPosts.length > 0) {
             return blogPosts.map((post, index) => {
                 return (
-                    <div className="card" key={index}>
-                        <div className="card-header">
-                            <p className="card-title">{post.title}</p>
-                            <p className="card-date">{convertDate(post.createdAt)}</p>
+                    <div className={props.darkMode ? "card" : "card light"} key={index}>
+                        <div className={props.darkMode ? "card-header" : "card-header light"}>
+                            <p className={props.darkMode ? "card-title" : "card-title light"}>{post.title}</p>
+                            <p className={props.darkMode ? "card-date" : "card-date light"}>{convertDate(post.createdAt)}</p>
                         </div>
                         {
                             post.body.length > 400 ?
-                            <p className="card-body">{post.body.substr(1, 400)}. . . <Link className="card-link" to={{pathname: `/Focused/${post}`, post: post}}>Read More</Link></p>
+                            <p className="card-body">{post.body.substr(1, 400)}. . . <Link className={props.darkMode ? "card-link" : "card-link light"} to={{pathname: `/Focused/${post}`, post: post}}>Read More</Link></p>
                                 : <p className="card-body">{post.body}</p>
                         }
                     </div>

@@ -29,7 +29,7 @@ export const Interests = (props) => {
     }, [])
 
     const InterestCategoryTabs = () => (
-        <Tabs defaultActiveKey="1">
+        <Tabs className={props.darkMode ? "ant-tabs" : "ant-tabs light"} defaultActiveKey="1">
             <TabPane tab="Recent" key="1">
                 <Recent posts={posts} darkMode={props.darkMode} />
             </TabPane>

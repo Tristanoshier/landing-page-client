@@ -4,6 +4,10 @@
     font-family: var(--text);
 }
 
+.ant-tabs.light {
+    color: var(--gray);
+}
+
 .ant-tabs-nav-list {
     display: flex;
     justify-content: center;
@@ -11,6 +15,10 @@
     line-height: 2;
     margin-bottom: 40px;
 }
+.ant-tabs-nav-list.light-list {
+    border-bottom: 1px var(--gray) solid !important;
+}
+
 
 
 .ant-tabs-nav-operations {
@@ -55,6 +63,13 @@
     color: var(--white);
    
 }
+
+.searchbar.light {
+    background-color: var(--white);
+    border: 1px var(--gray) solid;
+    color: var(--gray);
+}
+
 .searchbar:focus {
     outline: none;
 }
@@ -68,7 +83,11 @@
     padding-left: 7px;
     border-right: 1px #bdbcbc solid;
     border-radius: .5em 0 0 .5em;
+}
 
+.topic-filter.light {
+    background-color: var(--gray);
+    color: var(--white);
 }
 
 .topic-filter:focus {
