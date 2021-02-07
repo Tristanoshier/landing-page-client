@@ -1,7 +1,7 @@
 .card {
     color: var(--white);
     font-family: var(--text);
-    font-size: 22px;
+    font-size: 24px;
     background-color: #192a35;
     margin: 20px 0 10px 0;
     padding-top: 0;
@@ -49,6 +49,7 @@
 
 .card-body {
     padding: 10px 30px 30px 30px;
+    font-size: 22px;
 }
 
 .interest-card-header {
@@ -101,4 +102,125 @@
 
 .card-link.light:hover {
     color: var(--blue);
+}
+
+
+
+/* Moto G4 and Galaxy S5 */
+@media(width: 360px) {
+    .card {
+        font-size: 18px;
+    }
+
+    .card-title {
+        font-size: 22px;
+        
+    }
+
+    .card-topic {
+        font-size: 14px;
+    }
+
+    .card-date {
+        font-size: 12px;
+    }
+}
+
+/* Pixel 2 & Pixel XL */
+@media(width: 411px) {
+    .card {
+        font-size: 18px;
+    }
+
+    .card-title {
+        font-size: 22px;
+        
+    }
+
+    .card-topic {
+        font-size: 14px;
+    }
+
+    .card-date {
+        font-size: 12px;
+    }
+}
+
+/* iPhone 5/SE */
+@media(width: 320px) {
+    .card {
+        font-size: 18px;
+    }
+
+    .card-title {
+        font-size: 20px;
+        
+    }
+
+    .card-topic {
+        font-size: 14px;
+    }
+
+    .card-date {
+        font-size: 12px;
+    }
+}
+
+/* iPhone 6/7/8/X */
+@media(width: 375px) {
+}
+.card {
+    font-size: 18px;
+}
+
+.card-title {
+    font-size: 22px;
+    
+}
+
+.card-topic {
+    font-size: 14px;
+}
+
+.card-date {
+    font-size: 12px;
+}
+
+/* iPhone 6/7/8/ Plus */
+@media(width: 414px) {
+    .card {
+        font-size: 18px;
+    }
+
+    .card-title {
+        font-size: 22px;
+    }
+
+    .card-topic {
+        font-size: 14px;
+    }
+
+    .card-date {
+        font-size: 12px;
+    }
+}
+
+/* Galaxy Fold */
+@media(width: 280px) {
+    .card {
+        font-size: 18px;
+    }
+
+    .card-title {
+        font-size: 22px;
+        
+    }
+
+    .card-topic {
+        font-size: 14px;
+    }
+
+    .card-date {
+        font-size: 12px;
+    }
 }

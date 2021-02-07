@@ -15,25 +15,24 @@
     line-height: 2;
     margin-bottom: 40px;
 }
+
 .ant-tabs-nav-list.light-list {
     border-bottom: 1px var(--gray) solid !important;
 }
-
-
 
 .ant-tabs-nav-operations {
     display: none;
 }
 
 .ant-tabs-tab {
-     font-size: 25px ;
-     margin: 0 10% 0 10%;    
+    font-size: 25px;
+    margin: 0 10% 0 10%;
 }
 
 .ant-tabs-tab.ant-tabs-tab-active {
-    border-bottom : 4px var(--orange) solid !important;
+    border-bottom: 4px var(--orange) solid !important;
     z-index: 2;
-  }
+}
 
 .ant-tabs-tab-btn:hover {
     font-weight: bold;
@@ -41,7 +40,7 @@
 
 
 .ant-tabs-tab-btn:focus {
-    outline: none; 
+    outline: none;
 }
 
 .ant-tabs-tabpane:focus {
@@ -61,7 +60,7 @@
     border: none;
     border-radius: 0 .5em .5em 0;
     color: var(--white);
-   
+
 }
 
 .searchbar.light {
@@ -97,3 +96,133 @@
 ::placeholder {
     color: #bdbcbc;
 }
+
+/* iPad Pro */
+@media(width: 1024px) {
+    .ant-tabs-tab {
+        font-size: 30px;
+        margin: 0 10% 0 10%;
+    }
+
+    .searchbar {
+        width: 50px;
+        font-size: 22px;
+    }
+
+    .topic-filter {
+        width: 60px;
+        font-size: 22px;
+    }
+}
+
+
+/* Moto G4 and Galaxy S5 */
+@media(width: 360px) {
+
+    .ant-tabs-tab {
+        font-size: 18px;
+        margin: 0 10% 0 10%;
+    }
+
+    .searchbar {
+        width: 50px;
+        font-size: 16px;
+    }
+
+    .topic-filter {
+        width: 60px;
+        font-size: 16px;
+    }
+}
+
+/* Pixel 2 & Pixel XL */
+@media(width: 411px) {
+    .ant-tabs-tab {
+        font-size: 20px;
+        margin: 0 10% 0 10%;
+    }
+
+    .searchbar {
+        width: 50px;
+        font-size: 16px;
+    }
+
+    .topic-filter {
+        width: 60px;
+        font-size: 16px;
+    }
+}
+
+/* iPhone 5/SE */
+@media(width: 320px) {
+    .ant-tabs-tab {
+        font-size: 16px;
+        margin: 0 10% 0 10%;
+    }
+
+    .searchbar {
+        width: 50px;
+        font-size: 16px;
+    }
+
+    .topic-filter {
+        width: 60px;
+        font-size: 16px;
+    }
+}
+
+/* iPhone 6/7/8/X */
+@media(width: 375px) {
+    .ant-tabs-tab {
+        font-size: 18px;
+        margin: 0 10% 0 10%;
+    }
+
+    .searchbar {
+        width: 50px;
+        font-size: 16px;
+    }
+
+    .topic-filter {
+        width: 60px;
+        font-size: 16px;
+    }
+}
+
+/* iPhone 6/7/8/ Plus */
+@media(width: 414px) {
+    .ant-tabs-tab {
+        font-size: 20px;
+        margin: 0 10% 0 10%;
+    }
+
+    .searchbar {
+        width: 50px;
+        font-size: 16px;
+    }
+
+    .topic-filter {
+        width: 60px;
+        font-size: 16px;
+    }
+}
+
+/* Galaxy Fold */
+@media(width: 280px) {
+    .ant-tabs-tab {
+        font-size: 18px;
+        margin: 0 10% 0 10%;
+    }
+
+    .searchbar {
+        width: 50px;
+        font-size: 16px;
+    }
+
+    .topic-filter {
+        width: 60px;
+        font-size: 16px;
+    }
+}
+
+

@@ -17,8 +17,8 @@ export const Recent = (props) => {
                             <span className={props.darkMode ? "card-topic" : "card-topic light"}>{post.topic}</span>
                         </div>
                         {
-                            post.body.length > 400 ?
-                                <p className="card-body">{post.body.substr(1, 400)}. . . <Link className={props.darkMode ? "card-link" : "card-link light"} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
+                            post.body.length > 300 ?
+                                <p className="card-body">{post.body.substr(1, 300)}. . . <Link className={props.darkMode ? "card-link" : "card-link light"} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
                                 : <p className="card-body">{post.body}</p>
                         }
                     </div>

@@ -7,19 +7,18 @@
 
 .focused-blog {
     display: flex;
-    margin: 0 0 0 10%;
+    margin: 10% 0 0 10%;
     flex-direction: column;
     max-width: 700px;
-    margin-top: 10%;
 }
 
 .back-button {
     background-color: var(--blue);
     color: #bdbcbc;
-    border-bottom: 2px solid #bdbcbc;
+    border-bottom: 2px#bdbcbc solid;
     font-family: var(--text);
-    font-size: 20px;
-    max-width: 43px;
+    font-size: 22px;
+    max-width: 46px;
 }
 
 .back-button.light {
@@ -38,6 +37,70 @@
 
 .back-button.light:hover {
     color: var(--blue);
+}
 
+/* iPad Pro */
+@media(width: 1024px) {
+    .focused-blog {
+        margin: 20% 10% 0 0;
+    }
+}
+
+/* iPad */
+@media(width: 768px),
+(height: 1024px) {
+    .focused-blog {
+        margin: 15% 10% 0 0;
+    }
+}
+
+/* Surface Duo */
+@media(width: 540px) {
+    .focused-blog {
+        margin: 15% 10% 0 0;
+    }
+}
+
+
+/* Moto G4 and Galaxy S5 */
+@media(width: 360px) {
+    .focused-blog {
+        margin: 20% 10% 0 0;
+    }
+}
+
+/* Pixel 2 & Pixel XL */
+@media(width: 411px) {
+    .focused-blog {
+        margin: 20% 10% 0 0;
+    }
+}
+
+/* iPhone 5/SE */
+@media(width: 320px) {
+    .focused-blog {
+        margin: 20% 10% 0 0;
+    }
+}
+
+/* iPhone 6/7/8/X */
+@media(width: 375px) {
+    .focused-blog {
+        margin: 20% 10% 0 0;
+    }
+}
+
+/* iPhone 6/7/8/ Plus */
+@media(width: 414px) {
+    .focused-blog {
+        margin: 20% 10% 0 0;
+    }
+}
+
+/* Galaxy Fold */
+@media(width: 280px) {
+    .focused-blog {
+        margin: 20% 10% 0 0;
+    }
 }
 

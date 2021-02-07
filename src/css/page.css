@@ -69,3 +69,9 @@
         font-size: 50px;
     }
 }
+
+@media(max-width: 414px) {
+    .about-text-dark {
+        font-size: 20px;
+    }
+}
