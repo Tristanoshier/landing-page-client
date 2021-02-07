@@ -42,9 +42,20 @@
     margin-left: 42%;
 }
 
-
 .back-to-top-btn:focus {
     outline: none;
+}
+
+.back-to-top-btn.light {
+    color: var(--darkergray);
+    border-bottom: 2px var(--blue) solid;
+}
+
+.back-to-top-btn.light:hover {
+    color: var(--blue);
+    border-bottom: 2px solid var(--orange);
+    transition: color 0.25s ease-out;
+    transition: border-bottom 0.25s ease-out;
 }
 
 .back-to-top-btn:hover {
