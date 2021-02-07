@@ -7,13 +7,13 @@ import { Contact } from '../Pages/Contact';
 import FocusedBlog from '../Pages/FocusedBlog';
 export const Routes = (props) => {
     return (
-        <div className="routes">
+        <div className='routes'>
             <Switch>
-                <Route exact path="/"><Main darkMode={props.darkMode} /></Route>
-                <Route exact path="/Interests"><Interests darkMode={props.darkMode} /></Route>
-                <Route exact path="/Blog"><Blog darkMode={props.darkMode} /></Route>
-                <Route exact path="/Contact"><Contact darkMode={props.darkMode} /></Route>
-                <Route exact path="/Focused/:post"><FocusedBlog darkMode={props.darkMode} /></Route>         
+                <Route exact path='/'><Main darkMode={props.darkMode} /></Route>
+                <Route exact path='/Interests'><Interests darkMode={props.darkMode} /></Route>
+                <Route exact path='/Blog'><Blog darkMode={props.darkMode} /></Route>
+                <Route exact path='/Contact'><Contact darkMode={props.darkMode} /></Route>
+                <Route exact path='/Focused/:post'><FocusedBlog darkMode={props.darkMode} /></Route>         
             </Switch>
         </div>
     )
