@@ -10,7 +10,7 @@ export const Routes = (props) => {
         <div className='routes'>
             <Switch>
                 <Route exact path='/'><Main darkMode={props.darkMode} /></Route>
-                <Route exact path='/Interests'><Interests darkMode={props.darkMode} /></Route>
+                <Route exact path='/Interests'><Interests darkMode={props.darkMode} colorMode={props.colorMode} /></Route>
                 <Route exact path='/Blog'><Blog darkMode={props.darkMode} /></Route>
                 <Route exact path='/Contact'><Contact darkMode={props.darkMode} /></Route>
                 <Route exact path='/Focused/:post'><FocusedBlog darkMode={props.darkMode} /></Route>         

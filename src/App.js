@@ -29,9 +29,14 @@ function App() {
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
 
+  const colorMode = (darkClass, lightClass) => {
+    return darkMode ? darkClass : lightClass;
+}
+
+
   return (
     <div className={darkMode ? "app-darkmode" : "app-lightmode"}>
-        <Home darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Home darkMode={darkMode} setDarkMode={setDarkMode} colorMode={colorMode} />
     </div>
   );
 }

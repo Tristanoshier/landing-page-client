@@ -14,10 +14,6 @@ const Navbar = (props) => {
     const githubURL = 'https://github.com/Tristanoshier';
 
 
-    const darkOrLightMode = (darkClass, lightClass) => {
-        return props.darkMode ? darkClass : lightClass;
-    }
-
     const classForMobile = (mobileDark, mobileLight, dark, light) => {
         return sidebar && props.darkMode ? mobileDark :
             sidebar && !props.darkMode ? mobileLight :
@@ -30,16 +26,16 @@ const Navbar = (props) => {
             <span className='mobile-main-nav-section'>
                 <NavItem className='nav-item'>
                     <NavLink
-                        activeClassName={darkOrLightMode('active-dark', 'active-light')}
+                        activeClassName={props.colorMode('active-dark', 'active-light')}
                         tag={RRNavLink}
                         onClick={openSidebar}
-                        className={darkOrLightMode('mobile-home-link-darkmode', 'mobile-home-link-lightmode')}
+                        className={props.colorMode('mobile-home-link-darkmode', 'mobile-home-link-lightmode')}
                         to='/'>Tristan Oshier
                         </NavLink>
                 </NavItem>
                 <NavItem className='main-nav-item'>
-                    <Link className={darkOrLightMode('main-nav-link-darkmode', 'main-nav-link-lightmode')} to='/'>Tristan Oshier</Link>
-                    <button className={darkOrLightMode('mobile-exit-button-dark', 'mobile-exit-button-light')}
+                    <Link className={props.colorMode('main-nav-link-darkmode', 'main-nav-link-lightmode')} to='/'>Tristan Oshier</Link>
+                    <button className={props.colorMode('mobile-exit-button-dark', 'mobile-exit-button-light')}
                         onClick={openSidebar}>
                         <FontAwesomeIcon icon={faTimes} size='2x' />
                     </button>
@@ -53,10 +49,10 @@ const Navbar = (props) => {
             return (
                 <NavItem className='nav-item' key={index}>
                     <NavLink
-                        activeClassName={darkOrLightMode('active-dark', 'active-light')}
+                        activeClassName={props.colorMode('active-dark', 'active-light')}
                         onClick={openSidebar}
                         tag={RRNavLink}
-                        className={darkOrLightMode('nav-link-darkmode', 'nav-link-lightmode')}
+                        className={props.colorMode('nav-link-darkmode', 'nav-link-lightmode')}
                         to={`/${name}`}>{name}
                     </NavLink>
                 </NavItem>
@@ -67,12 +63,12 @@ const Navbar = (props) => {
     const socialMediaSection = () => {
         return (
             <div className='social-media'>
-                <li><a className={darkOrLightMode('social-link-dark', 'social-link-light')}
+                <li><a className={props.colorMode('social-link-dark', 'social-link-light')}
                     href={linkedInURL}
                     target='_linkedin' >
                     <FontAwesomeIcon icon={faLinkedin} size='2x' />
                 </a></li>
-                <li><a className={darkOrLightMode('social-link-dark', 'social-link-light')}
+                <li><a className={props.colorMode('social-link-dark', 'social-link-light')}
                     href={githubURL}
                     target='_github' ><FontAwesomeIcon
                         icon={faGithubSquare} size='2x' />
@@ -84,7 +80,7 @@ const Navbar = (props) => {
     const lightAndDarkModeToggle = () => {
         return (
             <div className='toggle-container'>
-                <span className='sun' style={{ color: darkOrLightMode('var(--gray)', 'var(--orange)') }}>☀︎</span>
+                <span className='sun' style={{ color: props.colorMode('var(--gray)', 'var(--orange)') }}>☀︎</span>
                 <span className='toggle'>
                     <input
                         checked={props.darkMode}
@@ -94,13 +90,13 @@ const Navbar = (props) => {
                         id='checkbox' />
                     <label htmlFor='checkbox' />
                 </span>
-                <span className='moon' style={{ color: darkOrLightMode('var(--white)', 'var(--gray)') }}>☾</span>
+                <span className='moon' style={{ color: props.colorMode('var(--white)', 'var(--gray)') }}>☾</span>
             </div>
         )
     }
 
     const copyright = () => {
-        return <p className={darkOrLightMode('copyright-dark', 'copyright-light')}>© Tristan Oshier 2021</p>
+        return <p className={props.colorMode('copyright-dark', 'copyright-light')}>© Tristan Oshier 2021</p>
     }
 
     const hamburger = () => {
@@ -124,7 +120,7 @@ const Navbar = (props) => {
                         {copyright()}
                     </div>
                 </Nav>
-                <Routes darkMode={props.darkMode} />
+                <Routes darkMode={props.darkMode} colorMode={props.colorMode} />
             </>
         )
     }
