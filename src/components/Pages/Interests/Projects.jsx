@@ -11,7 +11,7 @@ export const Projects = (props) => {
             })
         }).then((res) => res.json())
             .then((projects) => {
-                setProjects(projects)
+                setProjects(projects);
             })
     }, [])
 

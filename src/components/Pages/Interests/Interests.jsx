@@ -26,9 +26,9 @@ export const Interests = (props) => {
                 setMoviePosts(posts.filter(x => x.topic === 'movies'));
                 setProgrammingPosts(posts.filter(x => x.topic === 'programming'));
             })
-       
+
     }, [getPostsURL])
-    
+
     const InterestCategoryTabs = () => (
         <Tabs className={props.colorMode('ant-tabs', 'ant-tabs light')} defaultActiveKey='1'>
             <TabPane tab='Recent' key='1'>

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Input, Form } from 'reactstrap';
-import { Link } from 'react-router-dom';
-import convertDate from '../../Shared/DateConverter';
+import postMapper from '../../Shared/PostMapper';
 
 export const Search = (props) => {
     const [filteredPosts, setFilteredPosts] = useState([]);
@@ -61,36 +60,6 @@ export const Search = (props) => {
         filterSearch();
     }, [topic, searchTerm, props.musicPosts, props.moviePosts, props.posts, props.programmingPosts])
 
-    const postMapper = () => {
-        if (filteredPosts.length > 0) {
-            return filteredPosts.map((post, index) => {
-                return (
-                    <div className={props.darkMode ? "card" : "card light"} key={index}>
-                        <div className={props.darkMode ? "interest-card-header" : "interest-card-header light"}>
-                            <span className="top-row">
-                                <p className={props.darkMode ? "card-title" : "card-title light"}>{post.title}</p>
-                                <p className={props.darkMode ? "card-date" : "card-date light"}>{convertDate(post.createdAt)}</p>
-                            </span>
-                            <span className={props.darkMode ? "card-topic" : "card-topic light"}>{post.topic}</span>
-                        </div>
-                        {
-                            post.body.length > 400 ?
-                                <p className="card-body">{post.body.substr(1, 400)}. . . <Link className={props.darkMode ? "card-link" : "card-link light"} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
-                                : <p className="card-body">{post.body}</p>
-                        }
-                    </div>
-                )
-            })
-        } else {
-            return (
-                <h2 className={props.darkMode ? "about-text-dark" : "about-text-light"}>
-                    no results found
-                </h2>
-            )
-
-        }
-    }
-
     const chooseTopic = (e) => {
         setTopic(e.target.value);
     }
@@ -110,7 +79,7 @@ export const Search = (props) => {
                 </Input>
                 <input className={props.darkMode ? "searchbar" : "searchbar light"} onChange={(e) => userSearch(e)} id="search" type="text" placeholder="Search..." autoComplete="off" />
             </Form>
-            {postMapper()}
+            {postMapper(filteredPosts, 'interests', props.darkMode)}
         </div>
     )
 }
