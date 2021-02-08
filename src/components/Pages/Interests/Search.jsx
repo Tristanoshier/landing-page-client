@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Input, Form } from 'reactstrap';
 import postMapper from '../../Shared/PostMapper';
 
-export const Search = (props) => {
+export const Search = (props) => { 
     const [filteredPosts, setFilteredPosts] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [topic, setTopic] = useState('');
@@ -11,15 +11,10 @@ export const Search = (props) => {
 
     useEffect(() => {
         const filterSearch = () => {
-            if (topic === 'music') {
-                setFilteredPosts(props.musicPosts);
-            } else if (topic === 'movies') {
-                setFilteredPosts(props.moviePosts);
-            } else if (topic === 'programming') {
-                setFilteredPosts(props.programmingPosts);
-            } else if (topic === '') {
-                setFilteredPosts(props.posts);
-            }
+            topic === 'music' ? setFilteredPosts(props.musicPosts) : 
+            topic === 'movies' ? setFilteredPosts(props.moviePosts) :
+            topic === 'programming' ? setFilteredPosts(props.programmingPosts)
+            : setFilteredPosts(props.posts);
 
             let filtered;
             if (topic === 'music') {
@@ -70,14 +65,14 @@ export const Search = (props) => {
 
     return (
         <div>
-            <Form className="search-form" onSubmit={handleSubmit}>
-                <Input className={props.darkMode ? "topic-filter" : "topic-filter light"} type='select' name="topic" value={topic} onChange={(e) => chooseTopic(e)} >
-                    <option value="">All</option>
-                    <option value="programming">Programming</option>
-                    <option value="music">Music</option>
-                    <option value="movies">Movies</option>
+            <Form className='search-form' onSubmit={handleSubmit}>
+                <Input className={props.darkMode ? 'topic-filter' : 'topic-filter light'} type='select' name='topic' value={topic} onChange={(e) => chooseTopic(e)} >
+                    <option value=''>All</option>
+                    <option value='programming'>Programming</option>
+                    <option value='music'>Music</option>
+                    <option value='movies'>Movies</option>
                 </Input>
-                <input className={props.darkMode ? "searchbar" : "searchbar light"} onChange={(e) => userSearch(e)} id="search" type="text" placeholder="Search..." autoComplete="off" />
+                <input className={props.darkMode ? 'searchbar' : 'searchbar light'} onChange={(e) => userSearch(e)} id='search' type='text' placeholder='Search...' autoComplete='off' />
             </Form>
             {postMapper(filteredPosts, 'interests', props.darkMode)}
         </div>
