@@ -5,14 +5,16 @@ import backToTop from '../Shared/BackToTop';
 
 const FocusedBlog = (props) => {
     const [redirect, setRedirect] = useState(false);
-    let post = props.location.post;
+    const post = props.location.post;
 
     const back = () => {
         setRedirect(true);
     }
 
-    if (redirect) {
+    if (redirect && post.topic !== 'blog') {
         return <Redirect to='/Interests' />
+    } else if (redirect && post.topic === 'blog') {
+        return <Redirect to="/Blog" />
     }
 
     const focusedBlogMapper = () => {
