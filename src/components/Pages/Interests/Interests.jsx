@@ -11,6 +11,7 @@ export const Interests = (props) => {
     const [musicPosts, setMusicPosts] = useState([]);
     const [moviePosts, setMoviePosts] = useState([]);
     const [programmingPosts, setProgrammingPosts] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const getPostsURL = `http://localhost:3001/site/interests`;
 
     useEffect(() => {
@@ -25,6 +26,7 @@ export const Interests = (props) => {
                 setMusicPosts(posts.filter(x => x.topic === 'music'));
                 setMoviePosts(posts.filter(x => x.topic === 'movies'));
                 setProgrammingPosts(posts.filter(x => x.topic === 'programming'));
+                setIsLoading(false);
             })
 
     }, [getPostsURL])
@@ -32,7 +34,7 @@ export const Interests = (props) => {
     const InterestCategoryTabs = () => (
         <Tabs className={props.colorMode('ant-tabs', 'ant-tabs light')} defaultActiveKey='1'>
             <TabPane tab='Recent' key='1'>
-                <Recent posts={posts} darkMode={props.darkMode} />
+                <Recent posts={posts} darkMode={props.darkMode} isLoading={isLoading} />
             </TabPane>
             <TabPane tab='Search' key='2'>
                 <Search
@@ -49,15 +51,18 @@ export const Interests = (props) => {
     );
 
     return (
-        <>
+        <div className="try-this">
             <div className='blog'>
                 <p id='main-header'>Interests</p>
                 <p className={props.colorMode('about-text-dark', 'about-text-light')}>
                     Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
             </p>
-                {InterestCategoryTabs()}
+                {isLoading ?
+                    <div className="loader"></div>
+                    : InterestCategoryTabs()}
             </div>
-            <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>
-        </>
+            {isLoading ? <></> :
+                <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>}
+        </div>
     )
 }

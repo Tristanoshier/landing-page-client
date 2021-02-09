@@ -1,9 +1,8 @@
-import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Main } from '../Pages/Main';
 import { Interests } from '../Pages/Interests/Interests';
-import Blog from '../Pages/Blog';
 import { Contact } from '../Pages/Contact';
+import Blog from '../Pages/Blog';
 import FocusedBlog from '../Pages/FocusedBlog';
 export const Routes = (props) => {
     return (

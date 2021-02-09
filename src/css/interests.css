@@ -11,7 +11,7 @@
 .ant-tabs-nav-list {
     display: flex;
     justify-content: center;
-    border-bottom: 1px var(--white) solid;
+    /* border-bottom: 1px var(--white) solid; */
     line-height: 2;
     margin-bottom: 40px;
 }

@@ -26,6 +26,8 @@
 
 html {
     overflow-x: hidden;
+    /* temp fix, shouldnt run into shifting ui issue once projects section is complete */
+    overflow-y: scroll;
     scroll-behavior: smooth;
 }
 

@@ -65,6 +65,21 @@
     transition: border-bottom 0.25s ease-out;
 }
 
+.loader {
+    border: 10px solid transparent;
+    border-top: 10px solid var(--gray);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+    margin: 10% 0 0 40%;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
 /* iPad Pro */
 @media(width: 1024px),
 (height: 1366px) {
@@ -117,5 +132,9 @@
 
     .back-to-top-btn.focused {
         margin-left: 25%;
+    }
+
+    .loader {
+        margin-left: 30%;
     }
 }

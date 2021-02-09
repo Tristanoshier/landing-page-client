@@ -104,6 +104,10 @@
     color: var(--blue);
 }
 
+.card-body.skeleton {
+    color: transparent;
+}
+
 
 
 /* Moto G4 and Galaxy S5 */

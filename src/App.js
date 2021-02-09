@@ -26,7 +26,7 @@ function App() {
 
   function getPrefColorScheme() {
     if (!window.matchMedia) return;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
 
   const colorMode = (darkClass, lightClass) => {
@@ -35,7 +35,7 @@ function App() {
 
 
   return (
-    <div className={darkMode ? "app-darkmode" : "app-lightmode"}>
+    <div className={colorMode('app-darkmode', 'app-lightmode')}>
         <Home darkMode={darkMode} setDarkMode={setDarkMode} colorMode={colorMode} />
     </div>
   );

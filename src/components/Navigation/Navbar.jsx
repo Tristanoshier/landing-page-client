@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink as RRNavLink, Link } from 'react-router-dom';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,7 +12,6 @@ const Navbar = (props) => {
     const navbarItems = ['Interests', 'Blog', 'Contact'];
     const linkedInURL = 'https://www.linkedin.com/in/tristan-oshier-678420196/';
     const githubURL = 'https://github.com/Tristanoshier';
-
 
     const classForMobile = (mobileDark, mobileLight, dark, light) => {
         return sidebar && props.darkMode ? mobileDark :
