@@ -3,10 +3,11 @@ export const Main = (props) => {
         <div className="main">
             <p className={props.darkMode ? "intro-darkmode" : "intro-lightmode"}><span id="welcome-header">Hey!</span><br />I'm Tristan,<br />a software engineer<br />specializing in<br />front-end.</p>
 
-            {/* svg mountains */}
+            {/* svg waves */}
             <svg className="abstract-mountains" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill={props.darkMode ? "#EE6B5C" : "#8C8C8C" } fillOpacity="1" d="M0,288L180,192L360,192L540,256L720,160L900,32L1080,96L1260,224L1440,32L1440,320L1260,320L1080,320L900,320L720,320L540,320L360,320L180,320L0,320Z"></path>
+                <path fill={props.darkMode ? "#EE6B5C" : "#1E3342"} fillOpacity="1" d="M0,288L26.7,282.7C53.3,277,107,267,160,234.7C213.3,203,267,149,320,138.7C373.3,128,427,160,480,181.3C533.3,203,587,213,640,234.7C693.3,256,747,288,800,261.3C853.3,235,907,149,960,101.3C1013.3,53,1067,43,1120,74.7C1173.3,107,1227,181,1280,181.3C1333.3,181,1387,107,1413,69.3L1440,32L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
             </svg>
+
         </div>
     )
 }
