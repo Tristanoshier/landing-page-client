@@ -10,8 +10,10 @@ const FocusedBlog = (props) => {
     const back = () => {
         setRedirect(true);
     }
-
-    if (redirect && post.topic !== 'blog') {
+    // temp fix for redirect bug
+    if (redirect && post === undefined) {
+        return <Redirect to='/Interests' />
+    } else if (redirect && post.topic !== 'blog') {
         return <Redirect to='/Interests' />
     } else if (redirect && post.topic === 'blog') {
         return <Redirect to='/Blog' />

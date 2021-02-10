@@ -36,7 +36,7 @@ export const Contact = (props) => {
             <input className={props.colorMode("email-box", "email-box light")} type="email" name="_replyto" placeholder="example@email.com" autoComplete="off" />
             <br />
             <br />
-            <label className={props.colorMode("contact-label, contact-label light")}>Message:</label>
+            <label className={props.colorMode("contact-label", "contact-label light")}>Message:</label>
             <br />
             <textarea className={props.colorMode("message-box", "message-box light")} type="text" name="message" autoComplete="off" placeholder="Enter message here" />
             <br />
