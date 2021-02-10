@@ -42,7 +42,7 @@ export const Projects = (props) => {
     }
 
     return (
-        <div class="projects">
+        <div className="projects">
            {projectMapper()}
            {props.isLoading || projects.length < 3 ? <></> :
                 <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>}

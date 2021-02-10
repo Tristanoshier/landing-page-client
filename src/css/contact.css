@@ -96,4 +96,27 @@
     border: none;
     background-color: var(--blue);
 }
+/* Surface Duo */
+@media(width: 540px) {
+    .contact {
+        width: 400px;
+    }
+}
+
+@media(max-width: 414px) {
+    .contact {
+        width: 270px;
+    }
+
+    .submit-btn {
+        margin-left: 32%;
+    }
+}
+
+/* Galaxy Fold */
+@media(width: 280px) {
+    .contact {
+        width: 200px;
+    }
+}
 
