@@ -2,4 +2,98 @@
     display: flex;
     margin: 0 10% 0 0;
     flex-direction: column;
+    font-family: var(--text);
+    width: 575px;
 }
+
+.contact-label {
+    font-size: 20px;
+    color: var(--white);
+}
+
+.contact-label.light {
+    color: var(--gray);
+}
+
+.email-box {
+    color: var(--white);
+    padding: 5px 5px 5px 10px;
+    background-color: #121e25;
+    height: 30px;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    border-radius: .5em .5em .5em .5em;
+    margin-top: 5px;
+}
+
+.email-box.light {
+    color: var(--darkergray);
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+}
+
+.message-box {
+    color: var(--white);
+    font-family: var(--text);
+    padding: 5px 5px 5px 10px;
+    background-color: #121e25;
+    width: 100%;
+    height: 200px;
+    font-size: 18px;
+    border: none;
+    border-radius: .5em .5em .5em .5em;
+    margin-top: 5px;
+}
+
+.message-box.light {
+    color: var(--darkergray);
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+}
+
+.email-box:focus {
+    outline: none;
+}
+
+.message-box:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: var(--gray);
+    font-family: var(--text);
+}
+
+.submit-btn {
+    font-family: var(--text);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: var(--blue);
+    border: 2px solid var(--white);
+    border-radius: .25em .25em .25em .25em;
+    margin-left: 40%;
+    width: 100px;
+    height: 30px;
+}
+
+.submit-btn.light {
+    color: var(--blue);
+    background-color: var(--white);
+    border: 2px solid var(--blue);
+}
+
+.submit-btn:hover {
+    border: none;
+    background-color: var(--orange);
+    transition: background-color 0.25s ease-out;
+    transition: border 0.25s ease-out;
+}
+
+.submit-btn.light:hover {
+    color: var(--white);
+    border: none;
+    background-color: var(--blue);
+}
+
