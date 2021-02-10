@@ -20,17 +20,17 @@ const FocusedBlog = (props) => {
     const focusedBlogMapper = () => {
         return (
             <div className='focused-blog'>
-                <span className={props.darkMode ? 'back-button' : 'back-button light'} onClick={() => back()}>Back</span>
+                <span className={props.colorMode('back-button','back-button light')} onClick={() => back()}>Back</span>
                 {
                     post !== undefined ?
-                        <div className={props.darkMode ? 'card' : 'card light'}>
-                            <div className={props.darkMode ? 'card-header' : 'card-header light'}>
-                                <p className={props.darkMode ? 'card-title' : 'card-title light'}>{post.title}</p>
-                                <p className={props.darkMode ? 'card-date' : 'card-date light'}>{convertDate(post.createdAt)}</p>
+                        <div className={props.colorMode('card', 'card light')}>
+                            <div className={props.colorMode('card-header','card-header light')}>
+                                <p className={props.colorMode('card-title','card-title light')}>{post.title}</p>
+                                <p className={props.colorMode('card-date','card-date light')}>{convertDate(post.createdAt)}</p>
                             </div>
                             <p className='card-body'>{post.body}</p>
                         </div> :
-                        <p className={props.darkMode ? 'about-text-dark' : 'about-text-light'}>whoops, looks like we lost the article. Click the back button to go back to the interests page.</p>
+                        <p className={props.colorMode('about-text-dark', 'about-text-light')}>whoops, looks like we lost the article. Click the back button to go back to the interests page.</p>
                 }
             </div>
         )
@@ -39,7 +39,7 @@ const FocusedBlog = (props) => {
     return (
         <>
             {focusedBlogMapper()}
-            <button className={props.darkMode ? 'back-to-top-btn focused' : 'back-to-top-btn focused light'} onClick={() => backToTop()}>Back to top</button>
+            <button className={props.colorMode('back-to-top-btn focused', 'back-to-top-btn focused light')} onClick={() => backToTop()}>Back to top</button>
         </>
     )
 

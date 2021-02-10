@@ -58,7 +58,7 @@ export const Interests = (props) => {
     );
 
     return (
-        <div className="try-this">
+        <div>
             <div className='blog'>
                 <p id='main-header'>Interests</p>
                 <p className={props.colorMode('about-text-dark', 'about-text-light')}>
