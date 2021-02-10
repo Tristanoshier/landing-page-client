@@ -30,7 +30,7 @@ const FocusedBlog = (props) => {
                             </div>
                             <p className='card-body'>{post.body}</p>
                         </div> :
-                        <p className={props.colorMode('about-text-dark', 'about-text-light')}>whoops, looks like we lost the article. Click the back button to go back to the interests page.</p>
+                        <p className={props.colorMode('page-text-dark', 'page-text-light')}>whoops, looks like we lost the article. Click the back button to go back to the interests page.</p>
                 }
             </div>
         )

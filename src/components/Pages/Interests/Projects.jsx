@@ -23,10 +23,10 @@ export const Projects = (props) => {
                 return (
                     <div key={index}>
                         <h2 className={props.darkMode ? "sub-heading-dark" : "sub-heading-light"}>- {project.title} -</h2>
-                        <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
+                        <p className={props.darkMode ? "page-text-dark" : "page-text-light"}>
                             {project.desc}
                         </p>
-                        <p className={props.darkMode ? "about-text-dark" : "about-text-light"}>
+                        <p className={props.darkMode ? "page-text-dark" : "page-text-light"}>
                             {project.link}
                         </p>
                     </div>
@@ -34,7 +34,7 @@ export const Projects = (props) => {
             })
         } else {
             return (
-                <h2 className={props.darkMode ? "about-text-dark" : "about-text-light"}>
+                <h2 className={props.darkMode ? "page-text-dark" : "page-text-light"}>
                     currently not working on any projects
                 </h2>
             )
