@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Input, Form } from 'reactstrap';
 import postMapper from '../../Shared/PostMapper';
+import backToTop from '../../Shared/BackToTop';
 
 export const Search = (props) => { 
     const [filteredPosts, setFilteredPosts] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [topic, setTopic] = useState('');
+    const [showBackToTop, setShowBackToTop] = useState(false);
 
     const handleSubmit = (e) => e.preventDefault();
 
@@ -51,9 +53,10 @@ export const Search = (props) => {
                 })
             }
             setFilteredPosts(filtered);
-        }
+            filteredPosts.length < 3 ? setShowBackToTop(false) : setShowBackToTop(true);
+        } 
         filterSearch();
-    }, [topic, searchTerm, props.musicPosts, props.moviePosts, props.posts, props.programmingPosts])
+    }, [topic, searchTerm, props.musicPosts, props.moviePosts, props.posts, props.programmingPosts, filteredPosts.length])
 
     const chooseTopic = (e) => {
         setTopic(e.target.value);
@@ -75,6 +78,8 @@ export const Search = (props) => {
                 <input className={props.darkMode ? 'searchbar' : 'searchbar light'} onChange={(e) => userSearch(e)} id='search' type='text' placeholder='Search...' autoComplete='off' />
             </Form>
             {postMapper(filteredPosts, 'interests', props.darkMode)}
+            {props.isLoading || !showBackToTop ? <></> :
+                <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>}
         </div>
     )
 }

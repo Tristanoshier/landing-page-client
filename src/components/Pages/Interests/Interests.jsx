@@ -3,7 +3,6 @@ import Tabs from 'antd/lib/tabs';
 import { Recent } from './Recent';
 import { Search } from './Search';
 import { Projects } from './Projects';
-import backToTop from '../../Shared/BackToTop';
 
 export const Interests = (props) => {
     const { TabPane } = Tabs;
@@ -34,7 +33,11 @@ export const Interests = (props) => {
     const InterestCategoryTabs = () => (
         <Tabs className={props.colorMode('ant-tabs', 'ant-tabs light')} defaultActiveKey='1'>
             <TabPane tab='Recent' key='1'>
-                <Recent posts={posts} darkMode={props.darkMode} isLoading={isLoading} />
+                <Recent 
+                    posts={posts} 
+                    darkMode={props.darkMode}
+                    colorMode={props.colorMode} 
+                    isLoading={isLoading} />
             </TabPane>
             <TabPane tab='Search' key='2'>
                 <Search
@@ -42,10 +45,14 @@ export const Interests = (props) => {
                     musicPosts={musicPosts}
                     moviePosts={moviePosts}
                     programmingPosts={programmingPosts}
-                    darkMode={props.darkMode} />
+                    darkMode={props.darkMode}
+                    colorMode={props.colorMode}
+                    isLoading={isLoading} />
             </TabPane>
             <TabPane tab='Projects' key='3'>
-                <Projects darkMode={props.darkMode} />
+                <Projects 
+                    darkMode={props.darkMode} 
+                    isLoading={isLoading} />
             </TabPane>
         </Tabs>
     );
@@ -61,8 +68,6 @@ export const Interests = (props) => {
                     <div className="loader"></div>
                     : InterestCategoryTabs()}
             </div>
-            {isLoading ? <></> :
-                <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>}
         </div>
     )
 }

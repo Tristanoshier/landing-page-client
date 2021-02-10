@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import backToTop from '../../Shared/BackToTop';
 
 export const Projects = (props) => {
     const [projects, setProjects] = useState([]);
@@ -34,15 +35,18 @@ export const Projects = (props) => {
         } else {
             return (
                 <h2 className={props.darkMode ? "about-text-dark" : "about-text-light"}>
-                    currently no projects
+                    currently not working on any projects
                 </h2>
             )
         }
     }
 
     return (
-        <div>
+        <div class="projects">
            {projectMapper()}
+           {props.isLoading || projects.length < 3 ? <></> :
+                <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>}
         </div>
+        
     )
 }

@@ -32,8 +32,8 @@ const Blog = (props) => {
                     <div className="loader"></div>
                     : postMapper(blogPosts, 'blog', props.darkMode)}
             </div>
-            {isLoading ? <></> :
-                <button className={props.darkMode ? 'back-to-top-btn' : 'back-to-top-btn light'} onClick={() => backToTop()}>Back to top</button>}
+            {props.isLoading || blogPosts.length < 3 ? <></> :
+                <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>}
         </>
 
     )

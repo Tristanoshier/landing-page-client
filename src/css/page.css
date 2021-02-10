@@ -65,6 +65,10 @@
     transition: border-bottom 0.25s ease-out;
 }
 
+.projects {
+    text-align: center;
+}
+
 .loader {
     border: 10px solid transparent;
     border-top: 10px solid var(--gray);
