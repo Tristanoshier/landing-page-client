@@ -5,7 +5,7 @@
 }
 
 .ant-tabs.light {
-    color: var(--gray);
+    color: var(--blue);
 }
 
 .ant-tabs-nav-list {
@@ -65,7 +65,7 @@
 
 .searchbar.light {
     background-color: var(--white);
-    border: 1px var(--gray) solid;
+    border: 1px var(--blue) solid;
     color: var(--gray);
 }
 
@@ -85,7 +85,7 @@
 }
 
 .topic-filter.light {
-    background-color: var(--gray);
+    background-color: var(--blue);
     color: var(--white);
 }
 

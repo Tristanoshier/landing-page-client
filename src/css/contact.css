@@ -30,7 +30,7 @@
 .email-box.light {
     color: var(--darkergray);
     background-color: var(--white);
-    border: 1px solid var(--gray);
+    border: 1px solid var(--blue);
 }
 
 .message-box {
@@ -49,7 +49,7 @@
 .message-box.light {
     color: var(--darkergray);
     background-color: var(--white);
-    border: 1px solid var(--gray);
+    border: 1px solid var(--blue);
 }
 
 .email-box:focus {
@@ -96,12 +96,26 @@
     border: none;
     background-color: var(--blue);
 }
+
+@media(max-width: 770px) {
+    .contact {
+        width: 500px;
+    }
+}
+
+@media(max-width: 670px) {
+    .contact {
+        width: 400px;
+    }
+}
+
 /* Surface Duo */
 @media(width: 540px) {
     .contact {
         width: 400px;
     }
 }
+
 
 @media(max-width: 414px) {
     .contact {

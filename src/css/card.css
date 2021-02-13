@@ -24,7 +24,7 @@
 }
 
 .card-header.light {
-    background-color: var(--gray);
+    background-color: var(--blue);
 }
 
 .card-title {
@@ -59,7 +59,7 @@
 }
 
 .interest-card-header.light {
-    background-color: var(--gray);
+    background-color: var(--blue);
 }
 
 .top-row {
@@ -76,7 +76,7 @@
 }
 
 .card-topic.light {
-    background-color: var(--darkergray);
+    background-color: #121e25;
     color: var(--white);
 }
 

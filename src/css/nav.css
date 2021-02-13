@@ -462,6 +462,19 @@
     }
 }
 
+@media(max-width: 560px) {
+    .mobile-home-link-darkmode {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 450px) {
+    .mobile-home-link-darkmode {
+        font-size: 18px;
+    }
+}
+
+
 /* Surface Duo */
 @media(width: 540px) {
 
