@@ -26,7 +26,7 @@
 
 html {
     overflow-x: hidden;
-    /* temp fix, shouldnt run into shifting ui issue once projects section is complete */
+    /* temp fix, can remove once every section has content on deployed site */
     overflow-y: scroll;
     scroll-behavior: smooth;
 }

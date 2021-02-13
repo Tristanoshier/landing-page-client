@@ -52,7 +52,7 @@ export const Interests = (props) => {
             <TabPane tab='Projects' key='3'>
                 <Projects 
                     darkMode={props.darkMode} 
-                    isLoading={isLoading} />
+                />
             </TabPane>
         </Tabs>
     );

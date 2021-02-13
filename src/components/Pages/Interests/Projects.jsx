@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import backToTop from '../../Shared/BackToTop';
+import convertDate from '../../Shared/DateConverter';
 
 export const Projects = (props) => {
     const [projects, setProjects] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
 
     useEffect(() => {
         fetch(`http://localhost:3001/site/projects`, {
@@ -13,6 +16,7 @@ export const Projects = (props) => {
         }).then((res) => res.json())
             .then((projects) => {
                 setProjects(projects);
+                setIsLoading(false);
             })
     }, [])
 
@@ -21,14 +25,16 @@ export const Projects = (props) => {
         if (projects.length > 0) {
             return projects.map((project, index) => {
                 return (
-                    <div key={index}>
-                        <h2 className={props.darkMode ? "sub-heading-dark" : "sub-heading-light"}>- {project.title} -</h2>
-                        <p className={props.darkMode ? "page-text-dark" : "page-text-light"}>
-                            {project.desc}
-                        </p>
-                        <p className={props.darkMode ? "page-text-dark" : "page-text-light"}>
-                            {project.link}
-                        </p>
+                    <div className={props.darkMode ? 'card' : 'card light'} key={index}>
+                        <div className={props.darkMode ? 'interest-card-header' : 'interest-card-header light'}>
+                            <span className='top-row'>
+                                <p className={props.darkMode ? 'card-title' : 'card-title light'}>{project.title}</p>
+                                <p className={props.darkMode ? 'card-date' : 'card-date light'}>{convertDate(project.createdAt)}</p>
+                            </span>
+                            <span className={props.darkMode ? 'card-topic' : 'card-topic light'}>{project.languages}</span>
+                        </div>
+                        <p className='card-body'>{project.description} <a href={project.link} className={props.darkMode ? 'card-link' : 'card-link light'} rel="noreferrer" target="_blank">Github Repo</a></p>
+                           
                     </div>
                 )
             })
@@ -42,11 +48,13 @@ export const Projects = (props) => {
     }
 
     return (
-        <div className="projects">
-           {projectMapper()}
-           {props.isLoading || projects.length < 3 ? <></> :
+        <div>
+            {isLoading ?
+                    <div className="loader"></div>
+                    : projectMapper()}
+            {props.isLoading || projects.length < 3 ? <></> :
                 <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>}
         </div>
-        
+
     )
 }
