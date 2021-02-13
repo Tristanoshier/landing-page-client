@@ -112,11 +112,62 @@
         margin-left: 32%;
     }
 }
+/* Pixel 2 & Pixel XL */
+@media(width: 411px) {
+    .contact {
+        width: 315px;
+    }
+
+    .submit-btn {
+        margin-left: 35%;
+    }
+}
+
+/* iPhone 5/SE */
+@media(width: 320px) {
+
+    .contact {
+        width: 240px;
+    }
+
+    .submit-btn {
+        margin-left: 30%;
+    }
+}
+
+/* iPhone 6/7/8/X */
+@media(width: 375px) {
+
+    .contact {
+        width: 285px;
+    }
+
+    .submit-btn {
+        margin-left: 33%;
+    }
+}
+
+
+/* iPhone 6/7/8/ Plus */
+@media(width: 414px) {
+
+    .contact {
+        width: 315px;
+    }
+
+    .submit-btn {
+        margin-left: 35%;
+    }
+}
 
 /* Galaxy Fold */
 @media(width: 280px) {
     .contact {
-        width: 200px;
+        width: 205px;
+    }
+
+    .submit-btn {
+        margin-left: 28%;
     }
 }
 
