@@ -4,12 +4,15 @@ import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ScrollToTop from './components/Navigation/ScrollToTop';
 
 export const history = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={history}>
-      <App />
+    <ScrollToTop>
+     <App />
+    </ScrollToTop>
   </Router>,
   document.getElementById('root')
 );

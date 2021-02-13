@@ -126,6 +126,10 @@ body {
 /* Surface Duo */
 @media(width: 540px) {
 
+    html {
+        scroll-behavior: initial;
+    }
+
     #main-header {
         font-size: 60px;
     }
@@ -147,6 +151,10 @@ body {
 
 /* Moto G4 & Galaxy S5 */
 @media(width: 360px) {
+
+    html {
+        scroll-behavior: initial;
+    }
 
     #main-header {
         font-size: 60px;
@@ -170,6 +178,10 @@ body {
 /* Pixel 2 & Pixel XL */
 @media(width: 411px) {
 
+    html {
+        scroll-behavior: initial;
+    }
+
     #main-header {
         font-size: 60px;
     }
@@ -191,6 +203,10 @@ body {
 
 /* iPhone 5/SE */
 @media(width: 320px) {
+
+    html {
+        scroll-behavior: initial;
+    }
 
     #main-header {
         font-size: 60px;
@@ -214,6 +230,10 @@ body {
 /* iPhone 6/7/8/X */
 @media(width: 375px) {
 
+    html {
+        scroll-behavior: initial;
+    }
+
     #main-header {
         font-size: 60px;
     }
@@ -236,6 +256,10 @@ body {
 /* iPhone 6/7/8/ Plus */
 @media(width: 414px) {
 
+    html {
+        scroll-behavior: initial;
+    }
+
     #main-header {
         font-size: 60px;
     }
@@ -257,6 +281,10 @@ body {
 
 /* Galaxy Fold */
 @media(width: 280px) {
+
+    html {
+        scroll-behavior: initial;
+    }
 
     #main-header {
         font-size: 50px;
