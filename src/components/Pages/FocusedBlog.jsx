@@ -1,22 +1,13 @@
-import { useState } from 'react';
-import { Redirect, withRouter } from 'react-router-dom'
+import { withRouter, useHistory } from 'react-router-dom'
 import convertDate from '../Shared/DateConverter';
 import backToTop from '../Shared/BackToTop';
 
 const FocusedBlog = (props) => {
-    const [redirect, setRedirect] = useState(false);
+    const history = useHistory();
     const post = props.location.post;
 
     const back = () => {
-        setRedirect(true);
-    }
-    // temp fix for redirect bug
-    if (redirect && post === undefined) {
-        return <Redirect to='/Interests' />
-    } else if (redirect && post.topic !== 'blog') {
-        return <Redirect to='/Interests' />
-    } else if (redirect && post.topic === 'blog') {
-        return <Redirect to='/Blog' />
+       history.goBack();
     }
 
     const focusedBlogMapper = () => {
