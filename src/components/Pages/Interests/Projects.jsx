@@ -6,7 +6,6 @@ export const Projects = (props) => {
     const [projects, setProjects] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-
     useEffect(() => {
         fetch(`http://localhost:3001/site/projects`, {
             method: 'GET',
@@ -19,7 +18,6 @@ export const Projects = (props) => {
                 setIsLoading(false);
             })
     }, [])
-
 
     const projectMapper = () => {
         if (projects.length > 0) {

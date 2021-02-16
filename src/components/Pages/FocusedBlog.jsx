@@ -8,22 +8,23 @@ const FocusedBlog = (props) => {
 
     const back = () => {
        history.goBack();
+       localStorage.clear();
     }
 
     const focusedBlogMapper = () => {
+        let storedPost = JSON.parse(localStorage.getItem('post'));
+        let focusedPost = post === undefined ? storedPost : post;
         return (
             <div className='focused-blog'>
                 <span className={props.colorMode('back-button','back-button light')} onClick={() => back()}>Back</span>
                 {
-                    post !== undefined ?
                         <div className={props.colorMode('card', 'card light')}>
                             <div className={props.colorMode('card-header','card-header light')}>
-                                <p className={props.colorMode('card-title','card-title light')}>{post.title}</p>
-                                <p className={props.colorMode('card-date','card-date light')}>{convertDate(post.createdAt)}</p>
+                                <p className={props.colorMode('card-title','card-title light')}>{focusedPost.title}</p>
+                                <p className={props.colorMode('card-date','card-date light')}>{convertDate(focusedPost.createdAt)}</p>
                             </div>
-                            <p className='card-body'>{post.body}</p>
-                        </div> :
-                        <p className={props.colorMode('page-text-dark', 'page-text-light')}>whoops, looks like we lost the article. Click the back button to go back to the interests page.</p>
+                            <p className='card-body'>{focusedPost.body}</p>
+                        </div> 
                 }
             </div>
         )

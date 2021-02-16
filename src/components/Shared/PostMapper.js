@@ -22,9 +22,15 @@ const interestHeader = (title, date, topic, darkMode) => {
     )
 }
 
+const savePostInLocalStorage = (post) => {
+    localStorage.setItem('post', JSON.stringify(post))
+}
+
 const postMapper = (posts, type, darkMode) => {
+    
     if (posts.length > 0) {
         return posts.map((post, index) => {
+           
             return (
                 <div className={darkMode ? 'card' : 'card light'} key={index}>
                     {
@@ -33,7 +39,7 @@ const postMapper = (posts, type, darkMode) => {
                     }
                     {
                         post.body.length > 300 ?
-                            <p className='card-body'>{post.body.substr(1, 300)}. . . <Link className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
+                            <p className='card-body'>{post.body.substr(1, 300)}. . . <Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
                             : <p className='card-body'>{post.body}</p>
                     }
                 </div>
