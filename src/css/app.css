@@ -7,7 +7,6 @@
 @import './colorMode.css';
 @import './card.css';
 
-
 /* font imports */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Playfair+Display&display=swap');
 
@@ -36,16 +35,14 @@ body {
     margin: 0;
 }
 
-.app-darkmode {
+.app {
     background-color: var(--blue);
     transition: background-color 0.25s ease-out;
     min-height: 100vh;
 }
 
-.app-lightmode {
+.app.light {
     background-color: var(--white);
-    transition: background-color 0.25s ease-out;
-    min-height: 100vh;
 }
 
 .home {
@@ -79,12 +76,7 @@ body {
         margin: 0 0 0 0;
     }
 
-    .app-darkmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-
-    .app-lightmode {
+    .app {
         min-height: 100vh;
         min-width: 100vw;
     }
@@ -113,12 +105,7 @@ body {
         margin: 0 0 0 0;
     }
 
-    .app-darkmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-
-    .app-lightmode {
+    .app {
         min-height: 100vh;
         min-width: 100vw;
     }
@@ -139,19 +126,14 @@ body {
         margin: 0 0 0 0;
     }
 
-    .app-darkmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-
-    .app-lightmode {
+    .app {
         min-height: 100vh;
         min-width: 100vw;
     }
 }
 
-/* Moto G4 & Galaxy S5 */
-@media(width: 360px) {
+/* phones */
+@media(max-width: 414px) {
 
     html {
         scroll-behavior: initial;
@@ -165,116 +147,7 @@ body {
         margin: 0 0 0 0;
     }
 
-    .app-darkmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-
-    .app-lightmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-}
-
-/* Pixel 2 & Pixel XL */
-@media(width: 411px) {
-
-    html {
-        scroll-behavior: initial;
-    }
-
-    #main-header {
-        font-size: 60px;
-    }
-
-    .home {
-        margin: 0 0 0 0;
-    }
-
-    .app-darkmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-
-    .app-lightmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-}
-
-/* iPhone 5/SE */
-@media(width: 320px) {
-
-    html {
-        scroll-behavior: initial;
-    }
-
-    #main-header {
-        font-size: 60px;
-    }
-
-    .home {
-        margin: 0 0 0 0;
-    }
-
-    .app-darkmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-
-    .app-lightmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-}
-
-/* iPhone 6/7/8/X */
-@media(width: 375px) {
-
-    html {
-        scroll-behavior: initial;
-    }
-
-    #main-header {
-        font-size: 60px;
-    }
-
-    .home {
-        margin: 0 0 0 0;
-    }
-
-    .app-darkmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-
-    .app-lightmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-}
-
-/* iPhone 6/7/8/ Plus */
-@media(width: 414px) {
-
-    html {
-        scroll-behavior: initial;
-    }
-
-    #main-header {
-        font-size: 60px;
-    }
-
-    .home {
-        margin: 0 0 0 0;
-    }
-
-    .app-darkmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-
-    .app-lightmode {
+    .app {
         min-height: 100vh;
         min-width: 100vw;
     }
@@ -283,25 +156,7 @@ body {
 /* Galaxy Fold */
 @media(width: 280px) {
 
-    html {
-        scroll-behavior: initial;
-    }
-
     #main-header {
         font-size: 50px;
-    }
-
-    .home {
-        margin: 0 0 0 0;
-    }
-
-    .app-darkmode {
-        min-height: 100vh;
-        min-width: 100vw;
-    }
-
-    .app-lightmode {
-        min-height: 100vh;
-        min-width: 100vw;
     }
 }

@@ -27,10 +27,8 @@ const savePostInLocalStorage = (post) => {
 }
 
 const postMapper = (posts, type, darkMode) => {
-    
     if (posts.length > 0) {
         return posts.map((post, index) => {
-           
             return (
                 <div className={darkMode ? 'card' : 'card light'} key={index}>
                     {

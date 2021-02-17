@@ -35,7 +35,7 @@ function App() {
 
 
   return (
-    <div className={colorMode('app-darkmode', 'app-lightmode')}>
+    <div className={colorMode('app', 'app light')}>
         <Home darkMode={darkMode} setDarkMode={setDarkMode} colorMode={colorMode} />
     </div>
   );
