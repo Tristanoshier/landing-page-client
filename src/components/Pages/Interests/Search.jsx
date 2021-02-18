@@ -12,20 +12,23 @@ export const Search = (props) => {
     const handleSubmit = (e) => e.preventDefault();
 
     useEffect(() => {
-
-        const checkName = (name, str) => {
-            var pattern = str.split("").map((x)=>{
-                return `(?=.*${x})`
+        /* in case user mistypes first four letters */
+        const checkTitle = (title, searchTerm) => {
+            let pattern = searchTerm.split("").map((letter)=>{
+                return `(?=.*${letter})`
             }).join("");
-            var regex = new RegExp(`${pattern}`, "g")
-            return name.match(regex);
+            let regex = new RegExp(`${pattern}`, "g")
+            return title.match(regex);
         }
 
         const result = post => {
             let firstLetters = post.title.substring(0, 4).toLowerCase();
-            return post.title.toLowerCase().includes(searchTerm.toLowerCase().trim()) 
-            || checkName(firstLetters, searchTerm.toLowerCase()) 
-            || searchTerm.toLowerCase().includes(post.title.toLowerCase().trim());
+            let title = post.title.toLowerCase().trim();
+            let entry = searchTerm.toLowerCase().trim();
+
+            return title.includes(entry) 
+            || checkTitle(firstLetters, entry) 
+            || entry.includes(title);
         }
         
         const filterSearch = () => {
@@ -37,35 +40,23 @@ export const Search = (props) => {
             let filtered;
             if (topic === 'music') {
                 filtered = props.musicPosts.filter(post => {
-                    if (searchTerm === '') {
-                        return props.musicPosts;
-                    } else {
-                        return result(post);
-                    }
+                    let results = (searchTerm === '') ? props.musicPosts : result(post);
+                    return results;
                 })
             } else if (topic === 'movies') {
                 filtered = props.moviePosts.filter(post => {
-                    if (searchTerm === '') {
-                        return props.moviePosts;
-                    } else {
-                        return result(post);
-                    }
+                    let results = (searchTerm === '') ? props.moviePosts : result(post);
+                    return results;
                 })
             } else if (topic === 'programming') {
                 filtered = props.programmingPosts.filter(post => {
-                    if (searchTerm === '') {
-                        return props.programmingPosts;
-                    } else {
-                        return result(post);
-                    }
+                    let results = (searchTerm === '') ? props.programmingPosts : result(post);
+                    return results;
                 })
             } else if (topic === '') {
                 filtered = props.posts.filter(post => {
-                    if (searchTerm === '') {
-                        return props.posts;
-                    } else {
-                        return result(post);
-                    }
+                    let results = (searchTerm === '') ? props.posts : result(post);
+                    return results;
                 })
             }
             setFilteredPosts(filtered);
