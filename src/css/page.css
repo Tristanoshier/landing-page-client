@@ -15,18 +15,17 @@
     font-family: var(--main);
     font-size: 34px;
 }
-
-.page-text-light {
-    font-size: 22px;
-    color: var(--darkergray);
-    font-family: var(--text);
-}
-
-.page-text-dark {
+.page-text {
     font-size: 22px;
     color: var(--white);
     font-family: var(--text);
 }
+
+.page-text.light {
+     color: var(--darkergray);
+}
+
+
 
 .back-to-top-btn {
     background: none;
@@ -88,11 +87,11 @@
 @media(width: 1024px),
 (height: 1366px) {
 
-    .page-text-light {
+    .light {
         font-size: 35px;
     }
     
-    .page-text-dark {
+    .page-text {
         font-size: 35px;
     }
 
@@ -109,11 +108,11 @@
 @media(width: 768px),
 (height: 1024px) {
 
-    .page-text-light {
+    .light {
         font-size: 30px;
     }
     
-    .page-text-dark {
+    .page-text {
         font-size: 30px;
     }
 
@@ -127,7 +126,7 @@
 }
 
 @media(max-width: 414px) {
-    .page-text-dark {
+    .page-text {
         font-size: 20px;
     }
     .back-to-top-btn {

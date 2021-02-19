@@ -45,7 +45,7 @@ const postMapper = (posts, type, darkMode) => {
         })
     } else {
         return (
-            <h2 className={darkMode ? 'page-text-dark' : 'page-text-light'}>
+            <h2 className={darkMode ? 'page-text' : 'page-text light'}>
                 no results found
             </h2>
         )

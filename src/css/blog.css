@@ -61,44 +61,8 @@
     }
 }
 
-
-/* Moto G4 and Galaxy S5 */
-@media(width: 360px) {
-    .focused-blog {
-        margin: 20% 10% 0 0;
-    }
-}
-
-/* Pixel 2 & Pixel XL */
-@media(width: 411px) {
-    .focused-blog {
-        margin: 20% 10% 0 0;
-    }
-}
-
-/* iPhone 5/SE */
-@media(width: 320px) {
-    .focused-blog {
-        margin: 20% 10% 0 0;
-    }
-}
-
-/* iPhone 6/7/8/X */
-@media(width: 375px) {
-    .focused-blog {
-        margin: 20% 10% 0 0;
-    }
-}
-
-/* iPhone 6/7/8/ Plus */
-@media(width: 414px) {
-    .focused-blog {
-        margin: 20% 10% 0 0;
-    }
-}
-
-/* Galaxy Fold */
-@media(width: 280px) {
+/* phones */
+@media(max-width: 414px) {
     .focused-blog {
         margin: 20% 10% 0 0;
     }

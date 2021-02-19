@@ -38,7 +38,7 @@ export const Projects = (props) => {
             })
         } else {
             return (
-                <h2 className={props.darkMode ? "page-text-dark" : "page-text-light"}>
+                <h2 className={props.darkMode ? "page-text" : "page-text light"}>
                     currently not working on any projects
                 </h2>
             )
