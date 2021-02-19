@@ -4,7 +4,6 @@
     flex-direction: column;
 }
 
-
 #welcome-header {
     font-size: 100px;
     color: var(--orange);
@@ -13,15 +12,7 @@
     margin-bottom: 0;
 }
 
-.intro-lightmode {
-    font-size: 40px;
-    color: var(--darkergray);
-    font-weight: bold;
-    font-family: var(--text);
-    min-width: 400px;
-}
-
-.intro-darkmode {
+.intro {
     font-size: 40px;
     color: var(--white);
     font-weight: bold;
@@ -29,7 +20,11 @@
     min-width: 400px;
 }
 
-.abstract-mountains {
+.intro.light {
+    color: var(--darkergray);
+}
+
+.waves {
     position: fixed;
     bottom: 0;
     left: 235px;
@@ -45,18 +40,13 @@
         font-size: 90px;
     }
 
-    .intro-lightmode {
+    .intro {
         font-size: 35px;
         min-width: 300px;
     }
 
-    .intro-darkmode {
-        font-size: 35px;
-        min-width: 300px;
-    }
-
-    .abstract-mountains {
-        left: 0px;
+    .waves {
+        left: 0;
     }
 }
 
@@ -71,16 +61,12 @@
         font-size: 120px;
     }
 
-    .intro-lightmode {
+    .intro {
         font-size: 50px;
         min-width: 500px;
     }
 
-    .intro-darkmode {
-        font-size: 50px;
-        min-width: 500px;
-    }
-    .abstract-mountains {
+    .waves {
         left: 268px;
     }
 }
@@ -95,18 +81,9 @@
         font-size: 70px;
     }
 
-    .intro-lightmode {
+    .intro {
         font-size: 35px;
         min-width: 300px;
-    }
-
-    .intro-darkmode {
-        font-size: 35px;
-        min-width: 300px;
-    }
-
-    .abstract-mountains {
-        left: 0px;
     }
 }
 
@@ -120,20 +97,10 @@
         font-size: 70px;
     }
 
-    .intro-lightmode {
+    .intro {
         font-size: 35px;
         min-width: 300px;
-    }
-
-    .intro-darkmode {
-        font-size: 35px;
-        min-width: 300px;
-    }
-
-    .abstract-mountains {
-        left: 0px;
-    }
-    
+    }  
 }
 
 /* Moto G4 & Galaxy S5 */
@@ -146,20 +113,10 @@
         font-size: 60px;
     }
 
-    .intro-lightmode {
+    .intro {
         font-size: 30px;
         min-width: 300px;
-    }
-
-    .intro-darkmode {
-        font-size: 30px;
-        min-width: 300px;
-    }
-
-    .abstract-mountains {
-        left: 0px;
-    }
-    
+    }  
 }
 
 /* Pixel 2 & Pixel XL */
@@ -172,20 +129,10 @@
         font-size: 70px;
     }
 
-    .intro-lightmode {
+    .intro {
         font-size: 35px;
         min-width: 300px;
-    }
-
-    .intro-darkmode {
-        font-size: 35px;
-        min-width: 300px;
-    }
-
-    .abstract-mountains {
-        left: 0px;
-    }
-    
+    } 
 }
 
 /* iPhone 5/SE */
@@ -198,19 +145,10 @@
         font-size: 60px;
     }
 
-    .intro-lightmode {
+    .intro {
         font-size: 30px;
         min-width: 200px;
     }
-
-    .intro-darkmode {
-        font-size: 30px;
-        min-width: 200px;
-    }
-
-    .abstract-mountains {
-        left: 0px;
-    }  
 }
 
 /* iPhone 6/7/8/X */
@@ -223,20 +161,10 @@
         font-size: 70px;
     }
 
-    .intro-lightmode {
+    .intro {
         font-size: 35px;
         min-width: 300px;
-    }
-
-    .intro-darkmode {
-        font-size: 35px;
-        min-width: 300px;
-    }
-
-    .abstract-mountains {
-        left: 0;
-    }
-    
+    }  
 }
 
 /* iPhone 6/7/8/ Plus */
@@ -249,20 +177,10 @@
         font-size: 70px;
     }
 
-    .intro-lightmode {
+    .intro {
         font-size: 35px;
         min-width: 300px;
-    }
-
-    .intro-darkmode {
-        font-size: 35px;
-        min-width: 300px;
-    }
-
-    .abstract-mountains {
-        left: 0;
-    }
-    
+    }  
 }
 
 /* Galaxy Fold */
@@ -275,17 +193,8 @@
         font-size: 50px;
     }
 
-    .intro-lightmode {
+    .intro {
         font-size: 25px;
         min-width: 200px;
     }
-
-    .intro-darkmode {
-        font-size: 25px;
-        min-width: 200px;
-    }
-
-    .abstract-mountains {
-        left: 0px;
-    }  
 }
