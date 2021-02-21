@@ -28,7 +28,7 @@ const Navbar = (props) => {
                         activeClassName={props.colorMode('active', 'active light')}
                         tag={RRNavLink}
                         onClick={openSidebar}
-                        className={props.colorMode('mobile-home-link', 'mobile-home-link light')}
+                        className={props.colorMode('mobile-home-link-darkmode', 'mobile-home-link-lightmode')}
                         to='/'>Tristan Oshier
                         </NavLink>
                 </NavItem>
@@ -51,7 +51,7 @@ const Navbar = (props) => {
                         activeClassName={props.colorMode('active', 'active light')}
                         onClick={openSidebar}
                         tag={RRNavLink}
-                        className={props.colorMode('nav-link-darkmode', 'nav-link-lightmode')}
+                        className={props.colorMode('navbar-link', 'navbar-link light')}
                         to={`/${name}`}>{name}
                     </NavLink>
                 </NavItem>
@@ -62,12 +62,12 @@ const Navbar = (props) => {
     const socialMediaSection = () => {
         return (
             <div className='social-media'>
-                <li><a className={props.colorMode('social-link-dark', 'social-link-light')}
+                <li><a className={props.colorMode('social-link', 'social-link light')}
                     href={linkedInURL}
                     target='_linkedin' >
                     <FontAwesomeIcon icon={faLinkedin} size='2x' />
                 </a></li>
-                <li><a className={props.colorMode('social-link-dark', 'social-link-light')}
+                <li><a className={props.colorMode('social-link', 'social-link light')}
                     href={githubURL}
                     target='_github' ><FontAwesomeIcon
                         icon={faGithubSquare} size='2x' />
@@ -95,7 +95,7 @@ const Navbar = (props) => {
     }
 
     const copyright = () => {
-        return <p className={props.colorMode('copyright-dark', 'copyright-light')}>© Tristan Oshier 2021</p>
+        return <p className={props.colorMode('copyright', 'copyright light')}>© Tristan Oshier 2021</p>
     }
 
     const hamburger = () => {
