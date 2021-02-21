@@ -25,10 +25,10 @@ const Navbar = (props) => {
             <span className='mobile-main-nav-section'>
                 <NavItem className='nav-item'>
                     <NavLink
-                        activeClassName={props.colorMode('active-dark', 'active-light')}
+                        activeClassName={props.colorMode('active', 'active light')}
                         tag={RRNavLink}
                         onClick={openSidebar}
-                        className={props.colorMode('mobile-home-link-darkmode', 'mobile-home-link-lightmode')}
+                        className={props.colorMode('mobile-home-link', 'mobile-home-link light')}
                         to='/'>Tristan Oshier
                         </NavLink>
                 </NavItem>
@@ -48,7 +48,7 @@ const Navbar = (props) => {
             return (
                 <NavItem className='nav-item' key={index}>
                     <NavLink
-                        activeClassName={props.colorMode('active-dark', 'active-light')}
+                        activeClassName={props.colorMode('active', 'active light')}
                         onClick={openSidebar}
                         tag={RRNavLink}
                         className={props.colorMode('nav-link-darkmode', 'nav-link-lightmode')}
