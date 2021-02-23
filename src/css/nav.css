@@ -302,24 +302,6 @@
         border-right: none;
     }
 
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 3%;
-        left: 4%;
-        background: none;
-        color: var(--white);
-        border: none;
-    }
-
-    .hamburger.light {
-        color: var(--blue);
-    }
-
-    .hamburger.active {
-        display: none;
-    }
-
     .nav-dark.active {
         left: 0;
         padding-left: 20px;
@@ -396,7 +378,6 @@
         margin-top: 90px;
     }
 
-
     .mobile-home-link-darkmode {
         display: block;
         color: var(--white);
@@ -426,7 +407,6 @@
     }
 }
 
-
 /* Surface Duo */
 @media(width: 540px) {
 
@@ -450,24 +430,6 @@
 
     .nav-items-section {
         border-right: none;
-    }
-
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 3%;
-        left: 4%;
-        background: none;
-        color: var(--white);
-        border: none;
-    }
-
-    .hamburger.light {
-        color: var(--blue);
-    }
-
-    .hamburger.active {
-        display: none;
     }
 
     .nav-dark.active {
@@ -586,24 +548,6 @@
 
     .nav-items-section {
         border-right: none;
-    }
-
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 3%;
-        left: 4%;
-        background: none;
-        color: var(--white);
-        border: none;
-    }
-
-    .hamburger.light {
-        color: var(--blue);
-    }
-
-    .hamburger.active {
-        display: none;
     }
 
     .nav-dark.active {
@@ -725,24 +669,6 @@
         border-right: none;
     }
 
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 3%;
-        left: 4%;
-        background: none;
-        color: var(--white);
-        border: none;
-    }
-
-    .hamburger.light {
-        color: var(--blue);
-    }
-
-    .hamburger.active {
-        display: none;
-    }
-
     .nav-dark.active {
         left: 0;
         padding-left: 20px;
@@ -860,24 +786,6 @@
 
     .nav-items-section {
         border-right: none;
-    }
-
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 3%;
-        left: 4%;
-        background: none;
-        color: var(--white);
-        border: none;
-    }
-
-    .hamburger.light {
-        color: var(--blue);
-    }
-
-    .hamburger.active {
-        display: none;
     }
 
     .nav-dark.active {
@@ -999,24 +907,6 @@
         border-right: none;
     }
 
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 3%;
-        left: 4%;
-        background: none;
-        color: var(--white);
-        border: none;
-    }
-
-    .hamburger.light {
-        color: var(--blue);
-    }
-
-    .hamburger.active {
-        display: none;
-    }
-
     .nav-dark.active {
         left: 0;
         padding-left: 20px;
@@ -1136,24 +1026,6 @@
         border-right: none;
     }
 
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 3%;
-        left: 4%;
-        background: none;
-        color: var(--white);
-        border: none;
-    }
-
-    .hamburger.light {
-        color: var(--blue);
-    }
-
-    .hamburger.active {
-        display: none;
-    }
-
     .nav-dark.active {
         left: 0;
         padding-left: 20px;
@@ -1269,27 +1141,8 @@
         margin-top: 0;
     }
 
-
     .nav-items-section {
         border-right: none;
-    }
-
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 3%;
-        left: 4%;
-        background: none;
-        color: var(--white);
-        border: none;
-    }
-
-    .hamburger.light {
-        color: var(--blue);
-    }
-
-    .hamburger.active {
-        display: none;
     }
 
     .nav-dark.active {
@@ -1307,7 +1160,6 @@
         min-width: 50%;
         border-right: 1px solid var(--gray);
     }
-
 
     .nav-toggle {
         display: block;
