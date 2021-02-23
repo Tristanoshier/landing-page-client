@@ -100,7 +100,7 @@ const Navbar = (props) => {
 
     const hamburger = () => {
         return (
-            <button className={classForMobile('hamburger-dark active', ' hamburger-light active', 'hamburger-dark', 'hamburger-light')}
+            <button className={classForMobile('hamburger active', ' hamburger light active', 'hamburger', 'hamburger light')}
                 onClick={openSidebar}><FontAwesomeIcon icon={faBars} size='2x' />
             </button>
         )
