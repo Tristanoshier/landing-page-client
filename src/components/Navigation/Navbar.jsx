@@ -34,7 +34,7 @@ const Navbar = (props) => {
                 </NavItem>
                 <NavItem className='main-nav-item'>
                     <Link className={props.colorMode('main-nav-link-darkmode', 'main-nav-link-lightmode')} to='/'>Tristan Oshier</Link>
-                    <button className={props.colorMode('mobile-exit-button-dark', 'mobile-exit-button-light')}
+                    <button className={props.colorMode('mobile-exit-btn', 'mobile-exit-btn light')}
                         onClick={openSidebar}>
                         <FontAwesomeIcon icon={faTimes} size='2x' />
                     </button>
@@ -110,7 +110,7 @@ const Navbar = (props) => {
         return (
             <>
                 {hamburger()}
-                <Nav className={classForMobile('nav-dark active', 'nav-light active', 'nav-dark', 'nav-light')}>
+                <Nav className={classForMobile('nav-mobile active', 'nav-mobile light active', 'nav-mobile', 'nav-mobile light')}>
                     {navHomeSection()}
                     <div className='nav-items-section'>
                         {navItemSection()}

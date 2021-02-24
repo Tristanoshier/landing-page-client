@@ -103,7 +103,6 @@
 }
 
 /* Only show on mobile or small screens */
-
 .mobile-main-nav-link-darkmode {
     display: none;
 }
@@ -112,11 +111,7 @@
     display: none
 }
 
-.mobile-exit-button-dark {
-    display: none;
-}
-
-.mobile-exit-button-light {
+.mobile-exit-btn {
     display: none;
 }
 
@@ -133,7 +128,7 @@
 }
 
 @media(max-width: 1000px) {
-    .nav-dark {
+    .nav-mobile {
         left: -100%;
         background-color: var(--blue);
         z-index: 1;
@@ -142,17 +137,16 @@
         margin-top: 0;
     }
 
-    .nav-light {
-        left: -100%;
+    .nav-mobile.light {
         background-color: var(--white);
-        z-index: 1;
-        transition: 150ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
     }
 
-    .nav-items-section {
-        border-right: none;
+    .nav-mobile.active {
+        left: 0;
+        padding-left: 20px;
+        transition: 150ms;
+        min-width: 40%;
+        border-right: 1px solid var(--gray);
     }
 
     .hamburger {
@@ -173,23 +167,6 @@
         display: none;
     }
 
-    .nav-dark.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 150ms;
-        min-width: 40%;
-        border-right: 1px solid var(--gray);
-    }
-
-    .nav-light.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 150ms;
-        min-width: 40%;
-        border-right: 1px solid var(--gray);
-    }
-
-
     .nav-toggle {
         display: block;
     }
@@ -226,7 +203,7 @@
         top: 5%;
     }
 
-    .mobile-exit-button-dark {
+    .mobile-exit-btn {
         display: block;
         background: none;
         border: none;
@@ -234,12 +211,8 @@
         margin-right: 5px;
     }
 
-    .mobile-exit-button-light {
-        display: block;
-        background: none;
-        border: none;
+    .mobile-exit-btn.light {
         color: var(--blue);
-        margin-right: 5px;
     }
 
     .nav-item {
@@ -247,9 +220,9 @@
     }
 
     .nav-items-section {
+        border: none;
         margin-top: 90px;
     }
-
 
     .mobile-home-link-darkmode {
         display: block;
@@ -270,7 +243,6 @@
 
 /* iPad Pro */
 @media(width: 1024px) {
-
     .nav-item {
         font-size: 35px;
     }
@@ -280,42 +252,8 @@
 @media(width: 768px),
 (height: 1024px) {
 
-    .nav-dark {
-        left: -100%;
-        background-color: var(--blue);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-light {
-        left: -100%;
-        background-color: var(--white);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-items-section {
-        border-right: none;
-    }
-
-    .nav-dark.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
+    .nav-mobile.active {
         min-width: 50%;
-        border-right: 1px solid var(--gray);
-    }
-
-    .nav-light.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
-        min-width: 50%;
-        border-right: 1px solid var(--gray);
     }
 
     .nav-toggle {
@@ -352,22 +290,6 @@
         justify-content: space-evenly;
         position: absolute;
         top: 5%;
-    }
-
-    .mobile-exit-button-dark {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--white);
-        margin-right: 5px;
-    }
-
-    .mobile-exit-button-light {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--blue);
-        margin-right: 5px;
     }
 
     .nav-item {
@@ -410,42 +332,12 @@
 /* Surface Duo */
 @media(width: 540px) {
 
-    .nav-dark {
-        left: -100%;
-        background-color: var(--blue);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-light {
-        left: -100%;
-        background-color: var(--white);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
+    .nav-mobile.active {
+        min-width: 50%;
     }
 
     .nav-items-section {
         border-right: none;
-    }
-
-    .nav-dark.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
-        min-width: 50%;
-        border-right: 1px solid var(--gray);
-    }
-
-    .nav-light.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
-        min-width: 50%;
-        border-right: 1px solid var(--gray);
     }
 
     .nav-toggle {
@@ -482,22 +374,6 @@
         justify-content: space-evenly;
         position: absolute;
         top: 5%;
-    }
-
-    .mobile-exit-button-dark {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--white);
-        margin-right: 5px;
-    }
-
-    .mobile-exit-button-light {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--blue);
-        margin-right: 5px;
     }
 
     .nav-item {
@@ -527,43 +403,8 @@
 
 /* Moto G4 & Galaxy S5 */
 @media(width: 360px) {
-
-    .nav-dark {
-        left: -100%;
-        background-color: var(--blue);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-light {
-        left: -100%;
-        background-color: var(--white);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-items-section {
-        border-right: none;
-    }
-
-    .nav-dark.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
+    .nav-mobile.active {
         min-width: 50%;
-        border-right: 1px solid var(--gray);
-    }
-
-    .nav-light.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
-        min-width: 50%;
-        border-right: 1px solid var(--gray);
     }
 
     .nav-toggle {
@@ -601,22 +442,6 @@
         position: absolute;
         left: 10%;
         top: 5%;
-    }
-
-    .mobile-exit-button-dark {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--white);
-        margin-right: 5px;
-    }
-
-    .mobile-exit-button-light {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--blue);
-        margin-right: 5px;
     }
 
     .nav-item {
@@ -646,43 +471,8 @@
 
 /* Pixel 2 & Pixel XL */
 @media(width: 411px) {
-
-    .nav-dark {
-        left: -100%;
-        background-color: var(--blue);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-light {
-        left: -100%;
-        background-color: var(--white);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-items-section {
-        border-right: none;
-    }
-
-    .nav-dark.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
+    .nav-mobile.active {
         min-width: 50%;
-        border-right: 1px solid var(--gray);
-    }
-
-    .nav-light.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
-        min-width: 50%;
-        border-right: 1px solid var(--gray);
     }
 
     .nav-toggle {
@@ -720,22 +510,6 @@
         position: absolute;
         left: 10%;
         top: 5%;
-    }
-
-    .mobile-exit-button-dark {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--white);
-        margin-right: 5px;
-    }
-
-    .mobile-exit-button-light {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--blue);
-        margin-right: 5px;
     }
 
     .nav-item {
@@ -765,43 +539,8 @@
 
 /* iPhone 5/SE */
 @media(width: 320px) {
-
-    .nav-dark {
-        left: -100%;
-        background-color: var(--blue);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-light {
-        left: -100%;
-        background-color: var(--white);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-items-section {
-        border-right: none;
-    }
-
-    .nav-dark.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
+    .nav-mobile.active {
         min-width: 50%;
-        border-right: 1px solid var(--gray);
-    }
-
-    .nav-light.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
-        min-width: 50%;
-        border-right: 1px solid var(--gray);
     }
 
     .nav-toggle {
@@ -841,28 +580,8 @@
         top: 5%;
     }
 
-    .mobile-exit-button-dark {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--white);
-        margin-right: 5px;
-    }
-
-    .mobile-exit-button-light {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--blue);
-        margin-right: 5px;
-    }
-
     .nav-item {
         font-size: 20px;
-    }
-
-    .nav-items-section {
-        margin-top: 90px;
     }
 
     .mobile-home-link-darkmode {
@@ -884,43 +603,8 @@
 
 /* iPhone 6/7/8/X */
 @media(width: 375px) {
-
-    .nav-dark {
-        left: -100%;
-        background-color: var(--blue);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-light {
-        left: -100%;
-        background-color: var(--white);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-items-section {
-        border-right: none;
-    }
-
-    .nav-dark.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
+    .nav-mobile.active {
         min-width: 50%;
-        border-right: 1px solid var(--gray);
-    }
-
-    .nav-light.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
-        min-width: 50%;
-        border-right: 1px solid var(--gray);
     }
 
     .nav-toggle {
@@ -958,22 +642,6 @@
         position: absolute;
         left: 10%;
         top: 5%;
-    }
-
-    .mobile-exit-button-dark {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--white);
-        margin-right: 5px;
-    }
-
-    .mobile-exit-button-light {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--blue);
-        margin-right: 5px;
     }
 
     .nav-item {
@@ -1003,43 +671,8 @@
 
 /* iPhone 6/7/8/ Plus */
 @media(width: 414px) {
-
-    .nav-dark {
-        left: -100%;
-        background-color: var(--blue);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-light {
-        left: -100%;
-        background-color: var(--white);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-items-section {
-        border-right: none;
-    }
-
-    .nav-dark.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
+    .nav-mobile.active {
         min-width: 50%;
-        border-right: 1px solid var(--gray);
-    }
-
-    .nav-light.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
-        min-width: 50%;
-        border-right: 1px solid var(--gray);
     }
 
     .nav-toggle {
@@ -1077,22 +710,6 @@
         position: absolute;
         left: 10%;
         top: 5%;
-    }
-
-    .mobile-exit-button-dark {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--white);
-        margin-right: 5px;
-    }
-
-    .mobile-exit-button-light {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--blue);
-        margin-right: 5px;
     }
 
     .nav-item {
@@ -1122,43 +739,8 @@
 
 /* Galaxy Fold */
 @media(width: 280px) {
-
-    .nav-dark {
-        left: -100%;
-        background-color: var(--blue);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-light {
-        left: -100%;
-        background-color: var(--white);
-        z-index: 1;
-        transition: 250ms;
-        border-right: 1px solid var(--gray);
-        margin-top: 0;
-    }
-
-    .nav-items-section {
-        border-right: none;
-    }
-
-    .nav-dark.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
+    .nav-mobile.active {
         min-width: 50%;
-        border-right: 1px solid var(--gray);
-    }
-
-    .nav-light.active {
-        left: 0;
-        padding-left: 20px;
-        transition: 250ms;
-        min-width: 50%;
-        border-right: 1px solid var(--gray);
     }
 
     .nav-toggle {
@@ -1196,22 +778,6 @@
         position: absolute;
         left: 10%;
         top: 5%;
-    }
-
-    .mobile-exit-button-dark {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--white);
-        margin-right: 5px;
-    }
-
-    .mobile-exit-button-light {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--blue);
-        margin-right: 5px;
     }
 
     .nav-item {
