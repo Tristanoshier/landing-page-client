@@ -30,7 +30,7 @@
     font-family: var(--main);
 }
 
-.main-nav-link-darkmode {
+.main-nav-link {
     color: var(--white);
     text-decoration: none;
     border-bottom: 5px solid var(--orange);
@@ -38,12 +38,8 @@
     transition: border-bottom 0.25s ease-out;
 }
 
-.main-nav-link-lightmode {
+.main-nav-link.light {
     color: var(--blue);
-    text-decoration: none;
-    border-bottom: 5px solid var(--orange);
-    transition: color 0.25s ease-out;
-    transition: border-bottom 0.25s ease-out;
 }
 
 .navbar-link {
@@ -164,15 +160,9 @@
         display: block;
     }
 
-    .main-nav-link-darkmode {
+    .main-nav-link {
         display: none;
     }
-
-    .main-nav-link-lightmode {
-        display: none;
-    }
-
-  
 
     .mobile-main-nav-section {
         display: flex;
@@ -239,14 +229,6 @@
         display: block;
     }
 
-    .main-nav-link-darkmode {
-        display: none;
-    }
-
-    .main-nav-link-lightmode {
-        display: none;
-    }
-
     .nav-item {
         font-size: 20px;
     }
@@ -299,14 +281,6 @@
         display: block;
     }
 
-    .main-nav-link-darkmode {
-        display: none;
-    }
-
-    .main-nav-link-lightmode {
-        display: none;
-    }
-
     .nav-item {
         font-size: 20px;
     }
@@ -340,14 +314,6 @@
 
     .nav-toggle {
         display: block;
-    }
-
-    .main-nav-link-darkmode {
-        display: none;
-    }
-
-    .main-nav-link-lightmode {
-        display: none;
     }
 
     .mobile-main-nav-section {
@@ -394,14 +360,6 @@
         display: block;
     }
 
-    .main-nav-link-darkmode {
-        display: none;
-    }
-
-    .main-nav-link-lightmode {
-        display: none;
-    }
-
     .mobile-main-nav-section {
         display: flex;
         flex-direction: row;
@@ -446,14 +404,6 @@
         display: block;
     }
 
-    .main-nav-link-darkmode {
-        display: none;
-    }
-
-    .main-nav-link-lightmode {
-        display: none;
-    }
-
     .mobile-main-nav-section {
         display: flex;
         flex-direction: row;
@@ -492,14 +442,6 @@
 
     .nav-toggle {
         display: block;
-    }
-
-    .main-nav-link-darkmode {
-        display: none;
-    }
-
-    .main-nav-link-lightmode {
-        display: none;
     }
 
     .mobile-main-nav-section {
@@ -546,14 +488,6 @@
         display: block;
     }
 
-    .main-nav-link-darkmode {
-        display: none;
-    }
-
-    .main-nav-link-lightmode {
-        display: none;
-    }
-
     .mobile-main-nav-section {
         display: flex;
         flex-direction: row;
@@ -596,14 +530,6 @@
 
     .nav-toggle {
         display: block;
-    }
-
-    .main-nav-link-darkmode {
-        display: none;
-    }
-
-    .main-nav-link-lightmode {
-        display: none;
     }
 
     .mobile-main-nav-section {
