@@ -108,11 +108,7 @@
     display: none;
 }
 
-.mobile-home-link-darkmode {
-    display: none;
-}
-
-.mobile-home-link-lightmode {
+.mobile-home-link {
     display: none;
 }
 
@@ -193,7 +189,7 @@
         margin-top: 90px;
     }
 
-    .mobile-home-link-darkmode {
+    .mobile-home-link {
         display: block;
         color: var(--white);
         text-decoration: none;
@@ -201,12 +197,8 @@
         margin-right: 7px;
     }
 
-    .mobile-home-link-lightmode {
-        display: block;
+    .mobile-home-link.light {
         color: var(--blue);
-        text-decoration: none;
-        font-size: 28px;
-        margin-right: 7px;
     }
 }
 
@@ -220,7 +212,6 @@
 /* iPad */
 @media(width: 768px),
 (height: 1024px) {
-
     .nav-mobile.active {
         min-width: 50%;
     }
@@ -236,8 +227,10 @@
     .nav-items-section {
         margin-top: 90px;
     }
+}
 
-    .mobile-home-link-darkmode {
+@media(max-width: 768px) {
+    .mobile-home-link {
         display: block;
         color: var(--white);
         text-decoration: none;
@@ -245,24 +238,8 @@
         margin-right: 7px;
     }
 
-    .mobile-home-link-lightmode {
-        display: block;
+    .mobile-home-link.light {
         color: var(--blue);
-        text-decoration: none;
-        font-size: 22px;
-        margin-right: 7px;
-    }
-}
-
-@media(max-width: 560px) {
-    .mobile-home-link-darkmode {
-        font-size: 22px;
-    }
-}
-
-@media(max-width: 450px) {
-    .mobile-home-link-darkmode {
-        font-size: 18px;
     }
 }
 
@@ -287,22 +264,6 @@
 
     .nav-items-section {
         margin-top: 90px;
-    }
-
-    .mobile-home-link-darkmode {
-        display: block;
-        color: var(--white);
-        text-decoration: none;
-        font-size: 22px;
-        margin-right: 7px;
-    }
-
-    .mobile-home-link-lightmode {
-        display: block;
-        color: var(--blue);
-        text-decoration: none;
-        font-size: 22px;
-        margin-right: 7px;
     }
 }
 
@@ -332,22 +293,6 @@
     .nav-items-section {
         margin-top: 80px;
     }
-
-    .mobile-home-link-darkmode {
-        display: block;
-        color: var(--white);
-        text-decoration: none;
-        font-size: 22px;
-        margin-right: 7px;
-    }
-
-    .mobile-home-link-lightmode {
-        display: block;
-        color: var(--blue);
-        text-decoration: none;
-        font-size: 22px;
-        margin-right: 7px;
-    }
 }
 
 /* Pixel 2 & Pixel XL */
@@ -376,22 +321,6 @@
     .nav-items-section {
         margin-top: 90px;
     }
-
-    .mobile-home-link-darkmode {
-        display: block;
-        color: var(--white);
-        text-decoration: none;
-        font-size: 22px;
-        margin-right: 7px;
-    }
-
-    .mobile-home-link-lightmode {
-        display: block;
-        color: var(--blue);
-        text-decoration: none;
-        font-size: 22px;
-        margin-right: 7px;
-    }
 }
 
 /* iPhone 5/SE */
@@ -417,20 +346,8 @@
         font-size: 20px;
     }
 
-    .mobile-home-link-darkmode {
-        display: block;
-        color: var(--white);
-        text-decoration: none;
+    .mobile-home-link {
         font-size: 19px;
-        margin-right: 7px;
-    }
-
-    .mobile-home-link-lightmode {
-        display: block;
-        color: var(--blue);
-        text-decoration: none;
-        font-size: 19px;
-        margin-right: 7px;
     }
 }
 
@@ -460,22 +377,6 @@
     .nav-items-section {
         margin-top: 90px;
     }
-
-    .mobile-home-link-darkmode {
-        display: block;
-        color: var(--white);
-        text-decoration: none;
-        font-size: 22px;
-        margin-right: 7px;
-    }
-
-    .mobile-home-link-lightmode {
-        display: block;
-        color: var(--blue);
-        text-decoration: none;
-        font-size: 22px;
-        margin-right: 7px;
-    }
 }
 
 /* iPhone 6/7/8/ Plus */
@@ -503,22 +404,6 @@
 
     .nav-items-section {
         margin-top: 90px;
-    }
-
-    .mobile-home-link-darkmode {
-        display: block;
-        color: var(--white);
-        text-decoration: none;
-        font-size: 22px;
-        margin-right: 7px;
-    }
-
-    .mobile-home-link-lightmode {
-        display: block;
-        color: var(--blue);
-        text-decoration: none;
-        font-size: 22px;
-        margin-right: 7px;
     }
 }
 
@@ -549,19 +434,7 @@
         margin-top: 90px;
     }
 
-    .mobile-home-link-darkmode {
-        display: block;
-        color: var(--white);
-        text-decoration: none;
+    .mobile-home-link {
         font-size: 16px;
-        margin-right: 7px;
-    }
-
-    .mobile-home-link-lightmode {
-        display: block;
-        color: var(--blue);
-        text-decoration: none;
-        font-size: 16px;
-        margin-right: 7px;
     }
 }

@@ -28,7 +28,7 @@ const Navbar = (props) => {
                         activeClassName={props.colorMode('active', 'active light')}
                         tag={RRNavLink}
                         onClick={openSidebar}
-                        className={props.colorMode('mobile-home-link-darkmode', 'mobile-home-link-lightmode')}
+                        className={props.colorMode('mobile-home-link', 'mobile-home-link light')}
                         to='/'>Tristan Oshier
                         </NavLink>
                 </NavItem>
