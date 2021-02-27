@@ -14,7 +14,7 @@ export const Search = (props) => {
     useEffect(() => {
         /* in case user mistypes first four letters */
         const checkTitle = (title, searchTerm) => {
-            let pattern = searchTerm.split("").map((letter)=>{
+            let pattern = searchTerm.split('').map((letter)=>{
                 return `(?=.*${letter})`
             }).join("");
             let regex = new RegExp(`${pattern}`, "g")
@@ -84,7 +84,7 @@ export const Search = (props) => {
                 </Input>
                 <input className={props.darkMode ? 'searchbar' : 'searchbar light'} onChange={(e) => userSearch(e)} id='search' type='text' placeholder='Search...' autoComplete='off' />
             </Form>
-            {postMapper(filteredPosts, 'interests', props.darkMode)}
+            {postMapper(filteredPosts, 'interests', null, props.darkMode)}
             {props.isLoading || !showBackToTop ? <></> :
                 <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>}
         </div>

@@ -26,22 +26,38 @@ const savePostInLocalStorage = (post) => {
     localStorage.setItem('post', JSON.stringify(post))
 }
 
-const postMapper = (posts, type, darkMode) => {
+const postMapper = (posts, type, lastElementOnPage, darkMode) => {
     if (posts.length > 0) {
         return posts.map((post, index) => {
-            return (
-                <div className={darkMode ? 'card' : 'card light'} key={index}>
-                    {
-                        type === 'blog' ? blogHeader(post.title, post.createdAt, darkMode)
-                            : interestHeader(post.title, post.createdAt, post.topic, darkMode)
-                    }
-                    {
-                        post.body.length > 300 ?
-                            <p className='card-body'>{post.body.substr(1, 300)}. . . <Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
-                            : <p className='card-body'>{post.body}</p>
-                    }
-                </div>
-            )
+                if (posts.length === index + 1 && lastElementOnPage !== null) {
+                    return (
+                        <div ref={lastElementOnPage} className={darkMode ? 'card' : 'card light'} key={index}>
+                            {
+                                type === 'blog' ? blogHeader(post.title, post.createdAt, darkMode)
+                                    : interestHeader(post.title, post.createdAt, post.topic, darkMode)
+                            }
+                            {
+                                post.body.length > 300 ?
+                                    <p className='card-body'>{post.body.substr(1, 300)}. . . <Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
+                                    : <p className='card-body'>{post.body}</p>
+                            }
+                        </div>
+                    )
+                } else { 
+                return (
+                    <div className={darkMode ? 'card' : 'card light'} key={index}>
+                        {
+                            type === 'blog' ? blogHeader(post.title, post.createdAt, darkMode)
+                                : interestHeader(post.title, post.createdAt, post.topic, darkMode)
+                        }
+                        {
+                            post.body.length > 300 ?
+                                <p className='card-body'>{post.body.substr(1, 300)}. . . <Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
+                                : <p className='card-body'>{post.body}</p>
+                        }
+                    </div>
+                )
+                }
         })
     } else {
         return (

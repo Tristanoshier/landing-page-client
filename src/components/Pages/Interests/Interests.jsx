@@ -11,10 +11,9 @@ export const Interests = (props) => {
     const [moviePosts, setMoviePosts] = useState([]);
     const [programmingPosts, setProgrammingPosts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const getPostsURL = `http://localhost:3001/site/interests`;
 
     useEffect(() => {
-        fetch(getPostsURL, {
+        fetch(`http://localhost:3001/site/interests/search`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json'
@@ -27,8 +26,7 @@ export const Interests = (props) => {
                 setProgrammingPosts(posts.filter(x => x.topic === 'programming'));
                 setIsLoading(false);
             })
-
-    }, [getPostsURL])
+    }, [])
 
     const InterestCategoryTabs = () => (
         <Tabs className={props.colorMode('ant-tabs', 'ant-tabs light')} defaultActiveKey='1'>
@@ -37,7 +35,8 @@ export const Interests = (props) => {
                     posts={posts} 
                     darkMode={props.darkMode}
                     colorMode={props.colorMode} 
-                    isLoading={isLoading} />
+                    isLoading={isLoading}
+                    setIsLoading={setIsLoading} />
             </TabPane>
             <TabPane tab='Search' key='2'>
                 <Search

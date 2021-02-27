@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
 import backToTop from '../Shared/BackToTop';
 import postMapper from '../Shared/PostMapper';
@@ -6,20 +6,39 @@ import postMapper from '../Shared/PostMapper';
 const Blog = (props) => {
     const [blogPosts, setBlogPosts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const blogURL = `http://localhost:3001/site/blog`;
+    const [infiniteScrollLoading, setInfiniteScrollLoading] = useState(true);
+    const [hasMore, setHasMore] = useState(false);
+    const [pageNumber, setPageNumber] = useState(1);
 
     useEffect(() => {
-        fetch(blogURL, {
+        pageNumber <= 1 ? setInfiniteScrollLoading(false) : setInfiniteScrollLoading(true);
+        fetch(`http://localhost:3001/site/blog?page=${pageNumber}&limit=5`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json'
             })
-        }).then((res) => res.json())
-            .then((posts) => {
-                setBlogPosts(posts);
-                setIsLoading(false);
-            })
-    }, [blogURL])
+        }).then(res => res.json()).then(posts => {
+            setBlogPosts(prevBlogPosts => {
+                return [...prevBlogPosts, ...posts];
+            });
+            setHasMore(posts.length > 0);
+            setIsLoading(false);
+            setInfiniteScrollLoading(false);
+        })
+    }, [pageNumber])
+
+    const observer = useRef();
+
+    const lastPostOnScreen = useCallback(node => {
+        if (isLoading) return;
+        if (observer.current) observer.current.disconnect();
+        observer.current = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting && hasMore) {
+                setPageNumber(prevPageNumber => prevPageNumber + 1);
+            }
+        })
+        if (node) observer.current.observe(node)
+    }, [isLoading, hasMore])
 
     return (
         <>
@@ -30,7 +49,9 @@ const Blog = (props) => {
                 </p>
                 {isLoading ?
                     <div className="loader"></div>
-                    : postMapper(blogPosts, 'blog', props.darkMode)}
+                    : postMapper(blogPosts, 'blog', lastPostOnScreen, props.darkMode)
+                }
+                {infiniteScrollLoading ? <div className="loader"></div> : <></>}
             </div>
             {props.isLoading || blogPosts.length < 3 ? <></> :
                 <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>}
