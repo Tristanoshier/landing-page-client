@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import backToTop from '../../Shared/BackToTop';
 import convertDate from '../../Shared/DateConverter';
+import APIURL from '../../../Evironment/environment';
 
 export const Projects = (props) => {
     const [projects, setProjects] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://localhost:3001/site/projects`, {
+        fetch(`${APIURL}/site/projects`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json'

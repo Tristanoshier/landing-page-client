@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import postMapper from '../../Shared/PostMapper';
+import APIURL from '../../../Evironment/environment';
 
 export const Recent = (props) => {
     const [recentPosts, setRecentPosts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3001/site/interests?page=1&limit=3`, {
+        fetch(`${APIURL}/site/interests?page=1&limit=3`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json'

@@ -3,6 +3,7 @@ import Tabs from 'antd/lib/tabs';
 import { Recent } from './Recent';
 import { Search } from './Search';
 import { Projects } from './Projects';
+import APIURL from '../../../Evironment/environment';
 
 export const Interests = (props) => {
     const { TabPane } = Tabs;
@@ -13,7 +14,7 @@ export const Interests = (props) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://localhost:3001/site/interests/search`, {
+        fetch(`${APIURL}/site/interests/search`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json'

@@ -2,6 +2,7 @@ import { useEffect, useState, useRef, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
 import backToTop from '../Shared/BackToTop';
 import postMapper from '../Shared/PostMapper';
+import APIURL from '../../Evironment/environment';
 
 const Blog = (props) => {
     const [blogPosts, setBlogPosts] = useState([]);
@@ -12,7 +13,7 @@ const Blog = (props) => {
 
     useEffect(() => {
         pageNumber <= 1 ? setInfiniteScrollLoading(false) : setInfiniteScrollLoading(true);
-        fetch(`http://localhost:3001/site/blog?page=${pageNumber}&limit=5`, {
+        fetch(`${APIURL}/site/blog?page=${pageNumber}&limit=5`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json'
