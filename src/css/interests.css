@@ -97,6 +97,10 @@
     color: #bdbcbc;
 }
 
+.icon-tab {
+    display: flex;
+}
+
 /* iPad Pro */
 @media(width: 1024px) {
     .ant-tabs-tab {

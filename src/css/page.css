@@ -11,6 +11,8 @@
 }
 .page-text {
     font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5em;
     color: var(--white);
     font-family: var(--text);
 }

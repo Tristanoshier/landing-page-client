@@ -25,7 +25,7 @@ export const Interests = (props) => {
                 setMoviePosts(posts.filter(x => x.topic === 'movies'));
                 setProgrammingPosts(posts.filter(x => x.topic === 'programming'));
                 setIsLoading(false);
-            })
+            }).catch(() => alert('Sorry, something went wrong. Check your network connection or try again in a few minutes.'))
     }, [])
 
     const InterestCategoryTabs = () => (
@@ -59,9 +59,9 @@ export const Interests = (props) => {
     return (
         <div>
             <div className='blog'>
-                <p id='main-header'>Interests</p>
+                <p id='main-header'>My Interests</p>
                 <p className={props.colorMode('page-text', 'page-text light')}>
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
+                    I spend a lot of my time working on improving my programming skills along with learning different areas of mathematics. I also love listening to music and have a decent-sized vinyl collection. This is the place where I talk about what I'm working on, listening to, reading, and even review recent movies I've watched. Feel free to read anything that interests you and leave a like if you enjoyed it :)
             </p>
                 {isLoading ?
                     <div className="loader"></div>

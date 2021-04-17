@@ -14,7 +14,7 @@ export const Recent = (props) => {
             .then((posts) => {
                 setRecentPosts(posts);
                 props.setIsLoading(false);
-            })
+            }).catch(() => alert('Sorry, something went wrong. Check your network connection or try again in a few minutes.'))
     }, [props])
     return (
         <>

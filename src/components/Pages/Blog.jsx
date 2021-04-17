@@ -24,7 +24,7 @@ const Blog = (props) => {
             setHasMore(posts.length > 0);
             setIsLoading(false);
             setInfiniteScrollLoading(false);
-        })
+        }).catch(() => alert('Sorry, something went wrong. Check your network connection or try again in a few minutes.'))
     }, [pageNumber])
 
     const observer = useRef();
@@ -43,15 +43,15 @@ const Blog = (props) => {
     return (
         <>
             <div className='blog'>
-                <p id='main-header'>Blog</p>
+                <p id='main-header'>My Blog</p>
                 <p className={props.colorMode('page-text', 'page-text light')}>
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
+                    Welcome to my blog. This is the place where I talk about what im doing in life as well as my experience as a young engineer navigating through the large world of software engineering. I try and post something weekly so keep an eye out for new content!
                 </p>
                 {isLoading ?
-                    <div className="loader"></div>
+                    <div className='loader'></div>
                     : postMapper(blogPosts, 'blog', lastPostOnScreen, props.darkMode)
                 }
-                {infiniteScrollLoading ? <div className="loader"></div> : <></>}
+                {infiniteScrollLoading ? <div className='loader'></div> : <></>}
             </div>
             {props.isLoading || blogPosts.length < 3 ? <></> :
                 <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>}

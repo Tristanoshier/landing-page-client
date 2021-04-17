@@ -16,8 +16,8 @@ export const Search = (props) => {
         const checkTitle = (title, searchTerm) => {
             let pattern = searchTerm.split('').map((letter)=>{
                 return `(?=.*${letter})`
-            }).join("");
-            let regex = new RegExp(`${pattern}`, "g")
+            }).join('');
+            let regex = new RegExp(`${pattern}`, 'g')
             return title.match(regex);
         }
 
