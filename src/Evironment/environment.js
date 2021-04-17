@@ -7,7 +7,7 @@ switch(window.location.hostname) {
         break
     case 'tristanoshier.herokuapp.com':
     case 'tristanoshier.com':
-        APIURL = 'https://tristanoshier-server.herokuapp.com/'
+        APIURL = 'https://tristanoshier-server.herokuapp.com'
         break
     default: // we should never hit default case, add to get rid of warning
         APIURL = 'http://localhost:3001'
