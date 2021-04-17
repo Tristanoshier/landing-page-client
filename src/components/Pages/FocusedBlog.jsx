@@ -1,6 +1,5 @@
 import { withRouter, useHistory } from 'react-router-dom'
 import convertDate from '../Shared/DateConverter';
-import backToTop from '../Shared/BackToTop';
 
 const FocusedBlog = (props) => {
     const history = useHistory();
@@ -33,7 +32,6 @@ const FocusedBlog = (props) => {
     return (
         <>
             {focusedBlogMapper()}
-            <button className={props.colorMode('back-to-top-btn focused', 'back-to-top-btn focused light')} onClick={() => backToTop()}>Back to top</button>
         </>
     )
 

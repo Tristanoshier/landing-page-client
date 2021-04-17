@@ -6,7 +6,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
 
   const getIntitialMode = useCallback(() =>  {
-    const isReturningUser = "dark" in localStorage;
+    const isReturningUser = 'dark' in localStorage;
     const savedMode = JSON.parse(localStorage.getItem('dark'));
     const userPrefersDark = getPrefColorScheme();
 
