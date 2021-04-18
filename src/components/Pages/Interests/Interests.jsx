@@ -51,7 +51,8 @@ export const Interests = (props) => {
             </TabPane>
             <TabPane tab='Projects' key='3'>
                 <Projects 
-                    darkMode={props.darkMode} 
+                    darkMode={props.darkMode}
+                    colorMode={props.colorMode}
                 />
             </TabPane>
         </Tabs>
