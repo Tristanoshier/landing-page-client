@@ -26,6 +26,8 @@ const Blog = (props) => {
             setIsLoading(false);
             setInfiniteScrollLoading(false);
         }).catch(() => alert('Sorry, something went wrong. Check your network connection or try again in a few minutes.'))
+        postMapper(blogPosts, 'blog', lastPostOnScreen, props.darkMode)
+
     }, [pageNumber])
 
     const observer = useRef();
