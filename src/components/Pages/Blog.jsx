@@ -23,12 +23,16 @@ const Blog = (props) => {
                 return [...prevBlogPosts, ...posts];
             });
             setHasMore(posts.length > 0);
+            loadFormattedPosts()
             setIsLoading(false);
             setInfiniteScrollLoading(false);
         }).catch(() => alert('Sorry, something went wrong. Check your network connection or try again in a few minutes.'))
-        postMapper(blogPosts, 'blog', lastPostOnScreen, props.darkMode)
 
     }, [pageNumber])
+
+    const loadFormattedPosts = () => {
+        return postMapper(blogPosts, 'blog', lastPostOnScreen, props.darkMode)
+    }
 
     const observer = useRef();
 
@@ -52,7 +56,7 @@ const Blog = (props) => {
                 </p>
                 {isLoading ?
                     <div className='loader'></div>
-                    : postMapper(blogPosts, 'blog', lastPostOnScreen, props.darkMode)
+                    : loadFormattedPosts()
                 }
                 {infiniteScrollLoading ? <div className='loader'></div> : <></>}
             </div>
