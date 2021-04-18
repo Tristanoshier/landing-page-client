@@ -54,7 +54,6 @@ const Blog = (props) => {
                 <p className={props.colorMode('page-text', 'page-text light')}>
                     Welcome to my blog. This is the place where I talk about what im doing in life as well as my experience as a young engineer navigating through the large world of software engineering. I try and post something weekly so keep an eye out for new content!
                 </p>
-                <div dangerouslySetInnerHTML={{__html: 'apply<br><br>me'}} />
                 {isLoading ?
                     <div className='loader'></div>
                     : loadFormattedPosts()
