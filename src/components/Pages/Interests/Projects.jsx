@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import backToTop from '../../Shared/BackToTop';
 import convertDate from '../../Shared/DateConverter';
 import APIURL from '../../../Evironment/environment';
@@ -20,6 +21,10 @@ export const Projects = (props) => {
             }).catch(() => alert('Sorry, something went wrong. Check your network connection or try again in a few minutes.'))
     }, [])
 
+    const saveProjectInLocalStorage = (project) => {
+        localStorage.setItem('project', JSON.stringify(project))
+    }
+
     const projectMapper = () => {
         if (projects.length > 0) {
             return projects.map((project, index) => {
@@ -32,8 +37,11 @@ export const Projects = (props) => {
                             </span>
                             <span className={props.darkMode ? 'card-topic' : 'card-topic light'}>{project.languages}</span>
                         </div>
-                        <p className='card-body'><div dangerouslySetInnerHTML={{__html: project.description}} /><br /><br /><a href={project.link} className={props.darkMode ? 'card-link' : 'card-link light'} rel="noreferrer" target="_blank">Github Repo</a></p>
-                           
+                        {
+                        project.description.length > 299 ?
+                                    <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${project.description.substr(0, 299)}. . .`}} /><br/><Link onClick={() => saveProjectInLocalStorage(project)} className={props.darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/FocusedProject/${project.title}`, project: project }}>See More</Link></p>
+                                    : <p className='card-body'><div dangerouslySetInnerHTML={{__html: project.description}} /></p>
+                        }  
                     </div>
                 )
             })

@@ -1,5 +1,5 @@
 import { withRouter, useHistory } from 'react-router-dom'
-import convertDate from '../Shared/DateConverter';
+import convertDate from '../Shared/DateConverter'
 
 const FocusedBlog = (props) => {
     const history = useHistory();
