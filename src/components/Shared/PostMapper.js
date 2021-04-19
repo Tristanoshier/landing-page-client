@@ -38,7 +38,7 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                             }
                             {
                                 post.body.length > 299 ?
-                                    <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br/><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
+                                    <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br/><br /><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
                                     : <p className='card-body'><div dangerouslySetInnerHTML={{__html: post.body}} /></p>
                             }
                         </div>
@@ -52,7 +52,7 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                         }
                         {
                             post.body.length > 299 ?
-                                <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br /><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
+                                <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br /><br /><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
                                 : <p className='card-body'><div dangerouslySetInnerHTML={{__html: post.body}} /></p>
                         }
                     </div>
