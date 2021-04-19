@@ -37,8 +37,8 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                                     : interestHeader(post.title, post.createdAt, post.topic, darkMode)
                             }
                             {
-                                post.body.length > 300 ?
-                                    <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /> <Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
+                                post.body.length > 299 ?
+                                    <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br/><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
                                     : <p className='card-body'><div dangerouslySetInnerHTML={{__html: post.body}} /></p>
                             }
                         </div>
@@ -52,7 +52,7 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                         }
                         {
                             post.body.length > 299 ?
-                                <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
+                                <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br /><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post}`, post: post }}>Read More</Link></p>
                                 : <p className='card-body'><div dangerouslySetInnerHTML={{__html: post.body}} /></p>
                         }
                     </div>

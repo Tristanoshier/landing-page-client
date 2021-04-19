@@ -32,7 +32,7 @@ export const Projects = (props) => {
                             </span>
                             <span className={props.darkMode ? 'card-topic' : 'card-topic light'}>{project.languages}</span>
                         </div>
-                        <p className='card-body'><div dangerouslySetInnerHTML={{__html: project.description}} /> <a href={project.link} className={props.darkMode ? 'card-link' : 'card-link light'} rel="noreferrer" target="_blank">Github Repo</a></p>
+                        <p className='card-body'><div dangerouslySetInnerHTML={{__html: project.description}} /><br /><a href={project.link} className={props.darkMode ? 'card-link' : 'card-link light'} rel="noreferrer" target="_blank">Github Repo</a></p>
                            
                     </div>
                 )
