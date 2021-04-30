@@ -14,6 +14,15 @@
     border: 1px var(--gray) solid;
 }
 
+.card-text {
+    color: var(--white);
+    font-family: var(--text);
+    margin: 5% 0 5% 0;
+}
+
+.card-text.light {
+    color: var(--darkergray);
+}
 
 .card-header {
     background-color: #121e25;
@@ -112,6 +121,14 @@
 @media(max-width: 414px) {
     .card {
         font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 18px;
+    }
+
+    .card-text.light {
+        color: var(--darkergray);
     }
 
     .card-title {

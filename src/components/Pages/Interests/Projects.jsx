@@ -39,15 +39,15 @@ export const Projects = (props) => {
                         </div>
                         {
                         project.description.length > 299 ?
-                                    <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${project.description.substr(0, 299)}. . .`}} /><br/><Link onClick={() => saveProjectInLocalStorage(project)} className={props.darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/FocusedProject/${project.title}`, project: project }}>See More</Link></p>
-                                    : <p className='card-body'><div dangerouslySetInnerHTML={{__html: project.description}} /></p>
+                                    <div className='card-body'><div className={props.darkMode ? 'card-text' : 'card-text light'} dangerouslySetInnerHTML={{__html: `${project.description.substr(0, 299)}. . .`}} /><br/><Link onClick={() => saveProjectInLocalStorage(project)} className={props.darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/FocusedProject/${project.title}`, project: project }}>See More</Link></div>
+                                    : <div className='card-body'><div className={props.darkMode ? 'card-text' : 'card-text light'} dangerouslySetInnerHTML={{__html: project.description}} /></div>
                         }  
                     </div>
                 )
             })
         } else {
             return (
-                <h2 className={props.darkMode ? "page-text" : "page-text light"}>
+                <h2 className={props.darkMode ? 'page-text' : 'page-text light'}>
                     currently not working on any projects
                 </h2>
             )
@@ -57,7 +57,7 @@ export const Projects = (props) => {
     return (
         <div>
             {isLoading ?
-                    <div className="loader"></div>
+                    <div className='loader'></div>
                     : projectMapper()}
             {props.isLoading || projects.length < 3 ? <></> :
                 <button className={props.colorMode('back-to-top-btn', 'back-to-top-btn light')} onClick={() => backToTop()}>Back to top</button>}

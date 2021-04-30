@@ -22,8 +22,8 @@ const FocusedProject = (props) => {
                                 <p className={props.colorMode('card-title','card-title light')}>{focusedProject.title}</p>
                                 <p className={props.colorMode('card-date','card-date light')}>{convertDate(focusedProject.createdAt)}</p>
                             </div>
-                            <p className='card-body'><div dangerouslySetInnerHTML={{__html: focusedProject.description}} /><br />
-                            <a href={focusedProject.link} className={props.colorMode('card-link', 'card-link light')} rel="noreferrer" target="_blank">See Live</a></p>
+                            <div className='card-body'><div className={props.colorMode('card-text', 'card-text light')} dangerouslySetInnerHTML={{__html: focusedProject.description}} /><br />
+                            <a href={focusedProject.link} className={props.colorMode('card-link', 'card-link light')} rel="noreferrer" target="_blank">See Live</a></div>
                         </div> 
                 }
             </div>

@@ -22,7 +22,7 @@ const FocusedBlog = (props) => {
                                 <p className={props.colorMode('card-title','card-title light')}>{focusedPost.title}</p>
                                 <p className={props.colorMode('card-date','card-date light')}>{convertDate(focusedPost.createdAt)}</p>
                             </div>
-                            <p className='card-body'><div dangerouslySetInnerHTML={{__html: focusedPost.body}} /></p>
+                            <div className='card-body'><div className={props.colorMode('card-text', 'card-text light')} dangerouslySetInnerHTML={{__html: focusedPost.body}} /></div>
                         </div> 
                 }
             </div>

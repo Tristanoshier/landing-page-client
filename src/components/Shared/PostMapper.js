@@ -38,8 +38,8 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                             }
                             {
                                 post.body.length > 299 ?
-                                    <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br/><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post.title}`, post: post }}>Read More</Link></p>
-                                    : <p className='card-body'><div dangerouslySetInnerHTML={{__html: post.body}} /></p>
+                                    <div className='card-body'><div className={darkMode ? 'card-text' : 'card-text light'} dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br/><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post.title}`, post: post }}>Read More</Link></div>
+                                    : <div className='card-body'><div className={darkMode ? 'card-text' : 'card-text light'} dangerouslySetInnerHTML={{__html: post.body}} /></div>
                             }
                         </div>
                     )
@@ -52,8 +52,8 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                         }
                         {
                             post.body.length > 299 ?
-                                <p className='card-body'><div dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br /><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post.title}`, post: post }}>Read More</Link></p>
-                                : <p className='card-body'><div dangerouslySetInnerHTML={{__html: post.body}} /></p>
+                                <div className='card-body'><div className={darkMode ? 'card-text' : 'card-text light'} dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br /><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post.title}`, post: post }}>Read More</Link></div>
+                                : <div className='card-body'><div className={darkMode ? 'card-text' : 'card-text light'} dangerouslySetInnerHTML={{__html: post.body}} /></div>
                         }
                     </div>
                 )
