@@ -17,6 +17,7 @@
 .card-text {
     color: var(--white);
     font-family: var(--text);
+    font-size: 22px;
     margin: 5% 0 5% 0;
 }
 
