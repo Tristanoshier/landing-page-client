@@ -1,6 +1,6 @@
 import convertDate from './DateConverter';
 import { Link } from 'react-router-dom';
-const parse = require('html-react-parser');
+import parse from 'html-react-parser';
 
 const blogHeader = (title, date, darkMode) => {
     return (
