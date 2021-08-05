@@ -51,7 +51,7 @@ const Blog = (props) => {
     return (
         <>
             <div className='blog'>
-                <p id='main-header'>My Blog</p>
+                <p id='main-header'>My Blog Is Horrible</p>
                 <p className={props.colorMode('card-text', 'card-text light')}>
                     Welcome to my blog. This is the place where I talk about what im doing in life as well as my experience as a young programmer navigating through the large world of software engineering. I try and post something weekly so keep an eye out for new content!
                 </p>
