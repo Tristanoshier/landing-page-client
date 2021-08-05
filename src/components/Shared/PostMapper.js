@@ -1,5 +1,6 @@
 import convertDate from './DateConverter';
 import { Link } from 'react-router-dom';
+import parseHTML from 'html-react-parser';
 
 const blogHeader = (title, date, darkMode) => {
     return (
@@ -38,8 +39,19 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                             }
                             {
                                 post.body.length > 299 ?
-                                    <div className='card-body'><div className={darkMode ? 'card-text' : 'card-text light'} dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br/><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post.title}`, post: post }}>Read More</Link></div>
-                                    : <div className='card-body'><div className={darkMode ? 'card-text' : 'card-text light'} dangerouslySetInnerHTML={{__html: post.body}} /></div>
+                                    <div className='card-body'>
+                                            <div className={darkMode ? 'card-text' : 'card-text light'}>
+                                                {parseHTML(`${post.body.substr(0, 299)}. . .`)}
+                                            </div>
+                                            <br/>
+                                            <Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post.title}`, post: post }}>Read More</Link>
+                                    </div>
+                                    : 
+                                    <div className='card-body'>
+                                        <div className={darkMode ? 'card-text' : 'card-text light'}>
+                                            {parseHTML(post.body)}
+                                        </div>
+                                    </div>
                             }
                         </div>
                     )
@@ -52,8 +64,19 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                         }
                         {
                             post.body.length > 299 ?
-                                <div className='card-body'><div className={darkMode ? 'card-text' : 'card-text light'} dangerouslySetInnerHTML={{__html: `${post.body.substr(0, 299)}. . .`}} /><br /><Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post.title}`, post: post }}>Read More</Link></div>
-                                : <div className='card-body'><div className={darkMode ? 'card-text' : 'card-text light'} dangerouslySetInnerHTML={{__html: post.body}} /></div>
+                                <div className='card-body'>
+                                    <div className={darkMode ? 'card-text' : 'card-text light'}>
+                                    {parseHTML(`${post.body.substr(0, 299)}. . .`)}
+                                    </div>
+                                    <br />
+                                    <Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post.title}`, post: post }}>Read More</Link>
+                                </div>
+                                : 
+                                <div className='card-body'>
+                                    <div className={darkMode ? 'card-text' : 'card-text light'}>
+                                        {parseHTML(post.body)}  
+                                    </div>
+                                </div>
                         }
                     </div>
                 )
