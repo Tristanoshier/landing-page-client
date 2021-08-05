@@ -1,6 +1,6 @@
 import convertDate from './DateConverter';
 import { Link } from 'react-router-dom';
-import ReactHtmlParser from 'react-html-parser';
+const parse = require('html-react-parser');
 
 const blogHeader = (title, date, darkMode) => {
     return (
@@ -41,7 +41,7 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                                 post.body.length > 299 ?
                                     <div className='card-body'>
                                             <div className={darkMode ? 'card-text' : 'card-text light'}>
-                                                {ReactHtmlParser(`${post.body.substr(0, 299)}. . .`)}
+                                                { parse(`${post.body.substr(0, 299)}. . .`) }
                                             </div>
                                             <br/>
                                             <Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post.title}`, post: post }}>Read More</Link>
@@ -49,7 +49,7 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                                     : 
                                     <div className='card-body'>
                                         <div className={darkMode ? 'card-text' : 'card-text light'}>
-                                            {ReactHtmlParser(post.body)}
+                                            {parse(post.body)}
                                         </div>
                                     </div>
                             }
@@ -66,7 +66,7 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                             post.body.length > 299 ?
                                 <div className='card-body'>
                                     <div className={darkMode ? 'card-text' : 'card-text light'}>
-                                    {ReactHtmlParser(`${post.body.substr(0, 299)}. . .`)}
+                                    {parse(`${post.body.substr(0, 299)}. . .`)}
                                     </div>
                                     <br />
                                     <Link onClick={() => savePostInLocalStorage(post)} className={darkMode ? 'card-link' : 'card-link light'} to={{ pathname: `/Focused/${post.title}`, post: post }}>Read More</Link>
@@ -74,7 +74,7 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                                 : 
                                 <div className='card-body'>
                                     <div className={darkMode ? 'card-text' : 'card-text light'}>
-                                        {ReactHtmlParser(post.body)}  
+                                        {parse(post.body)}  
                                     </div>
                                 </div>
                         }

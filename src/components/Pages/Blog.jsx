@@ -12,6 +12,7 @@ const Blog = (props) => {
     const [pageNumber, setPageNumber] = useState(1);
 
     useEffect(() => {
+        console.log('are you getting deployed')
         pageNumber <= 1 ? setInfiniteScrollLoading(false) : setInfiniteScrollLoading(true);
         fetch(`${APIURL}/site/blog?page=${pageNumber}&limit=5`, {
             method: 'GET',
