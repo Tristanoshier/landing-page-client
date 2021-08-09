@@ -63,7 +63,7 @@ export const Interests = (props) => {
             <div className='blog'>
                 <p id='main-header'>My Interests</p>
                 <p className={props.colorMode('card-text', 'card-text light')}>
-                I spend a lot of my time working on improving my programming skills, studying algorithms and data structures, building projects with friends, and collecting records for my vinyl collection. This is the place where I talk about what I'm working on, listening to, reading, and even review recent movies I've watched. Feel free to read anything that interests you.
+                I spend a lot of my time working on improving my programming skills, studying algorithms and data structures, building projects with friends, and collecting records for my vinyl collection. This is the place where I talk about what I'm working on, listening to, reading, and review recent movies I've watched. Feel free to read anything that interests you!
             </p>
                 {isLoading ?
                     <div className="loader"></div>
