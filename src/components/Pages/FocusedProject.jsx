@@ -1,7 +1,7 @@
 import { withRouter, useHistory } from 'react-router-dom'
-import convertDate from '../../Shared/DateConverter';
+import convertDate from '../Shared/DateConverter';
 
-const FocusedProject = (props) => {
+const FocusedProject = props => {
     const history = useHistory();
     const project = props.location.project;
 

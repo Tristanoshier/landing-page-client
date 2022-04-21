@@ -13,30 +13,30 @@
 }
 
 .back-button {
-    background-color: var(--blue);
-    color: #bdbcbc;
-    border-bottom: 2px#bdbcbc solid;
+    background-color: var(--independence);
+    color: var(--periwinklecrayola);
+    border-bottom: 2px var(--periwinklecrayola) solid;
     font-family: var(--text);
     font-size: 22px;
     max-width: 46px;
 }
 
 .back-button.light {
-    background-color: var(--white);
-    color: var(--blue);
-    border-bottom: 2px var(--blue) solid;
+    background-color: var(--periwinklecrayola);
+    color: var(--blueyonder);
+    border-bottom: 2px var(--blueyonder) solid;
 }
 
 .back-button:hover {
-    color: var(--white);
+    color: var(--periwinklecrayola);
     font-weight: bold;
-    border-bottom: 2px solid var(--orange);
+    border-bottom: 4px solid var(--cornflowerblue);
     transition: color 0.25s ease-out;
     transition: border-bottom 0.25s ease-out;
 }
 
 .back-button.light:hover {
-    color: var(--blue);
+    color: var(--independence);
 }
 
 /* iPad Pro */

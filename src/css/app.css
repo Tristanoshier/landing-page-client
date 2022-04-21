@@ -7,20 +7,18 @@
 @import './colorMode.css';
 @import './card.css';
 
-/* font imports */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Playfair+Display&display=swap');
-
 :root {
     /* color variables */
-    --orange: #EE6B5C;
-    --blue: #1E3342;
-    --gray: #6b6b6b;
-    --white: #F9F8F8;
-    --darkergray: #7e7e7e;
+    --cornflowerblue: #719BE5;
+    --periwinklecrayola: #BFD2F4;
+    --lightsteelblue: #b4c7e7;
+    --blueyonder: #667896;
+    --independence: #475672;
+    --darkerindependence: #404d66;
 
     /* font variables */
-    --main: 'Playfair Display', serif;
-    --text: 'Lato', sans-serif;
+    --main: 'Helvetica Neue', Arial, serif;
+    --text: 'Helvetica Neue', Arial, sans-serif;
 }
 
 html {
@@ -36,13 +34,13 @@ body {
 }
 
 .app {
-    background-color: var(--blue);
+    background-color: var(--independence);
     transition: background-color 0.25s ease-out;
     min-height: 100vh;
 }
 
 .app.light {
-    background-color: var(--white);
+    background-color: var(--periwinklecrayola);
 }
 
 .home {
@@ -54,8 +52,8 @@ body {
 }
 
 #main-header {
-    font-size: 70px;
-    color: var(--orange);
+    font-size: 100px;
+    color: var(--cornflowerblue);
     font-weight: bold;
     font-family: var(--main);
     margin-bottom: 0;

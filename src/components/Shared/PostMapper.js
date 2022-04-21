@@ -2,15 +2,6 @@ import convertDate from './DateConverter';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 
-const blogHeader = (title, date, darkMode) => {
-    return (
-        <div className={darkMode ? 'card-header' : 'card-header light'}>
-            <p className={darkMode ? 'card-title' : 'card-title light'}>{title}</p>
-            <p className={darkMode ? 'card-date' : 'card-date light'}>{convertDate(date)}</p>
-        </div>
-    )
-}
-
 const interestHeader = (title, date, topic, darkMode) => {
     return (
         <div className={darkMode ? 'interest-card-header' : 'interest-card-header light'}>
@@ -27,16 +18,13 @@ const savePostInLocalStorage = (post) => {
     localStorage.setItem('post', JSON.stringify(post))
 }
 
-const postMapper = (posts, type, lastElementOnPage, darkMode) => {
+const postMapper = (posts, lastElementOnPage, darkMode) => {
     if (posts.length > 0) {
         return posts.map((post, index) => {
                 if (posts.length === index + 1 && lastElementOnPage !== null) {
                     return (
                         <div ref={lastElementOnPage} className={darkMode ? 'card' : 'card light'} key={index}>
-                            {
-                                type === 'blog' ? blogHeader(post.title, post.createdAt, darkMode)
-                                    : interestHeader(post.title, post.createdAt, post.topic, darkMode)
-                            }
+                            { interestHeader(post.title, post.createdAt, post.topic, darkMode) }
                             {
                                 post.body.length > 299 ?
                                     <div className='card-body'>
@@ -58,10 +46,7 @@ const postMapper = (posts, type, lastElementOnPage, darkMode) => {
                 } else { 
                 return (
                     <div className={darkMode ? 'card' : 'card light'} key={index}>
-                        {
-                            type === 'blog' ? blogHeader(post.title, post.createdAt, darkMode)
-                                : interestHeader(post.title, post.createdAt, post.topic, darkMode)
-                        }
+                        { interestHeader(post.title, post.createdAt, post.topic, darkMode) }
                         {
                             post.body.length > 299 ?
                                 <div className='card-body'>

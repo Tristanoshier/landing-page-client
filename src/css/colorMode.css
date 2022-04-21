@@ -8,7 +8,7 @@
   input[type="checkbox"].checkbox {
     width: 40px;
     height: 10px;
-    background: var(--orange);
+    background: var(--cornflowerblue);
     position: relative;
     border-radius: 5px;
     -webkit-appearance: none;
@@ -33,9 +33,9 @@
     cursor: pointer;
     position: absolute;
     left: 2px;
-    background: var(--white);
+    background: var(--independence);
     opacity: 0.9;
-    background-color: var(--gray);
+    background-color: var(--blueyonder);
   }
 
   .toggle-container {

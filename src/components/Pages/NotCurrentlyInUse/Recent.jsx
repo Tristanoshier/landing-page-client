@@ -21,7 +21,7 @@ export const Recent = (props) => {
         <>
             {props.isLoading ?
                 <div className="loader"></div>
-                : postMapper(recentPosts, 'interests', null, props.darkMode)}
+                : postMapper(recentPosts, null, props.darkMode)}
         </>
     )
 }

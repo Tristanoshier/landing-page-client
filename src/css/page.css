@@ -1,56 +1,59 @@
 .sub-heading-light {
-    color: var(--blue);
+    color: var(--periwinklecrayola);
     font-family: var(--main);
     font-size: 34px;
 }
 
 .sub-heading-dark {
-    color: var(--white);
+    color: var(--independence);
     font-family: var(--main);
     font-size: 34px;
 }
+
 .page-text {
     font-size: 22px;
     font-weight: bold;
     line-height: 1.5em;
-    color: var(--white);
+    color: var(--lightsteelblue);
     font-family: var(--text);
 }
 
 .page-text.light {
-     color: var(--darkergray);
+     color: var(--independence);
 }
 
 .back-to-top-btn {
     background: none;
     border: none;
     font-size: 22px;
-    color: #bdbcbc;
-    border-bottom: 2px #bdbcbc solid;
+    color: var(--lightsteelblue);
+    border-bottom: 2px var(--cornflowerblue) solid;
     margin: 5% 0 5% 35%;
+}
+
+.back-to-top-btn:hover {
+    color: var(--periwinklecrayola);
+    border-bottom: 4px solid var(--cornflowerblue);
+    font-weight: bold;
+    transition: color 0.25s ease-out;
+    transition: border-bottom 0.25s ease-out;
+}
+
+.back-to-top-btn.light {
+    color: var(--blueyonder);
+    border-bottom: 2px var(--cornflowerblue) solid;
+}
+
+.back-to-top-btn.light:hover {
+    color: var(--independence);
+    font-weight: bold;
+    border-bottom: 4px solid var(--cornflowerblue);
+    transition: color 0.25s ease-out;
+    transition: border-bottom 0.25s ease-out;
 }
 
 .back-to-top-btn:focus {
     outline: none;
-}
-
-.back-to-top-btn.light {
-    color: var(--darkergray);
-    border-bottom: 2px var(--blue) solid;
-}
-
-.back-to-top-btn.light:hover {
-    color: var(--blue);
-    border-bottom: 2px solid var(--orange);
-    transition: color 0.25s ease-out;
-    transition: border-bottom 0.25s ease-out;
-}
-
-.back-to-top-btn:hover {
-    color: var(--white);
-    border-bottom: 2px solid var(--orange);
-    transition: color 0.25s ease-out;
-    transition: border-bottom 0.25s ease-out;
 }
 
 .projects {
@@ -59,7 +62,7 @@
 
 .loader {
     border: 10px solid transparent;
-    border-top: 10px solid var(--gray);
+    border-top: 10px solid var(--blueyonder);
     border-radius: 50%;
     width: 80px;
     height: 80px;

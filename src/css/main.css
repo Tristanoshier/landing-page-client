@@ -6,22 +6,22 @@
 
 #welcome-header {
     font-size: 100px;
-    color: var(--orange);
+    color: var(--cornflowerblue);
     font-weight: bold;
     font-family: var(--main);
     margin-bottom: 0;
 }
 
 .intro {
-    font-size: 40px;
-    color: var(--white);
+    font-size: 36px;
+    color: var(--periwinklecrayola);
     font-weight: bold;
     font-family: var(--text);
-    min-width: 400px;
+    min-width: 430px;
 }
 
 .intro.light {
-    color: var(--darkergray);
+    color: var(--blueyonder);
 }
 
 .waves {
@@ -31,7 +31,6 @@
 }
 
 @media(max-width: 1000px) {
-
     .main {
         margin: 10% 0 0 0;
     }
@@ -52,7 +51,6 @@
 
 /* iPad Pro */
 @media(width: 1024px) {
-
    .main {
         margin: 10% 0 0 0;
     }

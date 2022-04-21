@@ -9,7 +9,7 @@ import { Routes } from './Routes';
 const Navbar = (props) => {
     const [sidebar, setSidebar] = useState(false);
     const openSidebar = () => setSidebar(!sidebar);
-    const navbarItems = ['Interests', 'Blog', 'Contact'];
+    const navbarItems = ['Blog', 'Projects', 'Contact'];
     const linkedInURL = 'https://www.linkedin.com/in/tristan-oshier-678420196/';
     const githubURL = 'https://github.com/Tristanoshier';
 
@@ -79,7 +79,7 @@ const Navbar = (props) => {
     const lightAndDarkModeToggle = () => {
         return (
             <div className='toggle-container'>
-                <span className='sun' style={{ color: props.colorMode('var(--gray)', 'var(--orange)') }}>☀︎</span>
+                <span className='sun' style={{ color: props.colorMode('var(--blueyonder)', 'orange') }}>☀︎</span>
                 <span className='toggle'>
                     <input
                         checked={props.darkMode}
@@ -89,13 +89,13 @@ const Navbar = (props) => {
                         id='checkbox' />
                     <label htmlFor='checkbox' />
                 </span>
-                <span className='moon' style={{ color: props.colorMode('var(--white)', 'var(--gray)') }}>☾</span>
+                <span className='moon' style={{ color: props.colorMode('var(--periwinklecrayola)', 'var(--blueyonder)') }}>☾</span>
             </div>
         )
     }
 
     const copyright = () => {
-        return <p className={props.colorMode('copyright', 'copyright light')}>© Tristan Oshier 2021</p>
+        return <p className={props.colorMode('copyright', 'copyright light')}>© Tristan Oshier 2022</p>
     }
 
     const hamburger = () => {

@@ -8,48 +8,48 @@
 
 .contact-label {
     font-size: 20px;
-    color: var(--white);
+    color: var(--periwinklecrayola);
 }
 
 .contact-label.light {
-    color: var(--gray);
+    color: var(--independence);
 }
 
 .email-box {
-    color: var(--white);
+    color: var(--lightsteelblue);
     padding: 5px 5px 5px 10px;
-    background-color: var(--blue);
+    background-color: var(--independence);
+    border: 1px solid var(--periwinklecrayola);
     height: 30px;
     width: 100%;
     font-size: 18px;
-    border: 1px solid var(--white);
     border-radius: .5em .5em .5em .5em;
     margin-top: 5px;
 }
 
 .email-box.light {
-    color: var(--darkergray);
-    background-color: var(--white);
-    border: 1px solid var(--blue);
+    background-color: var(--periwinklecrayola);
+    border: 1px solid var(--independence);
+    color: var(--independence);
 }
 
 .message-box {
-    color: var(--white);
+    color: var(--lightsteelblue);
+    background-color: var(--independence);
     font-family: var(--text);
     padding: 5px 5px 5px 10px;
-    background-color: var(--blue);
     width: 100%;
     height: 200px;
     font-size: 18px;
-    border: 1px solid var(--white);
+    border: 1px solid var(--periwinklecrayola);
     border-radius: .5em .5em .5em .5em;
     margin-top: 5px;
 }
 
 .message-box.light {
-    color: var(--darkergray);
-    background-color: var(--white);
-    border: 1px solid var(--blue);
+    color: var(--independence);
+    background-color: var(--periwinklecrayola);
+    border: 1px solid var(--independence);
 }
 
 .email-box:focus {
@@ -61,17 +61,17 @@
 }
 
 ::placeholder {
-    color: var(--gray);
+    color: var(--blueyonder);
     font-family: var(--text);
 }
 
 .submit-btn {
+    color: var(--periwinklecrayola);
     font-family: var(--text);
-    color: var(--white);
     font-size: 20px;
     font-weight: bolder;
-    background-color: var(--blue);
-    border: 2px solid var(--white);
+    background-color: var(--independence);
+    border: 2px solid var(--periwinklecrayola);
     border-radius: .25em .25em .25em .25em;
     margin-left: 40%;
     width: 100px;
@@ -79,22 +79,22 @@
 }
 
 .submit-btn.light {
-    color: var(--blue);
-    background-color: var(--white);
-    border: 2px solid var(--blue);
+    color: var(--independence);
+    background-color: var(--periwinklecrayola);
+    border: 2px solid var(--independence);
 }
 
 .submit-btn:hover {
+    color: var(--periwinklecrayola);
     border: none;
-    background-color: var(--orange);
+    background-color: var(--blueyonder);
     transition: background-color 0.25s ease-out;
     transition: border 0.25s ease-out;
 }
 
 .submit-btn.light:hover {
-    color: var(--white);
     border: none;
-    background-color: var(--blue);
+    background-color: var(--blueyonder);
 }
 
 @media(max-width: 770px) {

@@ -21,7 +21,6 @@ export const Contact = (props) => {
     xhr.send(data);
   }
 
-
   return (
     <div className='contact'>
       <p id='main-header'>Contact</p>
@@ -31,7 +30,7 @@ export const Contact = (props) => {
         action='https://formspree.io/f/mwkwzdzr'
         method='POST'
       >
-        <label className={props.colorMode('contact-label', 'contact-label light')}>Your Email: (required)</label>
+        <label className={props.colorMode('contact-label', 'contact-label light')}>Your Email:</label>
         <br />
         <input className={props.colorMode('email-box', 'email-box light')} type='email' name='_replyto' placeholder='example@email.com' autoComplete='off' />
         <br />
@@ -42,7 +41,7 @@ export const Contact = (props) => {
         <br />
         <br />
         {status === 'SUCCESS' ? <p className={props.colorMode('contact-label', 'contact-label light')}>Thanks!</p> : <button className={props.colorMode('submit-btn', 'submit-btn light')}>Send</button>}
-        {status === 'ERROR' && <p>Ooops! There was an error.</p>}
+        {status === 'ERROR' && <p className={props.colorMode('contact-label', 'contact-label light')}>Oops! There was an error.</p>}
       </form>
     </div>
   )

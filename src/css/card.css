@@ -1,32 +1,31 @@
 .card {
-    color: var(--white);
+    color: var(--blueyonder);
+    background-color: var(--blueyonder);
     font-family: var(--text);
     font-size: 24px;
-    background-color: #192a35;
     margin: 20px 0 10px 0;
     padding-top: 0;
     border-radius: .5em
 }
 
 .card.light {
-    color: var(--gray);
-    background-color: var(--white);
-    border: 1px var(--gray) solid;
+    color: var(--periwinklecrayola);
+    background-color: var(--lightsteelblue);
 }
 
 .card-text {
-    color: var(--white);
+    color: var(--periwinklecrayola);
     font-family: var(--text);
     font-size: 22px;
     margin: 5% 0 5% 0;
 }
 
 .card-text.light {
-    color: var(--darkergray);
+    color: var(--blueyonder);
 }
 
 .card-header {
-    background-color: #121e25;
+    background-color: var(--darkerindependence);
     padding: 20px;
     display: flex;
     border-radius: .5em .5em 0 0;
@@ -34,27 +33,28 @@
 }
 
 .card-header.light {
-    background-color: var(--blue);
+    background-color: var(--blueyonder);
 }
 
 .card-title {
+    color: var(--periwinklecrayola);
     font-size: 22px;
     font-weight: bold;
     margin: 0;
 }
 
 .card-title.light {
-    color: var(--white);
+    color: var(--periwinklecrayola);
 }
 
 .card-date {
-    color: #bdbcbc;
+    color: var(--blueyonder);
     font-size: 14px;
     font-weight: bold;
 }
 
 .card-date.light {
-    color: var(--white);
+    color: var(--lightsteelblue);
 }
 
 .card-body {
@@ -63,13 +63,13 @@
 }
 
 .interest-card-header {
-    background-color: #121e25;
+    background-color: var(--darkerindependence);
     padding: 20px;
     border-radius: .5em .5em 0 0;
 }
 
 .interest-card-header.light {
-    background-color: var(--blue);
+    background-color: var(--blueyonder);
 }
 
 .top-row {
@@ -77,8 +77,9 @@
     justify-content: space-between;
 }
 
-.card-topic {
-    background-color: var(--blue);
+.card-topic { 
+    background-color: var(--blueyonder);
+    color: var(--periwinklecrayola);
     padding: .3em .6em;
     border-radius: .3em;
     font-size: 16px;
@@ -86,32 +87,32 @@
 }
 
 .card-topic.light {
-    background-color: #121e25;
-    color: var(--white);
+    color: var(--blueyonder);
+    background-color: var(--lightsteelblue);
 }
 
 
 .card-link {
     text-decoration: none;
-    color: #bdbcbc;
-    border-bottom: 2px#bdbcbc solid;
+    color: var(--periwinklecrayola);
+    border-bottom: 2px var(--periwinklecrayola) solid;
 }
 
 .card-link.light {
-    color: var(--blue);
-    border-bottom: 2px var(--blue) solid;
+    color: var(--independence);
+    border-bottom: 2px var(--independence) solid;
 }
 
 .card-link:hover {
-    color: var(--white);
+    color: var(--periwinklecrayola);
     font-weight: bold;
-    border-bottom: 2px solid var(--orange);
+    border-bottom: 4px solid var(--cornflowerblue);
     transition: color 0.25s ease-out;
     transition: border-bottom 0.25s ease-out;
 }
 
 .card-link.light:hover {
-    color: var(--blue);
+    color: var(--independence);
 }
 
 .card-body.skeleton {
@@ -129,7 +130,7 @@
     }
 
     .card-text.light {
-        color: var(--darkergray);
+        color: var(--cornflowerblue);
     }
 
     .card-title {

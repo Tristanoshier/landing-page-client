@@ -17,53 +17,50 @@
 }
 
 .nav-items-section {
-    border-right: 1px solid var(--gray);
+    border-right: 1px solid var(--blueyonder);
     padding-right: 10px;
     font-family: var(--text);
     min-height: 100vh;
 }
 
 .main-nav-item {
-    font-size: 30px;
+    font-size: 29.5px;
     margin-bottom: 30px;
     font-weight: bold;
     font-family: var(--main);
 }
 
 .main-nav-link {
-    color: var(--white);
+    color: var(--periwinklecrayola);
     text-decoration: none;
-    border-bottom: 5px solid var(--orange);
+    border-bottom: 5px solid var(--cornflowerblue);
+    font-family: var(--main);
     transition: color 0.25s ease-out;
     transition: border-bottom 0.25s ease-out;
 }
 
 .main-nav-link.light {
-    color: var(--blue);
+    color: var(--independence);
 }
 
 .navbar-link {
-    color: var(--white);
+    color: var(--periwinklecrayola);
     text-decoration: none;
     transition: color 0.25s ease-out;
 }
 
 .navbar-link.light {
-    color: var(--darkergray);
+    color: var(--independence);
 }
 
 .navbar-link:hover {
-    border-bottom: 4px solid var(--orange);
+    border-bottom: 4px solid var(--cornflowerblue);
     transition: border-bottom 0.15s ease-in;
     font-weight: bolder;
 }
 
 .active {
-    border-bottom: 4px solid var(--orange);
-}
-
-.active.light {
-    border-bottom: 4px solid var(--orange);
+    border-bottom: 4px solid var(--cornflowerblue);
 }
 
 .social-media {
@@ -73,17 +70,17 @@
 }
 
 .social-link {
-    color: var(--gray);
+    color: var(--blueyonder);
     margin-right: 5px;
 }
 
 .social-link:hover {
-    color: var(--white);
+    color: var(--periwinklecrayola);
     transition: color 0.15s ease-in;
 }
 
 .social-link.light:hover {
-    color: var(--blue);
+    color: var(--independence);
 }
 
 .copyright {
@@ -91,11 +88,11 @@
     bottom: 20px;
     font-family: var(--text);
     font-size: 12px;
-    color: var(--gray);
+    color: var(--blueyonder);
 }
 
 .copyright.light {
-    color: var(--darkergray);
+    color: var(--independence);
 }
 
 /* Only show on mobile or small screens */
@@ -115,15 +112,15 @@
 @media(max-width: 1000px) {
     .nav-mobile {
         left: -100%;
-        background-color: var(--blue);
+        background-color: var(--independence);
         z-index: 1;
         transition: 150ms;
-        border-right: 1px solid var(--gray);
+        border-right: 1px solid var(--independence);
         margin-top: 0;
     }
 
     .nav-mobile.light {
-        background-color: var(--white);
+        background-color: var(--periwinklecrayola);
     }
 
     .nav-mobile.active {
@@ -131,7 +128,7 @@
         padding-left: 20px;
         transition: 150ms;
         min-width: 40%;
-        border-right: 1px solid var(--gray);
+        border-right: 1px solid var(--blueyonder);
     }
 
     .hamburger {
@@ -140,12 +137,12 @@
         top: 3%;
         left: 4%;
         background: none;
-        color: var(--white);
+        color: var(--periwinklecrayola);
         border: none;
     }
 
     .hamburger.light {
-        color: var(--blue);
+        color: var(--independence);
     }
 
     .hamburger.active {
@@ -172,12 +169,12 @@
         display: block;
         background: none;
         border: none;
-        color: var(--white);
+        color: var(--periwinklecrayola);
         margin-right: 5px;
     }
 
     .mobile-exit-btn.light {
-        color: var(--blue);
+        color: var(--independence);
     }
 
     .nav-item {
@@ -191,14 +188,16 @@
 
     .mobile-home-link {
         display: block;
-        color: var(--white);
+        color: var(--periwinklecrayola);
+        font-family: var(--main);
+        font-weight: bold;
         text-decoration: none;
         font-size: 28px;
         margin-right: 7px;
     }
 
     .mobile-home-link.light {
-        color: var(--blue);
+        color: var(--independence);
     }
 }
 
@@ -232,14 +231,12 @@
 @media(max-width: 768px) {
     .mobile-home-link {
         display: block;
-        color: var(--white);
         text-decoration: none;
         font-size: 22px;
         margin-right: 7px;
     }
 
     .mobile-home-link.light {
-        color: var(--blue);
     }
 }
 
