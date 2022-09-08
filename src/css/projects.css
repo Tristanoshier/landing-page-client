@@ -1,0 +1,133 @@
+.projects {
+  min-height: 100vh;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.project-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 50px;
+  grid-auto-rows: minmax(100px, auto);
+  padding-top: 1%;
+}
+
+.project-container.all {
+  padding-bottom: 2%;
+}
+
+.project-header {
+  display: grid;
+  grid-template-columns: 15% 1fr 0fr 15%;
+  padding-top: 3%;
+}
+
+.page-header.project {
+  align-self: center;
+  padding-top: 0;
+}
+
+.focused-project {
+  min-height: 90vh;
+  background-color: var(--white);
+}
+
+.focused-project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.focused-project-container.mobile {
+  display: none;
+}
+
+.image-section {
+  width: 50vw;
+  margin: 5%;
+}
+
+.info-section {
+  width: 50vw;
+}
+
+.project-title {
+  color: var(--light_oxford_blue);
+  font-family: var(--main);
+  font-size: 32px;
+  margin-bottom: 5%;
+  margin-top: 2%;
+  text-align: center;
+}
+
+.project-description {
+  color: var(--light_oxford_blue);
+  font-family: var(--text);
+  font-size: 16px;
+  margin-right: 5%;
+  line-height: 2;
+  margin-top: 10%;
+}
+
+.project-description.mobile {
+  display: none;
+}
+
+.see-live {
+  margin-top: 10%;
+  margin-bottom: 20%;
+}
+
+@media (max-width: 1250px) {
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .focused-project-container {
+    display: none;
+  }
+
+  .info-section {
+    width: 90vw;
+  }
+
+  .project-description.mobile {
+    display: block;
+    margin-top: 0;
+  }
+
+  .focused-project-container.mobile {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .image-section {
+    width: auto;
+    margin: 0;
+  }
+
+  .project-title {
+    color: var(--dark_oxford_blue);
+    font-size: 32px;
+  }
+}
+
+/* DEVICE SPECIFIC STYLING */
+
+@media only screen and (device-width: 375px) and (device-height: 667px) {
+  .project-container {
+    padding-bottom: 20%;
+  }
+
+  .project-title {
+    font-size: 28px;
+  }
+  .project-description {
+    font-size: 14px;
+    margin-right: 0;
+  }
+}

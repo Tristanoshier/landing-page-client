@@ -1,0 +1,50 @@
+@import 'main';
+@import 'nav';
+@import 'page';
+@import 'blog';
+@import 'contact';
+@import 'colorMode';
+@import 'card';
+@import 'projects';
+@import 'services';
+@import 'footer';
+@import 'imageCarousel';
+@import 'loadingSkeleton';
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+:root {
+    /* color variables */
+    --baby_blue_eyes: #ADCEEE;
+    --dark_oxford_blue: #081330;
+    --light_oxford_blue: #173558;
+    --cultured: #EAEFF1;
+    --white: #FFFFFF;
+    --gray: rgb(142, 142, 142);
+    --loading-grey: #ededed;
+
+    /* font variables */
+    --main: 'DM Serif Display', serif;
+    --text: 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+    background-color: var(--baby_blue_eyes);
+}
+
+.app {
+    transition: background-color 0.25s ease-out;
+    min-height: 100vh;
+}

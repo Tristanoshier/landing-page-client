@@ -1,9 +1,23 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import Home from './components/Navigation/Home';
-import './css/app.css';
+import { Route, Switch } from "react-router-dom";
+import Navbar from './components/Navigation/Navbar';
+import Landing from './components/Pages/Landing';
+import FocusedBlog from './components/Pages/Blog/FocusedBlog';
+import FocusedProject from './components/Pages/Projects/FocusedProject';
+import Services from './components/Pages/Services/Services';
+import Blog from './components/Pages/Blog/Blog';
+import Footer from './components/Pages/Footer';
+import Projects from './components/Pages/Projects/Projects';
+import Contact from './components/Pages/Contact/Contact';
+import AllPosts from './components/Pages/Blog/AllPosts';
+import AllProjects from './components/Pages/Projects/AllProjects';
+import ContactForm from  './components/Pages/Contact/ContactForm';
+import FocusNavbar from './components/Navigation/FocusNavbar';
+
+import './css/app.scss';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const getIntitialMode = useCallback(() =>  {
     const isReturningUser = 'dark' in localStorage;
@@ -31,12 +45,46 @@ function App() {
 
   const colorMode = (darkClass, lightClass) => {
     return darkMode ? darkClass : lightClass;
-}
-
+  }
 
   return (
-    <div className={colorMode('app', 'app light')}>
-        <Home darkMode={darkMode} setDarkMode={setDarkMode} colorMode={colorMode} />
+    <div className='app'>
+        <Switch>
+          <Route exact path="/">
+            <Navbar darkMode={darkMode} colorMode={colorMode} />
+            <Landing darkMode={darkMode} setDarkMode={setDarkMode} colorMode={colorMode} />
+            <Projects colorMode={colorMode} />
+            <Services />
+            <Blog colorMode={colorMode} />
+            <Contact colorMode={colorMode} />
+            <Footer />
+          </Route>
+          <Route exact path="/post-details/:post">
+            <FocusNavbar />
+            <FocusedBlog darkMode={darkMode} colorMode={colorMode} />
+            <Footer />
+          </Route>  
+          <Route exact path="/project-details/:project">
+            <FocusNavbar />
+            <FocusedProject darkMode={darkMode} colorMode={colorMode} />
+            <Footer />
+          </Route>
+          <Route exact path="/all-posts">
+            <FocusNavbar />
+            <AllPosts />
+            <Footer />
+          </Route>
+          <Route exact path="/all-projects">
+            <FocusNavbar />
+            <AllProjects />
+            <Footer />
+          </Route>
+          <Route exact path="/contact-form">
+            <FocusNavbar />
+            <ContactForm />
+            <Footer />
+          </Route>
+        </Switch>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-let convertDate = (createdAt) => {
+let convertDate = createdAt => {
     let date = new Date(createdAt);
     const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
     const month = new Intl.DateTimeFormat('en', { month: 'numeric' }).format(date);

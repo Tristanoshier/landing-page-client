@@ -1,187 +1,260 @@
 .contact {
-    display: flex;
-    margin: 0 10% 0 0;
-    flex-direction: column;
-    font-family: var(--text);
-    width: 575px;
+  display: flex;
+  min-height: 80vh;
+  background-color: var(--baby_blue_eyes);
+  width: 100%;
+  flex-direction: column;
+  font-family: var(--text);
+}
+
+.contact-heading {
+  font-family: var(--text);
+  color: var(--light_oxford_blue);
+  font-weight: 500;
+  font-size: 62px;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.contact-sub-heading {
+  font-family: var(--text);
+  color: var(--light_oxford_blue);
+  font-weight: 500;
+  font-size: 62px;
+  text-align: center;
+}
+
+.landing-btn.conversation {
+  height: 75px;
+  width: auto;
+  font-size: 24px;
+}
+
+.contact-form-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: var(--white);
+  font-family: var(--text);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-form {
+  width: 40vw;
+  background-color: var(--white);
+  padding: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact-header-message {
+  color: var(--light_oxford_blue);
+  font-family: var(--main);
+  font-size: 22px;
 }
 
 .contact-label {
-    font-size: 20px;
-    color: var(--periwinklecrayola);
-}
-
-.contact-label.light {
-    color: var(--independence);
+  font-size: 16px;
+  color: var(--light_oxford_blue);
 }
 
 .email-box {
-    color: var(--lightsteelblue);
-    padding: 5px 5px 5px 10px;
-    background-color: var(--independence);
-    border: 1px solid var(--periwinklecrayola);
-    height: 30px;
-    width: 100%;
-    font-size: 18px;
-    border-radius: .5em .5em .5em .5em;
-    margin-top: 5px;
-}
-
-.email-box.light {
-    background-color: var(--periwinklecrayola);
-    border: 1px solid var(--independence);
-    color: var(--independence);
+  color: var(--light_oxford_blue);
+  padding: 5px 5px 5px 10px;
+  background-color: var(--white);
+  border: 1px solid var(--dark_oxford_blue);
+  height: 40px;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 5px;
 }
 
 .message-box {
-    color: var(--lightsteelblue);
-    background-color: var(--independence);
-    font-family: var(--text);
-    padding: 5px 5px 5px 10px;
-    width: 100%;
-    height: 200px;
-    font-size: 18px;
-    border: 1px solid var(--periwinklecrayola);
-    border-radius: .5em .5em .5em .5em;
-    margin-top: 5px;
-}
-
-.message-box.light {
-    color: var(--independence);
-    background-color: var(--periwinklecrayola);
-    border: 1px solid var(--independence);
+  color: var(--dark_oxford_blue);
+  background-color: var(--white);
+  font-family: var(--text);
+  padding: 5px 5px 5px 10px;
+  width: 100%;
+  height: 200px;
+  font-size: 18px;
+  border: 1px solid var(--light_oxford_blue);
+  margin-top: 5px;
 }
 
 .email-box:focus {
-    outline: none;
+  outline: none;
 }
 
 .message-box:focus {
-    outline: none;
+  outline: none;
 }
 
 ::placeholder {
-    color: var(--blueyonder);
-    font-family: var(--text);
+  color: var(--light_oxford_blue);
+  font-family: var(--text);
 }
 
 .submit-btn {
-    color: var(--periwinklecrayola);
-    font-family: var(--text);
-    font-size: 20px;
-    font-weight: bolder;
-    background-color: var(--independence);
-    border: 2px solid var(--periwinklecrayola);
-    border-radius: .25em .25em .25em .25em;
-    margin-left: 40%;
-    width: 100px;
-    height: 30px;
-}
-
-.submit-btn.light {
-    color: var(--independence);
-    background-color: var(--periwinklecrayola);
-    border: 2px solid var(--independence);
+  color: var(--light_oxford_blue);
+  font-weight: bolder;
+  background-color: var(--white);
+  border: 1px solid var(--dark_oxford_blue);
 }
 
 .submit-btn:hover {
-    color: var(--periwinklecrayola);
-    border: none;
-    background-color: var(--blueyonder);
-    transition: background-color 0.25s ease-out;
-    transition: border 0.25s ease-out;
+  color: var(--cultured);
+  background-color: var(--dark_oxford_blue);
+  transition: background-color 0.25s ease-out;
+  transition: border 0.25s ease-out;
 }
 
-.submit-btn.light:hover {
-    border: none;
-    background-color: var(--blueyonder);
+.contact-information {
+  width: 40vh;
+  background-color: var(--dark_oxford_blue);
+  color: var(--cultured);
+  font-family: var(--text);
+  padding: 25px;
 }
 
-@media(max-width: 770px) {
-    .contact {
-        width: 500px;
-    }
+.contact-info-message {
+  font-family: var(--main);
+  font-size: 22px;
 }
 
-@media(max-width: 670px) {
-    .contact {
-        width: 400px;
-    }
+.contact-info-text {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-/* Surface Duo */
-@media(width: 540px) {
-    .contact {
-        width: 400px;
-    }
+.contact-info-option {
+  font-size: 16px;
 }
 
-
-@media(max-width: 414px) {
-    .contact {
-        width: 270px;
-    }
-
-    .submit-btn {
-        margin-left: 32%;
-    }
-}
-/* Pixel 2 & Pixel XL */
-@media(width: 411px) {
-    .contact {
-        width: 315px;
-    }
-
-    .submit-btn {
-        margin-left: 35%;
-    }
+.contact-info-option.phone {
+  letter-spacing: 1px;
 }
 
-/* iPhone 5/SE */
-@media(width: 320px) {
+@media (max-width: 1050px) {
+  .contact-heading {
+    font-size: 50px;
+  }
 
-    .contact {
-        width: 240px;
-    }
+  .contact-sub-heading {
+    font-size: 50px;
+  }
 
-    .submit-btn {
-        margin-left: 30%;
-    }
+  .landing-btn.conversation {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .contact-form {
+    width: 60vw;
+  }
 }
 
-/* iPhone 6/7/8/X */
-@media(width: 375px) {
+@media (max-width: 720px) {
+  .contact {
+    min-height: 50vh;
+  }
 
-    .contact {
-        width: 285px;
-    }
+  .landing-btn.conversation {
+    margin-top: 15%;
+  }
 
-    .submit-btn {
-        margin-left: 33%;
-    }
+  .form-container {
+    flex-direction: column-reverse;
+    margin: 5% 0;
+  }
+
+  .contact-form {
+    width: 90vw;
+  }
+
+  .contact-information {
+    width: 90vw;
+  }
 }
 
+@media only screen and (max-device-width: 415px) and (max-device-height: 920px) {
+  .contact {
+    min-height: 50vh;
+  }
 
-/* iPhone 6/7/8/ Plus */
-@media(width: 414px) {
-
-    .contact {
-        width: 315px;
-    }
-
-    .submit-btn {
-        margin-left: 35%;
-    }
+  .landing-btn.conversation {
+    margin-top: 15%;
+  }
 }
 
-/* Galaxy Fold */
-@media(width: 280px) {
-    .contact {
-        width: 205px;
-    }
+@media only screen and (device-width: 820px) and (device-height: 1180px) {
+  .contact {
+    min-height: 40vh;
+  }
 
-    .submit-btn {
-        margin-left: 28%;
-    }
+  .form-container {
+    flex-direction: column-reverse;
+    margin: 5% 0;
+  }
+
+  .contact-form {
+    width: 90vw;
+  }
+
+  .contact-information {
+    width: 90vw;
+  }
+
+  .landing-btn.conversation {
+    margin-top: 15%;
+  }
 }
 
+@media only screen and (device-width: 768px) and (device-height: 1024px) {
+  .contact {
+    min-height: 40vh;
+  }
+
+  .form-container {
+    flex-direction: column-reverse;
+    margin: 5% 0;
+  }
+
+  .contact-form {
+    width: 90vw;
+  }
+
+  .contact-information {
+    width: 90vw;
+  }
+
+  .landing-btn.conversation {
+    margin-top: 15%;
+  }
+}
+
+@media only screen and (device-width: 912px) and (device-height: 1368px) {
+  .contact {
+    min-height: 40vh;
+  }
+
+  .form-container {
+    flex-direction: column-reverse;
+    margin: 5% 0;
+  }
+
+  .contact-form {
+    width: 90vw;
+  }
+
+  .contact-information {
+    width: 90vw;
+  }
+
+  .landing-btn.conversation {
+    margin-top: 15%;
+  }
+}

@@ -1,70 +1,97 @@
 .blog {
+  min-height: 100vh;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.blog-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1%;
+  row-gap: 50px;
+  grid-auto-rows: minmax(100px, auto);
+  padding-top: 1%;
+}
+
+.blog-container.all {
+  padding-bottom: 2%;
+}
+
+.all-blog-container {
+  text-align: center;
+}
+
+.search-page {
+  display: grid;
+}
+
+.search-form {
+  display: flex;
+  width: 50vw;
+}
+
+.focused-post {
+  min-height: 90vh;
+  background-color: var(--white);
+  padding-bottom: 2%;
+}
+
+.focused-post-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-title {
+  justify-self: center;
+  align-self: center;
+  color: var(--light_oxford_blue);
+  font-family: var(--main);
+  font-size: 32px;
+  margin-top: 3%;
+}
+
+.post-info {
+  font-style: italic;
+  font-family: var(--text);
+  color: var(--gray);
+  font-size: 14px;
+  margin: 2% 0 2% 10%;
+}
+
+.post-body {
+  justify-self: center;
+  align-self: center;
+  width: 80vw;
+  color: var(--light_oxford_blue);
+  font-family: var(--text);
+  font-size: 16px;
+  line-height: 2;
+}
+
+@media (max-width: 920px) {
+  .blog-container {
     display: flex;
-    margin: 0 10% 0 0;
     flex-direction: column;
-    max-width: 700px;
+    align-items: center;
+  }
 }
 
-.focused-blog {
-    display: flex;
-    margin: 10% 0 0 10%;
-    flex-direction: column;
-    max-width: 700px;
-}
+/* DEVICE SPECIFIC STYLING */
 
-.back-button {
-    background-color: var(--independence);
-    color: var(--periwinklecrayola);
-    border-bottom: 2px var(--periwinklecrayola) solid;
-    font-family: var(--text);
-    font-size: 22px;
-    max-width: 46px;
-}
+@media only screen and (max-device-width: 415px) and (max-device-height: 920px) {
+  .post-title {
+    padding: 0 5%;
+    text-align: center;
+  }
 
-.back-button.light {
-    background-color: var(--periwinklecrayola);
-    color: var(--blueyonder);
-    border-bottom: 2px var(--blueyonder) solid;
-}
+  .post-body {
+    font-size: 14px;
+    width: 90vw;
+  }
 
-.back-button:hover {
-    color: var(--periwinklecrayola);
-    font-weight: bold;
-    border-bottom: 4px solid var(--cornflowerblue);
-    transition: color 0.25s ease-out;
-    transition: border-bottom 0.25s ease-out;
+  .post-info {
+    text-align: center;
+    margin: 3% 0;
+  }
 }
-
-.back-button.light:hover {
-    color: var(--independence);
-}
-
-/* iPad Pro */
-@media(max-width: 1024px) {
-    .focused-blog {
-        margin: 20% 10% 0 0;
-    }
-}
-
-/* iPad */
-@media(width: 768px),
-(height: 1024px) {
-    .focused-blog {
-        margin: 15% 10% 0 0;
-    }
-}
-
-/* Surface Duo */
-@media(width: 540px) {
-    .focused-blog {
-        margin: 15% 10% 0 0;
-    }
-}
-
-/* phones */
-@media(max-width: 414px) {
-    .focused-blog {
-        margin: 20% 10% 0 0;
-    }
-}
-
