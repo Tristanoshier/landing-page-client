@@ -10,7 +10,7 @@ const FocusedProject = (props) => {
     return (
       <div className="focused-project-container">
         <div className="image-section">
-        <div className="project-title">{focusedProject?.title}</div>
+          <div className="project-title">{focusedProject?.title}</div>
           <div className="carousel-wrapper">
             <div className="carousel-container">
               <div className="carousel">
@@ -37,16 +37,19 @@ const FocusedProject = (props) => {
           </div>
         </div>
         <div className="info-section">
-         
           <div
             className="project-description"
             dangerouslySetInnerHTML={{ __html: focusedProject?.description }}
           ></div>
-          <a href={focusedProject?.link} rel="noreferrer" target="_blank">
-            <button className="landing-btn submit-btn see-live">
-              See Live
-            </button>
-          </a>
+          {focusedProject?.link === "not-live" ? (
+            <></>
+          ) : (
+            <a href={focusedProject?.link} rel="noreferrer" target="_blank">
+              <button className="landing-btn submit-btn see-live">
+                See Live
+              </button>
+            </a>
+          )}
         </div>
       </div>
     );
