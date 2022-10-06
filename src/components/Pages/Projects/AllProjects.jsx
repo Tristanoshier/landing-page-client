@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import APIURL from "../../../Evironment/environment";
-import convertDate from "../../Shared/DateConverter";
-// import backToTop from "../../Shared/BackToTop";
 import { LoadingSkeleton } from "../../Shared/LoadingSkeleton";
+import { FilterProjects } from './FilterProjects';
+// import backToTop from "../../Shared/BackToTop";
+
 
 const AllProjects = () => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [portfolioProjects, setPortfolioProjects] = useState([]);
+  const [storeProjects, setStoreProjects] = useState([]);
+  const [otherProjects, setOtherProjects] = useState([]);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
@@ -20,8 +23,20 @@ const AllProjects = () => {
       .then((res) => res.json())
       .then((projects) => {
         setProjects(projects);
-        setIsLoading(false);
+
         projects.length >= 6 ? setShowBackToTop(true) : setShowBackToTop(false);
+
+        setPortfolioProjects(
+          projects.filter((project) => project.projecttype === "portfolio")
+        );
+        setStoreProjects(
+          projects.filter((project) => project.projecttype === "shop")
+        );
+        setOtherProjects(
+          projects.filter((project) => project.projecttype === "other")
+        );
+
+        setIsLoading(false);
       })
       .catch(() =>
         alert(
@@ -29,45 +44,6 @@ const AllProjects = () => {
         )
       );
   }, []);
-
-  const saveProjectInLocalStorage = (project) => {
-    localStorage.setItem("project", JSON.stringify(project));
-  };
-
-  const projectMapper = () => {
-      return projects.map((project, index) => {
-        return (
-          <div className="container" key={index}>
-            <div
-              className="card"
-              style={{ backgroundImage: `url(${project.thumbnailpath})` }}
-            >
-              <div className="contentBx">
-                <h2>{project.title}</h2>
-                <div className="color">
-                  <h3>Date Created :</h3>
-                  <span>{convertDate(project.createdAt)}</span>
-                </div>
-                <div className="size">
-                  <h3>Project Category :</h3>
-                  <span>{project.projecttype}</span>
-                </div>
-                <Link
-                  onClick={() => saveProjectInLocalStorage(project)}
-                  className="card-link"
-                  to={{
-                    pathname: `/project-details/${project.title}`,
-                    project: project,
-                  }}
-                >
-                  Learn More
-                </Link>
-              </div>
-            </div>
-          </div>
-        );
-      });
-  };
 
   return (
     <div className="projects">
@@ -77,7 +53,15 @@ const AllProjects = () => {
       </div>
       {!isLoading ? (
         <>
-          <div className="project-container all">{projectMapper()}</div>
+
+            <FilterProjects
+              projects={projects}
+              portfolioProjects={portfolioProjects}
+              storeProjects={storeProjects}
+              otherProjects={otherProjects}
+              isLoading={isLoading}
+            />
+
           {/* {showBackToTop ? (
             <button
               className="landing-btn back-to-top"

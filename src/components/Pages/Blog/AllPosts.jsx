@@ -34,6 +34,7 @@ const AllPosts = () => {
           posts.filter((post) => post.topic === "programming")
         );
         setBlogPosts(posts.filter((post) => post.topic === "blog"));
+        
         setIsLoading(false);
       })
       .catch(() =>

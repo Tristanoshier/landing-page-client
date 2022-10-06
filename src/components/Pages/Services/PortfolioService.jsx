@@ -11,7 +11,7 @@ export const PortfolioService = () => {
           <div className="service-card-container">
             <div className="information-section">
               <div className="images">
-                <img src="/images/alicemontana1.png" />
+                <img src="/images/alicemontana1.png" alt="portfolio example" />
               </div>
               <div className="information">
                 <div className="service-option-title">Template Portfolio</div>

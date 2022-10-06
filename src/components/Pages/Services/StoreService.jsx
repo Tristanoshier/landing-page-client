@@ -11,7 +11,7 @@ export const StoreService = () => {
           <div className="service-card-container">
             <div className="information-section">
               <div className="images">
-                <img src="/images/business.jpg" />
+                <img src="/images/business.jpg" alt="people discussing business" />
               </div>
               <div className="information">
                 <div className="service-option-title">Just Getting Started</div>
@@ -25,7 +25,7 @@ export const StoreService = () => {
                   <br />
                   <br />
                   Your online store will be hosted on{" "}
-                  <a href="https://www.bigcartel.com/" target="_blank">
+                  <a href="https://www.bigcartel.com/" target="_blank" rel="noreferrer">
                     Big Cartel
                   </a>{" "}
                   which will allow you to offer discounts, run promos, offer
@@ -43,7 +43,7 @@ export const StoreService = () => {
           <div className="service-card-container">
             <div className="information-section">
               <div className="images">
-                <img src="/images/business.jpg" />
+                <img src="/images/business.jpg" alt="people discussing business" />
               </div>
               <div className="information">
                 <div className="service-option-title">Level 2</div>
@@ -59,7 +59,7 @@ export const StoreService = () => {
                   <br />
                   <br />
                   Your online store will be hosted and managed on
-                  {" "}<a href="https://www.bigcartel.com/">Big Cartel</a> which will
+                  {" "}<a href="https://www.bigcartel.com/" target="_blank" rel="noreferrer">Big Cartel</a> which will
                   allow you to offer discounts, run promos, offer shipment
                   tracking, set your shipping fees, set up inventory tracking,
                   and manage the products visible on your page. The $9.99
@@ -76,7 +76,7 @@ export const StoreService = () => {
           <div className="service-card-container">
             <div className="information-section">
               <div className="images">
-                <img src="/images/business.jpg" />
+                <img src="/images/business.jpg" alt="people discussing business" />
               </div>
               <div className="information">
                 <div className="service-option-title">Level 3</div>
@@ -92,7 +92,7 @@ export const StoreService = () => {
                   <br />
                   <br />
                   Your online store will be hosted and managed on{" "}
-                  <a href="https://www.bigcartel.com/" target="_blank">
+                  <a href="https://www.bigcartel.com/" target="_blank" rel="noreferrer">
                     Big Cartel
                   </a>{" "}
                   which will allow you to offer discounts, run promos, offer
