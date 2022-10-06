@@ -46,7 +46,7 @@ const FocusedProject = (props) => {
           ) : (
             <a href={focusedProject?.link} rel="noreferrer" target="_blank">
               <button className="landing-btn submit-btn see-live">
-                See Live
+                Visit Site
               </button>
             </a>
           )}
