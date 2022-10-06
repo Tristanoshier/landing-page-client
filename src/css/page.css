@@ -51,13 +51,14 @@
 }
 
 .filter-option {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   background: transparent;
   color: var(--light_oxford_blue);
   border: none;
   margin-right: 3%;
   margin-left: 3%;
+  font-size: 16px;
 }
 
 .filter-option.active {
@@ -78,7 +79,7 @@
   }
 
   .filter-option {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .browse-all {
