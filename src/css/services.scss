@@ -172,6 +172,139 @@
     min-height: 100vh;
     width: 100%;
     background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        font-size: 80px;
+        font-family: var(--main);
+    }
+
+    .service-page-container {
+        .description {
+            font-family: var(--text);
+            color: var(--light_oxford_blue);
+            line-height: 2;
+            font-size: 18px;
+            width: 80vw;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+
+        .service-options {
+            display: flex;
+            flex-direction: column;
+
+            .service-card-container {
+                display: flex;
+                flex-direction: column;
+                max-width: 80vw;
+                margin-bottom: 10%;
+
+                .information-section {
+                    display: flex;
+                    flex-direction: row;
+
+                    .images {
+                        width: 50%;
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+
+                    .information {
+                        width: 50%;
+                        padding: 10px;
+                        margin-left: 20px;
+
+                        .service-option-title {
+                            font-family: var(--main);
+                            font-size: 34px;
+                            color: var(--light_oxford_blue);
+                        }
+
+                        .price {
+                            font-size: 26px;
+                            font-family: var(--text);
+                            color: var(--gray);
+                        }
+
+                        .help {
+                            font-size: 22px;
+                            color: var(--light_oxford_blue);
+                            font-family: var(--text);
+                            margin-bottom: 5px;
+                        }
+
+                        .delivery-time {
+                            font-size: 18px;
+                            color: var(--gray);
+                            font-family: var(--text);
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                        }
+
+                        .information-description {
+                            font-family: var(--text);
+                            line-height: 1.5;
+                            color: var(--light_oxford_blue);
+                        }
+
+                        .consultation-topics {
+                            display: flex;
+                            flex-direction: row;
+                            font-family: var(--text);
+                            color: var(--light_oxford_blue);
+                            line-height: 1.5;
+
+                            ul {
+                                margin-left: 10px;
+                            }
+
+                            #right-options {
+                                margin-left: 40px;
+                            }
+                        }
+                    }
+                    
+                }
+
+                .choose-template-section {
+                    padding-left: 4%;
+
+                    .pick {
+                        font-size: 22px;
+                        color: var(--light_oxford_blue);
+                        font-family: var(--text);
+                        padding-bottom: 5px;
+                    }
+
+                    .template-options {
+                        display: flex;
+                        flex-direction: row;
+                        .template-option {
+                            color: var(--light_oxford_blue);
+                            font-family: var(--text);
+                            font-size: 16px;
+                            padding: 5px 10px;
+                            background-color: var(--white);
+                            border: 1px var(--light_oxford_blue) solid;
+                            margin-right: 1%;
+                            transition: 0.5s;
+
+                            &:hover {
+                                color: var(--white);
+                                background-color: var(--light_oxford_blue);
+                            }
+                        }
+
+                       
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-device-width: 415px) and (max-device-height: 920px) {

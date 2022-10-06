@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export const PortfolioService = () => {
   return (
     <div className="service-page">
-      <div className="title">Personal Portfolio</div>
+      <div className="title">Personal Website</div>
       <div className="service-page-container">
         <div className="description">
           This page was written in HTML and CSS. The CSS was compiled from SASS.
@@ -14,44 +14,32 @@ export const PortfolioService = () => {
           SASS. Regardless, this could all be done in plain HTML and CSS.
         </div>
         <br />
-        <div className="service-option">
-          <div className="service-option-title">Template</div>
-          <div className="includes-header">Includes:</div>
-          <ul className="includes">
-            <li>Landing page</li>
-            <li>About page</li>
-            <li>Examples of work page</li>
-            <li>Services page</li>
-            <li>Contact page</li>
-            <li>Theme layout</li>
-            <li>Custom colors, fonts, and pictures</li>
-          </ul>
-          <div className="price">Price: $250</div>
-          <div className="completion-time">Completion Time: 3 days</div>
-        </div>
-        <br />
-        <div className="service-option">
-          <div className="service-option-title">Custom</div>
-          <div className="includes-header">Includes:</div>
-          <ul className="includes">
-            <li>5 - 8 custom pages</li>
-            <li>Custom layout & theme</li>
-          </ul>
-          <div className="price">Price: $500 - $800 depending on requests</div>
-          <div className="completion-time">
-            Completion Time: 1 - 2 weeks depending on requests
+        <div className="service-options">
+          <div className="service-card-container">
+            <div className="information-section">
+              <div className="images">
+                <img src="/images/alicemontana1.png" />
+              </div>
+              <div className="information">
+                <div className="service-option-title">Template Portfolio</div>
+                <div className="price">$350 - $500</div>
+                <div className="delivery-time">1 - 3 day completion time</div>
+                <div className="information-description">All template portfolios come with a landing page, about page, examples of work page, services page, and contact page. All templates are custom made by me with the option to change colors & fonts. Pictures and information must be provided in order to create your site.</div>
+                <div className="btn-container">
+                  <Link className="btn-link" to="/contact-form">
+                    <button className="landing-btn browse-all">Contact</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="choose-template-section">
+              <div className="pick">choose template</div>
+              <div className="template-options">
+                <button className="template-option">Student</button>
+                <button className="template-option">Professional</button>
+              </div>
+            </div>
           </div>
-        </div>
-        <br />
-        <div className="note">
-          Not sure what option is best for you? Contact me via the link below to
-          book a FREE 30-minute call to get more details on which option is
-          right for you.
-        </div>
-        <div className="btn-container">
-          <Link className="btn-link" to="/contact-form">
-            <button className="landing-btn browse-all">Contact</button>
-          </Link>
         </div>
       </div>
     </div>
