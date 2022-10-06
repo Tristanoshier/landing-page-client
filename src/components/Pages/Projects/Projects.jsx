@@ -8,11 +8,8 @@ const Projects = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true);
-    const ac = new AbortController();
     fetch(`${APIURL}/site/projects/favorites`,
     {
-      signal: ac.signal, 
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",
@@ -22,14 +19,13 @@ const Projects = () => {
       .then((res) => res.json())
       .then((projects) => {
         setProjects(projects);
+        setIsLoading(false);
       })
       .catch(() =>
         alert(
           "Sorry, something went wrong. Check your network connection or try again in a few minutes."
         )
       );
-      setIsLoading(false);
-      return () => ac.abort();
   }, []);
 
   const saveProjectInLocalStorage = (project) => {
