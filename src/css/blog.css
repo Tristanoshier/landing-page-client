@@ -69,7 +69,7 @@
   line-height: 2;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1250px) {
   .blog-container {
     display: flex;
     flex-direction: column;

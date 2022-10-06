@@ -126,50 +126,24 @@
   border: 1px var(--white) solid;
 }
 
-@media (max-width: 1200px) {
-  .container .card {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .container .card {
-    width: 250px;
-    height: 250px;
-  }
-
-  .container .card .contentBx .size h3,
-  .container .card .contentBx .color h3 {
-    font-size: 10px;
-  }
-
-  .container .card .contentBx .size,
-  .container .card .contentBx .color {
-    font-size: 12px;
-
-  }
-
-  .container .card .contentBx .card-link {
-    padding: 12px 32px;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 920px) {
+@media (max-width: 1250px) {
   .container .card {
     width: 400px;
     height: 400px;
   }
 
+  .container .card:hover .contentBx {
+    height: 400px;
+  }
+
   .container .card .contentBx .size h3,
   .container .card .contentBx .color h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .container .card .contentBx .size,
   .container .card .contentBx .color {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .container .card .contentBx .card-link {
@@ -188,5 +162,9 @@
       overflow: hidden;
       background-size: cover;
       background-position: center;
+    }
+
+    .container .card:hover .contentBx {
+      padding-top: 40%;
     }
 }
