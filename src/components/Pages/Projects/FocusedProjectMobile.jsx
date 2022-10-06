@@ -38,11 +38,15 @@ export const FocusedProjectMobile = (props) => {
           </div>
         </div>
       </div>
-      <a href={props.focusedProject?.link} rel="noreferrer" target="_blank">
-        <button className="landing-btn submit-btn see-live mobile">
-          Visit Site
-        </button>
-      </a>
+      {props.focusedProject?.link === "not-live" ? (
+            <></>
+          ) : (
+            <a href={props.focusedProject?.link} rel="noreferrer" target="_blank">
+              <button className="landing-btn submit-btn see-live">
+                Visit Site
+              </button>
+            </a>
+          )}
     </div>
   );
 };
