@@ -5,14 +5,8 @@ export const ConsultationService = () => {
   return (
     <div className="service-page">
       <div className="title">Consultation</div>
+      <br />
       <div className="service-page-container">
-        <div className="description">
-          This page was written in HTML and CSS. The CSS was compiled from SASS.
-          I used Normalize as my CSS reset and -prefix-free to save myself some
-          headaches. I haven't quite gotten the hang of Slim for compiling into
-          HTML, but someday I'll use it since its syntax compliments that of
-          SASS. Regardless, this could all be done in plain HTML and CSS.
-        </div>
         <div className="service-options">
           <div className="service-card-container">
             <div className="information-section">
@@ -21,7 +15,7 @@ export const ConsultationService = () => {
               </div>
               <div className="information">
                 <div className="service-option-title">1 on 1 consultation</div>
-                <div className="price">$50/hr</div>
+                <div className="price">$45/hr</div>
                 <br />
                 <div className="help">What I can help with:</div>
                 <div className="consultation-topics">
