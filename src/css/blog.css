@@ -1,6 +1,6 @@
 .blog {
   min-height: 100vh;
-  background-color: var(--white);
+  background-color: var(--ivory);
   text-align: center;
 }
 
@@ -33,7 +33,7 @@
 
 .focused-post {
   min-height: 90vh;
-  background-color: var(--white);
+  background-color: var(--ivory);
   padding-bottom: 2%;
 }
 
@@ -45,7 +45,7 @@
 .post-title {
   justify-self: center;
   align-self: center;
-  color: var(--light_oxford_blue);
+  color: var(--darkgray);
   font-family: var(--main);
   font-size: 32px;
   margin-top: 3%;
@@ -54,7 +54,7 @@
 .post-info {
   font-style: italic;
   font-family: var(--text);
-  color: var(--gray);
+  color: var(--darkgray);
   font-size: 14px;
   margin: 2% 0 2% 10%;
 }
@@ -63,7 +63,7 @@
   justify-self: center;
   align-self: center;
   width: 80vw;
-  color: var(--light_oxford_blue);
+  color: var(--darkgray);
   font-family: var(--text);
   font-size: 16px;
   line-height: 2;

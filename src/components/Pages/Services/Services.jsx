@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Services = () => {
   return (
     <div id="services" className="services">
-      <div className="page-header">Services I Offer</div>
+      <div className="page-header dark">Services I Offer</div>
       <div className="services-container">
         <ul>
           <li>
@@ -22,7 +22,7 @@ const Services = () => {
               <br />
               <div className="btn-container">
                 <Link className="btn-link" to="/portfolio-service">
-                  <button className="landing-btn browse-all">Learn More</button>
+                  <button className="landing-btn light browse-all">Learn More</button>
                 </Link>
               </div>
             </p>
@@ -44,7 +44,7 @@ const Services = () => {
               <br />
               <div className="btn-container">
                 <Link className="btn-link" to="/store-service">
-                  <button className="landing-btn browse-all">Learn More</button>
+                  <button className="landing-btn light browse-all">Learn More</button>
                 </Link>
               </div>
             </p>
@@ -66,7 +66,7 @@ const Services = () => {
               <br />
               <div className="btn-container">
                 <Link className="btn-link" to="/consultation-service">
-                  <button className="landing-btn browse-all">Learn More</button>
+                  <button className="landing-btn light browse-all">Learn More</button>
                 </Link>
               </div>
             </p>

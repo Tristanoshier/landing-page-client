@@ -1,6 +1,6 @@
 .landing-section {
     display: grid;
-    background-color: var(--baby_blue_eyes);
+    background-color: var(--ivory);
     grid-template-columns: 10% 1fr 1fr 10%;
     align-items: center;
     min-height: 90vh;
@@ -8,14 +8,14 @@
 
 .landing-title {
     grid-column: 2/3;
-    color: var(--dark_oxford_blue);
+    color: var(--darkgray);
     justify-self: center;
 }
 
 .headline {
-    color: var(--dark_oxford_blue);
-    font-family: 'DM Serif Display', serif;
-    font-size: 65px;
+    color: var(--darkgray);
+    font-family: var(--main);
+    font-size: 75px;
     letter-spacing: 2px;
     margin-bottom: 3%;
 }
@@ -23,25 +23,39 @@
 .sub-headline {
     font-size: 20px;
     font-family: var(--text);
-    color: var(--light_oxford_blue);
-    font-weight: 400;
+    color: var(--darkgray);
+    font-weight: 300;
     margin-bottom: 5%;
     line-height: 2;
 }
 
 .landing-btn {
-    padding: 16px 40px;
+    padding: 16px 35px;
+    font-size: 18px;
     text-transform: uppercase;
-    background-color: var(--light_oxford_blue);
-    color: var(--white);
-    font-family: var(--text);
+    background-color: var(--ivory);
+    color: var(--darkgray);
+    font-family: var(--main);
     font-weight: 500;
-    letter-spacing: 1px;
-    border: none;
+    letter-spacing: 2px;
+    border: 2px solid var(--darkgray);
+    transition: 0.5s;
 }
 
 .landing-btn:hover {
-    background-color: var(--dark_oxford_blue);
+    background-color: var(--darkgray);
+    color: var(--ivory);
+}
+
+.landing-btn.light {
+    background-color: var(--darkgray);
+    color: var(--ivory);
+    border: 2px solid var(--ivory);
+}
+
+.landing-btn.light:hover {
+    background-color: var(--ivory);
+    color: var(--darkgray);
 }
 
 .landing-picture {
@@ -51,7 +65,9 @@
 
 .main-pic {
     justify-self: center;
-    width: 500px;
+    width: 450px;
+    height: 500px;
+    object-fit: cover;
 }
 
 @media(max-width: 1420px) {

@@ -3,31 +3,32 @@
   grid-template-columns: 10% 1fr 1fr 20%;
   align-items: center;
   min-height: 20vh;
-  background-color: var(--dark_oxford_blue);
+  background-color: var(--darkgray);
+  border-top: 1px solid var(--ivory);
 }
 
 .copyright {
   grid-column: 4;
-  font-family: var(--text);
+  font-family: var(--main);
   font-size: 14px;
-  color: var(--cultured);
+  color: var(--ivory);
 }
 
 .follow-me {
-  font-family: var(--text);
+  font-family: var(--main);
   font-size: 22px;
   font-weight: bold;
-  color: var(--cultured);
+  color: var(--ivory);
   margin-bottom: 1%;
 }
 
 .social-links {
   grid-column: 2;
-  color: var(--cultured);
+  color: var(--ivory);
 }
 
 .social-link {
-  color: var(--cultured);
+  color: var(--ivory);
   margin-left: 2%;
 }
 

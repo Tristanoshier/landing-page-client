@@ -1,7 +1,7 @@
 .contact {
   display: flex;
   min-height: 80vh;
-  background-color: var(--baby_blue_eyes);
+  background-color: var(--darkgray);
   width: 100%;
   flex-direction: column;
   font-family: var(--text);
@@ -9,7 +9,7 @@
 
 .contact-heading {
   font-family: var(--text);
-  color: var(--light_oxford_blue);
+  color: var(--ivory);
   font-weight: 500;
   font-size: 62px;
   text-align: center;
@@ -18,7 +18,7 @@
 
 .contact-sub-heading {
   font-family: var(--text);
-  color: var(--light_oxford_blue);
+  color: var(--darkgray);
   font-weight: 500;
   font-size: 62px;
   text-align: center;
@@ -28,6 +28,15 @@
   height: 75px;
   width: auto;
   font-size: 24px;
+  background-color: var(--darkgray);
+  color: var(--ivory);
+  border: 2px solid var(--ivory);
+  transition: 0.5s;
+}
+
+.landing-btn.conversation:hover {
+  color: var(--darkgray);
+  background-color: var(--ivory);
 }
 
 .contact-form-page {
@@ -35,7 +44,7 @@
   justify-content: center;
   align-items: center;
   min-height: 90vh;
-  background-color: var(--white);
+  background-color: var(--ivory);
   font-family: var(--text);
 }
 
@@ -46,27 +55,28 @@
 
 .contact-form {
   width: 40vw;
-  background-color: var(--white);
+  background-color: var(--ivory);
   padding: 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--darkgray);
 }
 
 .contact-header-message {
-  color: var(--light_oxford_blue);
+  color: var(--darkgray);
   font-family: var(--main);
   font-size: 22px;
 }
 
 .contact-label {
   font-size: 16px;
-  color: var(--light_oxford_blue);
+  color: var(--darkgray);
+  font-family: var(--main);
 }
 
 .email-box {
-  color: var(--light_oxford_blue);
+  color: var(--darkgray);
   padding: 5px 5px 5px 10px;
-  background-color: var(--white);
-  border: 1px solid var(--dark_oxford_blue);
+  background-color: var(--ivory);
+  border: 1px solid var(--darkgray);
   height: 40px;
   width: 100%;
   font-size: 18px;
@@ -74,14 +84,14 @@
 }
 
 .message-box {
-  color: var(--dark_oxford_blue);
-  background-color: var(--white);
+  color: var(--darkgray);
+  background-color: var(--ivory);
   font-family: var(--text);
   padding: 5px 5px 5px 10px;
   width: 100%;
   height: 200px;
   font-size: 18px;
-  border: 1px solid var(--light_oxford_blue);
+  border: 1px solid var(--darkgray);
   margin-top: 5px;
 }
 
@@ -94,28 +104,27 @@
 }
 
 ::placeholder {
-  color: var(--light_oxford_blue);
+  color: var(--darkgray);
   font-family: var(--text);
 }
 
 .submit-btn {
-  color: var(--light_oxford_blue);
+  color: var(--darkgray);
   font-weight: bolder;
-  background-color: var(--white);
-  border: 1px solid var(--dark_oxford_blue);
+  background-color: var(--ivory);
+  border: 1px solid var(--darkgray);
+  transition: 0.5s;
 }
 
 .submit-btn:hover {
-  color: var(--cultured);
-  background-color: var(--dark_oxford_blue);
-  transition: background-color 0.25s ease-out;
-  transition: border 0.25s ease-out;
+  color: var(--ivory);
+  background-color: var(--darkgray);
 }
 
 .contact-information {
   width: 40vh;
-  background-color: var(--dark_oxford_blue);
-  color: var(--cultured);
+  background-color: var(--darkgray);
+  color: var(--ivory);
   font-family: var(--text);
   padding: 25px;
 }

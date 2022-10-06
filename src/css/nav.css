@@ -1,25 +1,28 @@
 .navbar {
-  font-family: var(--text);
-  color: var(--light_oxford_blue);
+  font-family: var(--main);
+  color: var(--darkgray);
+  background-color: var(--ivory);
   display: grid;
   grid-template-columns: 10% 1fr 1fr 10%;
   height: 80px;
-  background: transparent;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 999;
+  border-bottom: 1px var(--darkgray) solid;
 }
 
 .navbar.active {
-  background-color: var(--dark_oxford_blue);
-  color: var(--cultured);
+  background-color: var(--ivory);
+  color: var(--darkgray);
+  border-bottom: 1px var(--darkgray) solid;
 }
 
 .navbar-focused {
-  font-family: var(--text);
-  color: var(--light_oxford_blue);
-  background-color: var(--dark_oxford_blue);
+  font-family: var(--main);
+  color: var(--darkgray);
+  background-color: var(--ivory);
+  border-bottom: 1px var(--darkgray) solid;
   display: grid;
   grid-template-columns: 10% 1fr 1fr 10%;
   height: 80px;
@@ -31,8 +34,9 @@
 }
 
 .navbar-focused.active {
-  background-color: var(--dark_oxford_blue);
-  color: var(--cultured);
+  color: var(--darkgray);
+  background-color: var(--ivory);
+  border-bottom: 1px var(--darkgray) solid;
 }
 
 .mobile-navbar {
@@ -42,12 +46,13 @@
 .nav-items {
   display: flex;
   justify-content: space-evenly;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--text);
+  text-transform: capitalize;
 }
 
 .nav-item {
-  font-size: 14px;
+  font-size: 16px;
   list-style-type: none;
 }
 
@@ -61,8 +66,10 @@
   grid-column: 2/3;
   font-size: 18px;
   font-family: var(--text);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-size: bold;
+  font-family: var(--main);
   cursor: pointer;
 }
 
@@ -124,7 +131,7 @@
   position: relative;
   width: 100%;
   height: 3px;
-  background-color: var(--dark_oxford_blue);
+  background-color: var(--darkgray);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,7 +158,7 @@
 /* toggler animate */
 .menu-wrap .toggler:checked + .hamburger > div {
   transform: rotate(135deg);
-  background-color: var(--white);
+  background-color: var(--ivory);
 }
 
 /* turn lines into X */
@@ -198,7 +205,7 @@
 }
 
 .menu-wrap .menu > div {
-  background-color: var(--dark_oxford_blue);
+  background-color: var(--darkgray);
   border-radius: 50%;
   width: 200vw;
   height: 200vw;
@@ -220,7 +227,7 @@
 
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
-  color: var(--white);
+  color: var(--ivory);
   font-family: var(--text);
   font-size: 5rem;
   padding: 1rem;

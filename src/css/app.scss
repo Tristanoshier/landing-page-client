@@ -11,21 +11,16 @@
 @import 'imageCarousel';
 @import 'loadingSkeleton';
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Manrope:wght@600&display=swap');
 
 :root {
     /* color variables */
-    --baby_blue_eyes: #ADCEEE;
-    --dark_oxford_blue: #081330;
-    --light_oxford_blue: #173558;
-    --cultured: #EAEFF1;
-    --white: #FFFFFF;
-    --gray: rgb(142, 142, 142);
-    --loading-grey: #ededed;
+    --ivory: #EFF3E5;
+    --darkgray: #212930;
 
     /* font variables */
-    --main: 'DM Serif Display', serif;
-    --text: 'Helvetica Neue', Arial, sans-serif;
+    --main: 'Manrope', sans-serif;
+    --text: 'Lato', sans-serif;
 }
 
 * {
@@ -41,7 +36,7 @@ html {
 
 body {
     margin: 0;
-    background-color: var(--baby_blue_eyes);
+    background-color: var(--ivory);
 }
 
 .app {

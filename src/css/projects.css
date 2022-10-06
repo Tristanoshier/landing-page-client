@@ -1,6 +1,6 @@
 .projects {
   min-height: 100vh;
-  background-color: var(--white);
+  background-color: var(--ivory);
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
 
 .focused-project {
   min-height: 90vh;
-  background-color: var(--white);
+  background-color: var(--ivory);
 }
 
 .focused-project-container {
@@ -53,18 +53,18 @@
 }
 
 .project-title {
-  color: var(--light_oxford_blue);
+  color: var(--darkgray);
   font-family: var(--main);
-  font-size: 32px;
+  font-size: 34px;
   margin-bottom: 5%;
   margin-top: 2%;
   text-align: center;
 }
 
 .project-description {
-  color: var(--light_oxford_blue);
+  color: var(--darkgray);
   font-family: var(--text);
-  font-size: 16px;
+  font-size: 18px;
   margin-right: 5%;
   line-height: 2;
   margin-top: 10%;
@@ -111,7 +111,7 @@
   }
 
   .project-title {
-    color: var(--dark_oxford_blue);
+    color: var(--darkgray);
     font-size: 32px;
   }
 }

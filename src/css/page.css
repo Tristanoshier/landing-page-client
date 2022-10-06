@@ -1,10 +1,14 @@
 .page-header {
-  color: var(--dark_oxford_blue);
+  color: var(--darkgray);
   font-family: var(--main);
   font-weight: 500;
   font-size: 62px;
   text-align: center;
   padding-top: 5%;
+}
+
+.page-header.dark {
+  color: var(--ivory);
 }
 
 .btn-container {
@@ -14,19 +18,21 @@
 
 .btn-link {
   text-decoration: none;
-  color: var(--cultured);
+  color: var(--ivory);
 }
 
 .back-btn {
   text-transform: uppercase;
   height: 80px;
   width: 80px;
-  background-color: var(--baby_blue_eyes);
-  color: var(--dark_oxford_blue);
-  font-family: var(--text);
+  background-color: var(--ivory);
+  color: var(--darkgray);
+  font-family: var(--main);
   font-weight: 500;
   letter-spacing: 1px;
   border: none;
+  border-right: 1px solid var(--darkgray);
+  border-bottom: 1px solid var(--darkgray);
 }
 
 .back-to-top {
@@ -54,7 +60,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   background: transparent;
-  color: var(--light_oxford_blue);
+  color: var(--darkgray);
   border: none;
   margin-right: 3%;
   margin-left: 3%;
@@ -62,7 +68,7 @@
 }
 
 .filter-option.active {
-  border-bottom: 2px var(--light_oxford_blue) solid;
+  border-bottom: 2px var(--darkgray) solid;
 }
 
 @media (max-width: 920px) {
