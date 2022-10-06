@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MobileNavbar } from "./MobileNavbar";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [topNav, setTopNav] = useState(false);
@@ -44,9 +45,9 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#contact">
-              contact
-            </a>
+            <Link className="nav-link" to="/contact-form">
+            contact
+            </Link>
           </li>
         </div>
       </nav>

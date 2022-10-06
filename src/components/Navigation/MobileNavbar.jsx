@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const MobileNavbar = () => {
   const toggleCheckbox = () => {
@@ -9,7 +10,7 @@ export const MobileNavbar = () => {
       toggleButton.checked = true;
     }
   };
-  
+
   return (
     <div className="mobile-navbar">
       <div className="menu-wrap">
@@ -34,7 +35,9 @@ export const MobileNavbar = () => {
                   <a href="#blog">Blog</a>
                 </li>
                 <li onClick={() => toggleCheckbox()}>
-                  <a href="#contact">Contact</a>
+                  <Link className="nav-link" to="/contact-form">
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>
