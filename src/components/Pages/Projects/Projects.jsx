@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import APIURL from "../../../Evironment/environment";
 import { LoadingSkeleton } from "../../Shared/LoadingSkeleton";
+import formatTitle from "../../Shared/FormatTitle";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -49,7 +50,7 @@ const Projects = () => {
                   onClick={() => saveProjectInLocalStorage(project)}
                   className="card-link"
                   to={{
-                    pathname: `/project-details/${project.title}`,
+                    pathname: `/project-details/${formatTitle(project.title)}`,
                     project: project,
                   }}
                 >

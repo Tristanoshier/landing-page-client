@@ -1,5 +1,6 @@
 import convertDate from './DateConverter';
 import { Link } from 'react-router-dom';
+import formatTitle from './FormatTitle';
 
 const savePostInLocalStorage = post => {
     localStorage.setItem('post', JSON.stringify(post))
@@ -20,7 +21,7 @@ const postMapper = (posts, lastElementOnPage) => {
                                         onClick={() => savePostInLocalStorage(post)}
                                         className="card-link"
                                         to={{
-                                            pathname: `/post-details/${post.title}`,
+                                            pathname: `/post-details/${formatTitle(post.title)}`,
                                             post: post,
                                         }}
                                     >
