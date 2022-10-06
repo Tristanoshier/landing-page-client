@@ -57,7 +57,7 @@ function App() {
             <ConsultationService />
             <Footer />
           </Route>
-          <Route exact path="/all-posts">
+          <Route exact path="/Blog">
             <FocusNavbar />
             <AllPosts />
             <Footer />

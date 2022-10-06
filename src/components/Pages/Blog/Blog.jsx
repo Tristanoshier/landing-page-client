@@ -36,7 +36,7 @@ const Blog = () => {
             <div className="blog-container"> {postMapper(posts, null)}</div>
             {posts.length >= 3 ? (
               <div className="btn-container">
-                <Link className="btn-link" to="/all-posts">
+                <Link className="btn-link" to="/Blog">
                   <button className="landing-btn browse-all">Browse All</button>
                 </Link>
               </div>
