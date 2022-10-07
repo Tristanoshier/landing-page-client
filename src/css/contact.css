@@ -4,22 +4,21 @@
   background-color: var(--darkgray);
   width: 100%;
   flex-direction: column;
-  font-family: var(--text);
 }
 
 .contact-heading {
-  font-family: var(--text);
+  font-family: var(--font);
+  font-weight: var(--main);
   color: var(--ivory);
-  font-weight: 500;
   font-size: 62px;
   text-align: center;
   padding-top: 10%;
 }
 
 .contact-sub-heading {
-  font-family: var(--text);
+  font-family: var(--font);
+  font-weight: var(--main);
   color: var(--darkgray);
-  font-weight: 500;
   font-size: 62px;
   text-align: center;
 }
@@ -45,7 +44,8 @@
   align-items: center;
   min-height: 90vh;
   background-color: var(--ivory);
-  font-family: var(--text);
+  font-family: var(--font);
+  font-weight: var(--text);
 }
 
 .form-container {
@@ -62,14 +62,16 @@
 
 .contact-header-message {
   color: var(--darkgray);
-  font-family: var(--main);
+  font-family: var(--font);
+  font-weight: var(--main);
   font-size: 22px;
 }
 
 .contact-label {
   font-size: 16px;
   color: var(--darkgray);
-  font-family: var(--main);
+  font-family: var(--font);
+  font-weight: var(--main);
 }
 
 .email-box {
@@ -86,7 +88,8 @@
 .message-box {
   color: var(--darkgray);
   background-color: var(--ivory);
-  font-family: var(--text);
+  font-family: var(--font);
+  font-weight: var(--text);
   padding: 5px 5px 5px 10px;
   width: 100%;
   height: 200px;
@@ -105,7 +108,8 @@
 
 ::placeholder {
   color: var(--darkgray);
-  font-family: var(--text);
+  font-family: var(--font);
+  font-weight: var(--text);
 }
 
 .submit-btn {
@@ -125,12 +129,14 @@
   width: 40vh;
   background-color: var(--darkgray);
   color: var(--ivory);
-  font-family: var(--text);
+  font-family: var(--font);
+  font-weight: var(--text);
   padding: 25px;
 }
 
 .contact-info-message {
-  font-family: var(--main);
+  font-family: var(--font);
+  font-weight: var(--text);
   font-size: 22px;
 }
 

@@ -9,15 +9,16 @@
 
 .copyright {
   grid-column: 4;
-  font-family: var(--main);
+  font-family: var(--font);
+  font-weight: var(--text);
   font-size: 14px;
   color: var(--ivory);
 }
 
 .follow-me {
-  font-family: var(--main);
+  font-family: var(--font);
   font-size: 22px;
-  font-weight: bold;
+  font-weight: var(--main);
   color: var(--ivory);
   margin-bottom: 1%;
 }

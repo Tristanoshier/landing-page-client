@@ -1,5 +1,4 @@
 .navbar {
-  font-family: var(--main);
   color: var(--darkgray);
   background-color: var(--ivory);
   display: grid;
@@ -19,7 +18,6 @@
 }
 
 .navbar-focused {
-  font-family: var(--main);
   color: var(--darkgray);
   background-color: var(--ivory);
   border-bottom: 1px var(--darkgray) solid;
@@ -47,29 +45,28 @@
   display: flex;
   justify-content: space-evenly;
   letter-spacing: 1px;
-  font-family: var(--text);
   text-transform: capitalize;
 }
 
 .nav-item {
   font-size: 16px;
   list-style-type: none;
+  font-family: var(--font);
+  font-weight: var(--text);
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--black);
-  font-weight: 500;
 }
 
 #logo {
   grid-column: 2/3;
   font-size: 18px;
-  font-family: var(--text);
   letter-spacing: 1px;
   text-transform: capitalize;
-  font-size: bold;
-  font-family: var(--main);
+  font-family: var(--font);
+  font-weight: var(--main);
   cursor: pointer;
 }
 
@@ -228,7 +225,8 @@
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
   color: var(--ivory);
-  font-family: var(--text);
+  font-family: var(--font);
+  font-weight: var(--main);
   font-size: 5rem;
   padding: 1rem;
 }

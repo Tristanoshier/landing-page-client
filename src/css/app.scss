@@ -11,7 +11,7 @@
 @import 'imageCarousel';
 @import 'loadingSkeleton';
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Manrope:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
 
 :root {
     /* color variables */
@@ -19,8 +19,11 @@
     --darkgray: #212930;
 
     /* font variables */
-    --main: 'Manrope', sans-serif;
-    --text: 'Lato', sans-serif;
+    --font: 'Manrope', sans-serif;
+
+    /* font weight variables */
+    --main: 800;
+    --text: 400;
 }
 
 * {

@@ -14,7 +14,8 @@
 
 .headline {
     color: var(--darkgray);
-    font-family: var(--main);
+    font-family: var(--font);
+    font-weight: var(--main);
     font-size: 75px;
     letter-spacing: 2px;
     margin-bottom: 3%;
@@ -22,7 +23,8 @@
 
 .sub-headline {
     font-size: 20px;
-    font-family: var(--text);
+    font-family: var(--font);
+    font-weight: var(--text);
     color: var(--darkgray);
     font-weight: 300;
     margin-bottom: 5%;
@@ -35,8 +37,8 @@
     text-transform: uppercase;
     background-color: var(--ivory);
     color: var(--darkgray);
-    font-family: var(--main);
-    font-weight: 500;
+    font-family: var(--font);
+    font-weight: var(--main);
     letter-spacing: 2px;
     border: 2px solid var(--darkgray);
     transition: 0.5s;

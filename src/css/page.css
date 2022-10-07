@@ -1,6 +1,7 @@
 .page-header {
   color: var(--darkgray);
-  font-family: var(--main);
+  font-family: var(--font);
+  font-weight: var(--main);
   font-weight: 500;
   font-size: 62px;
   text-align: center;
@@ -27,8 +28,8 @@
   width: 80px;
   background-color: var(--ivory);
   color: var(--darkgray);
-  font-family: var(--main);
-  font-weight: 500;
+  font-family: var(--font);
+  font-weight: var(--main);
   letter-spacing: 1px;
   border: none;
   border-right: 1px solid var(--darkgray);
@@ -58,12 +59,12 @@
 
 .filter-option {
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   background: transparent;
   color: var(--darkgray);
   border: none;
-  margin-right: 3%;
-  margin-left: 3%;
+  margin-right: 4%;
+  margin-left: 4%;
   font-size: 16px;
 }
 
