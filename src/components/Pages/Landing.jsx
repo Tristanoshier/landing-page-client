@@ -4,10 +4,10 @@ const Landing = () => {
     <div>
       <section className="landing-section">
         <div className="landing-title">
-          <h1 className="headline">I'm Tristan A Software Engineer</h1>
+          <h1 className="headline">I'm Tristan A <br /> Software Engineer</h1>
           <h4 className="sub-headline">
             I craft high-performing, fully customizable websites that are
-            engaging, brand-accurate, & people-friendly.
+            engaging,<br /> brand-accurate, & people-friendly.
           </h4>
           <button
             className="landing-btn"

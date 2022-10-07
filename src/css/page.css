@@ -1,7 +1,6 @@
 .page-header {
   color: var(--darkgray);
   font-family: var(--font);
-  font-weight: var(--main);
   font-weight: 500;
   font-size: 62px;
   text-align: center;
@@ -65,7 +64,7 @@
   border: none;
   margin-right: 4%;
   margin-left: 4%;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .filter-option.active {
@@ -86,11 +85,17 @@
   }
 
   .filter-option {
-    font-size: 13px;
+    font-size: 18px;
   }
 
   .browse-all {
     margin-bottom: 5%;
   }
 
+}
+
+@media only screen and (device-width: 375px) and (device-height: 667px) {
+  .filter-option {
+    font-size: 16px;
+  }
 }

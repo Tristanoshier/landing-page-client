@@ -15,7 +15,7 @@ const postMapper = (posts, lastElementOnPage) => {
                                 <div className="contentBx">
                                     <h2>{post.title}</h2>
                                     <div className="color">
-                                        <span>posted on {convertDate(post.createdAt)} | {post.readtime} min read time</span>
+                                        <span>posted on {convertDate(post.createdAt)} ● {post.readtime} min read time</span>
                                     </div>
                                      <Link 
                                         onClick={() => savePostInLocalStorage(post)}

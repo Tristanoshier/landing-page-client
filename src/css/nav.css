@@ -2,7 +2,7 @@
   color: var(--darkgray);
   background-color: var(--ivory);
   display: grid;
-  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-columns: 13% 1fr 0.8fr 10%;
   height: 80px;
   align-items: center;
   position: sticky;
@@ -62,7 +62,7 @@
 
 #logo {
   grid-column: 2/3;
-  font-size: 18px;
+  font-size: 22px;
   letter-spacing: 1px;
   text-transform: capitalize;
   font-family: var(--font);
