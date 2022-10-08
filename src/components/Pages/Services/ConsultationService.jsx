@@ -11,7 +11,6 @@ export const ConsultationService = () => {
           <div className="service-card-container">
             <div className="information-section">
               <div className="images">
-                <img src="/images/business.jpg" alt="people discussing business" />
               </div>
               <div className="information">
                 <div className="service-option-title">1 on 1 consultation</div>

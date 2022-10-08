@@ -11,7 +11,7 @@ export const StoreService = () => {
           <div className="service-card-container">
             <div className="information-section">
               <div className="images">
-                <img src="/images/business.jpg" alt="people discussing business" />
+                <div>01</div>
               </div>
               <div className="information">
                 <div className="service-option-title">Just Getting Started</div>
@@ -43,10 +43,10 @@ export const StoreService = () => {
           <div className="service-card-container">
             <div className="information-section">
               <div className="images">
-                <img src="/images/business.jpg" alt="people discussing business" />
+                <div>02</div>
               </div>
               <div className="information">
-                <div className="service-option-title">Level 2</div>
+                <div className="service-option-title">Starting to Grow</div>
                 <div className="price">$350 + $9.99/month</div>
                 <div className="delivery-time">3 - 5 day completion time</div>
                 <div className="information-description">
@@ -76,10 +76,10 @@ export const StoreService = () => {
           <div className="service-card-container">
             <div className="information-section">
               <div className="images">
-                <img src="/images/business.jpg" alt="people discussing business" />
+                <div>03</div>
               </div>
               <div className="information">
-                <div className="service-option-title">Level 3</div>
+                <div className="service-option-title">Business is Taking Off!</div>
                 <div className="price">$500 + $19.99/month</div>
                 <div className="delivery-time">1 week completion time</div>
                 <div className="information-description">

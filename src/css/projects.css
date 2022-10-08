@@ -55,8 +55,8 @@
 .project-title {
   color: var(--darkgray);
   font-family: var(--font);
-  font-weight: var(--main);
-  font-size: 34px;
+  font-weight: var(--text);
+  font-size: 42px;
   margin-bottom: 5%;
   margin-top: 2%;
   text-align: center;
