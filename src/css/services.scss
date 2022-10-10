@@ -305,6 +305,47 @@
 }
 
 @media (max-width: 500px) {
+    .service-page {
+        .title {
+            font-size: 50px;
+            font-family: var(--font);
+            font-weight: var(--text);
+            color: var(--darkgray);
+            text-align: center;
+        }
+
+        .service-page-container {
+            .service-options {
+                .service-card-container {
+                    max-width: 95vw;
+                    .information-section {
+                        display: flex;
+                        flex-direction: column;
+
+                        .images {
+                            height: 20%;
+                            width: 100%;
+                        }
+
+                        .information {
+                            width: 100%;
+                            padding-left: 10px;
+                            text-align: center;
+
+                            .consultation-topics {
+                                text-align: initial;
+                            }
+
+                            .information-description {
+                                padding-right: 0%;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-device-width: 415px) and (max-device-height: 920px) {
