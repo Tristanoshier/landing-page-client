@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import APIURL from "../../../Evironment/environment";
 import { LoadingSkeleton } from "../../Shared/LoadingSkeleton";
-import { FilterProjects } from './FilterProjects';
+import { FilterProjects } from "./FilterProjects";
+import { Spring } from "react-spring/renderprops";
 // import backToTop from "../../Shared/BackToTop";
-
 
 const AllProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -47,22 +47,39 @@ const AllProjects = () => {
 
   return (
     <div className="projects">
-      <div className="project-header">
-        <div></div>
-        <p className="page-header project">All Work</p>
-      </div>
-      {!isLoading ? (
-        <>
+      <Spring
+        from={{ opacity: 0 }}
+        to={{ opacity: 1 }}
+        config={{ delay: 500, duration: 1000 }}
+      >
+        {(props) => (
+          <div style={props}>
+            <div className="project-header">
+              <div></div>
 
-            <FilterProjects
-              projects={projects}
-              portfolioProjects={portfolioProjects}
-              storeProjects={storeProjects}
-              otherProjects={otherProjects}
-              isLoading={isLoading}
-            />
+              <p className="page-header project">All Work</p>
+            </div>
+          </div>
+        )}
+      </Spring>
+      <Spring
+        from={{ opacity: 0 }}
+        to={{ opacity: 1 }}
+        config={{ delay: 1000, duration: 1000 }}
+      >
+        {(props) => (
+          <div style={props}>
+            {!isLoading ? (
+              <>
+                <FilterProjects
+                  projects={projects}
+                  portfolioProjects={portfolioProjects}
+                  storeProjects={storeProjects}
+                  otherProjects={otherProjects}
+                  isLoading={isLoading}
+                />
 
-          {/* {showBackToTop ? (
+                {/* {showBackToTop ? (
             <button
               className="landing-btn back-to-top"
               onClick={() => backToTop()}
@@ -72,12 +89,15 @@ const AllProjects = () => {
           ) : (
             <></>
           )} */}
-        </>
-      ) : (
-        <div className="loading-skeletons-wrapper">
-          <LoadingSkeleton numberOfCards={6} />
-        </div>
-      )}
+              </>
+            ) : (
+              <div className="loading-skeletons-wrapper">
+                <LoadingSkeleton numberOfCards={6} />
+              </div>
+            )}
+          </div>
+        )}
+      </Spring>
     </div>
   );
 };
