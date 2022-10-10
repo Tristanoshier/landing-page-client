@@ -195,11 +195,11 @@
   }
 }
 
-@media (max-width:  650px) {
+@media (max-width:  700px) {
   .landing-section {
     grid-template-columns: 10% 3fr 1fr 5% 5%;
-
   }
+
   .landing-title {
     grid-row-start: 1;
     grid-column-start: 2;
@@ -221,11 +221,11 @@
   
   .headline {
     font-size: 42px;
-    margin-bottom: 45%;
+    margin-bottom: 70%;
   }
 
   .sub-headline {
-    font-size: 16px;
+    display: none;
   }
 
   .landing-picture {
@@ -270,11 +270,11 @@
   
   .headline {
     font-size: 42px;
-    margin-bottom: 80%;
+    margin-bottom: 110%;
   }
 
   .sub-headline {
-    font-size: 16px;
+    display: none;
   }
 
   .landing-picture {
@@ -318,7 +318,7 @@
   
   .headline {
     font-size: 32px;
-    margin-bottom: 55%;
+    margin-bottom: 75%;
   }
 
   .sub-headline {
@@ -337,5 +337,11 @@
     width: 90vw;
     height: 70vh;
   }
+}
 
+@media only screen and (device-width: 360px) and (device-height: 740px) {
+  .headline {
+    font-size: 38px;
+    margin-bottom: 90%;
+  }
 }

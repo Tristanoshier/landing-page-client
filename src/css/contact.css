@@ -63,7 +63,7 @@
 .contact-header-message {
   color: var(--darkgray);
   font-family: var(--font);
-  font-weight: var(--main);
+  font-weight: var(--text);
   font-size: 22px;
 }
 

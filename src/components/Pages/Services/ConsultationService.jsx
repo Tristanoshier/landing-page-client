@@ -13,7 +13,7 @@ export const ConsultationService = () => {
               <div className="images">
               </div>
               <div className="information">
-                <div className="service-option-title">1 on 1 consultation</div>
+                <div className="service-option-title">1 on 1 Consultation</div>
                 <div className="price">$45/hr</div>
                 <br />
                 <div className="help">What I can help with:</div>
