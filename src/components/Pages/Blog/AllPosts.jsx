@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FilterPosts } from "./FilterPosts";
-import APIURL from "../../../Evironment/environment";
 import { Spring } from "react-spring/renderprops";
 // import backToTop from "../../Shared/BackToTop";
 import { LoadingSkeleton } from "../../Shared/LoadingSkeleton";
+import allPosts from '../../../Data/Post';
 
 const AllPosts = () => {
   const [posts, setPosts] = useState([]);
@@ -15,34 +15,20 @@ const AllPosts = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
-    fetch(`${APIURL}/site/posts`, {
-      method: "GET",
-      headers: new Headers({
-        "Content-Type": "application/json",
-      }),
-    })
-      .then((res) => res.json())
-      .then((posts) => {
-        setPosts(posts);
+    setPosts(allPosts);
 
-        if (posts.length >= 6) {
-          setShowBackToTop(true);
-        }
+    if (posts.length >= 6) {
+      setShowBackToTop(true);
+    }
 
-        setMusicPosts(posts.filter((post) => post.topic === "music"));
-        setMoviePosts(posts.filter((post) => post.topic === "movies"));
-        setProgrammingPosts(
-          posts.filter((post) => post.topic === "programming")
-        );
-        setBlogPosts(posts.filter((post) => post.topic === "blog"));
+    setMusicPosts(allPosts.filter((post) => post.topic === "music"));
+    setMoviePosts(allPosts.filter((post) => post.topic === "movies"));
+    setProgrammingPosts(
+      allPosts.filter((post) => post.topic === "programming")
+    );
+    setBlogPosts(allPosts.filter((post) => post.topic === "blog"));
 
-        setIsLoading(false);
-      })
-      .catch(() =>
-        alert(
-          "Sorry, something went wrong. Check your network connection or try again in a few minutes."
-        )
-      );
+    setIsLoading(false);
   }, []);
 
   return (
@@ -73,7 +59,7 @@ const AllPosts = () => {
                   <>
                     <div className="all-blog-container">
                       <FilterPosts
-                        posts={posts}
+                        posts={allPosts}
                         musicPosts={musicPosts}
                         moviePosts={moviePosts}
                         programmingPosts={programmingPosts}

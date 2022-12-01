@@ -1,33 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import APIURL from "../../../Evironment/environment";
 import { LoadingSkeleton } from "../../Shared/LoadingSkeleton";
 import formatTitle from "../../Shared/FormatTitle";
+import allProjects from '../../../Data/Project';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${APIURL}/site/projects/favorites`,
-    {
-      method: "GET",
-      headers: new Headers({
-        "Content-Type": "application/json",
-      }),
-    }
-    )
-      .then((res) => res.json())
-      .then((projects) => {
-        setProjects(projects);
-        setIsLoading(false);
-      })
-      .catch(() =>
-        alert(
-          "Sorry, something went wrong. Check your network connection or try again in a few minutes."
-        )
-      );
+    let featuredProjects = getFeaturedProjects();
+    setProjects(featuredProjects);
+    setIsLoading(false);
   }, []);
+
+  const getFeaturedProjects = () => {
+    return allProjects.filter(project => project.title ===
+      'Code Databank' || project.title === 'Sample shop for an artist' ||
+      project.title === 'Portfolio website for a college graduate');
+  }
 
   const saveProjectInLocalStorage = (project) => {
     localStorage.setItem("project", JSON.stringify(project));

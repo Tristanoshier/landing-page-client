@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import APIURL from "../../../Evironment/environment";
 import { LoadingSkeleton } from "../../Shared/LoadingSkeleton";
 import { FilterProjects } from "./FilterProjects";
 import { Spring } from "react-spring/renderprops";
+import allProjects from '../../../Data/Project';
 // import backToTop from "../../Shared/BackToTop";
 
 const AllProjects = () => {
@@ -14,35 +14,21 @@ const AllProjects = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
-    fetch(`${APIURL}/site/projects`, {
-      method: "GET",
-      headers: new Headers({
-        "Content-Type": "application/json",
-      }),
-    })
-      .then((res) => res.json())
-      .then((projects) => {
-        setProjects(projects);
+    setProjects(allProjects);
 
-        projects.length >= 6 ? setShowBackToTop(true) : setShowBackToTop(false);
+    allProjects.length >= 6 ? setShowBackToTop(true) : setShowBackToTop(false);
 
-        setPortfolioProjects(
-          projects.filter((project) => project.projecttype === "portfolio")
-        );
-        setStoreProjects(
-          projects.filter((project) => project.projecttype === "shop")
-        );
-        setOtherProjects(
-          projects.filter((project) => project.projecttype === "other")
-        );
+    setPortfolioProjects(
+      allProjects.filter((project) => project.projecttype === "portfolio")
+    );
+    setStoreProjects(
+      allProjects.filter((project) => project.projecttype === "shop")
+    );
+    setOtherProjects(
+      allProjects.filter((project) => project.projecttype === "other")
+    );
 
-        setIsLoading(false);
-      })
-      .catch(() =>
-        alert(
-          "Sorry, something went wrong. Check your network connection or try again in a few minutes."
-        )
-      );
+    setIsLoading(false);
   }, []);
 
   return (
@@ -72,7 +58,7 @@ const AllProjects = () => {
             {!isLoading ? (
               <>
                 <FilterProjects
-                  projects={projects}
+                  projects={allProjects}
                   portfolioProjects={portfolioProjects}
                   storeProjects={storeProjects}
                   otherProjects={otherProjects}
