@@ -1,43 +1,10 @@
-var allProjects = [{
-    "id": 1,
-    "title": "Black Lives Matter Resources",
-    "languages": "JavaScript",
-    "description": "<strong>About:</strong> <br> I created this project in order to give people an easy way to support the Black Lives Matter movement in multiple different ways. <br><br> The site provides resources for where to donate, sign petitions, and even phone numbers people can text to show their support. I wanted to create a fast way to find resources for my friends, family, and online following so that everyone can contribute to the movement in some way as quickly as possible.<br><br> <strong>Tech Stack:</strong> <br> This application is built in React and is hosted with Firebase hosting.",
-    "link": "https://black-lives-matter-resources.web.app",
-    "projecttype": "other",
-    "about": "Provides an easy and variety of ways to help out",
-    "thumbnailpath": "/images/blm.jpg",
-    "createdAt": "2021-08-09 21:57:04.901+00",
-    "images": [
-        {
-            "id": 1,
-            "path": "/images/blm1.jpg",
-            "name": "blm1",
-            "alt": "blm project screen shot 1'",
-            "createdAt": "2022-08-30 00:00:00-04"
-        },
-        {
-            "id": 2,
-            "path": "/images/blm2.jpg",
-            "name": "blm2",
-            "alt": "blm project screen shot 2'",
-            "createdAt": "2022-08-30 00:00:00-04"
-        },
-        {
-            "id": 3,
-            "path": "/images/blm3.jpg",
-            "name": "blm3",
-            "alt": "blm project screen shot 3'",
-            "createdAt": "2022-08-30 00:00:00-04"
-        }
-    ]
-},
+var allProjects = [
 {
     "id": 2,
     "title": "Code Databank",
     "languages": "JavaScript",
     "description": "<strong>About:</strong> <br> Full-stack web application that I created with a friend of mine to provide a “Stack Overflow” type of experience that is specific to the tech stack taught at Eleven Fifty Academy’s software development bootcamp for both staff and student use.<br><br> <strong>Tech Stack:</strong> <br> React, React Context, Express, Node.js, PostgreSQL",
-    "link": "https://efa-code.web.app",
+    "link": "not-live",
     "projecttype": "other",
     "about": "Q&A programming resources application",
     "thumbnailpath": "/images/codedatabank.jpg",

@@ -21,7 +21,7 @@ const Footer = () => {
           </a>
         </span>
       </div>
-      <div className="copyright">© Tristan Oshier 2022</div>
+      <div className="copyright">© Tristan Oshier 2023</div>
     </div>
   );
 };

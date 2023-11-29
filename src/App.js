@@ -26,7 +26,6 @@ function App() {
           <Route exact path="/">
             <Navbar />
             <Landing />
-            <Services />
             <Projects />
             <Contact />
             <Footer />
