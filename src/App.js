@@ -4,12 +4,9 @@ import Navbar from './components/Navigation/Navbar';
 import Landing from './components/Pages/Landing';
 import FocusedBlog from './components/Pages/Blog/FocusedBlog';
 import FocusedProject from './components/Pages/Projects/FocusedProject';
-import Services from './components/Pages/Services/Services';
-import Blog from './components/Pages/Blog/Blog';
 import Footer from './components/Pages/Footer';
 import Projects from './components/Pages/Projects/Projects';
 import Contact from './components/Pages/Contact/Contact';
-import AllPosts from './components/Pages/Blog/AllPosts';
 import AllProjects from './components/Pages/Projects/AllProjects';
 import ContactForm from  './components/Pages/Contact/ContactForm';
 import FocusNavbar from './components/Navigation/FocusNavbar';
@@ -53,11 +50,6 @@ function App() {
           <Route exact path="/consultation-service">
             <FocusNavbar />
             <ConsultationService />
-            <Footer />
-          </Route>
-          <Route exact path="/Blog">
-            <FocusNavbar />
-            <AllPosts />
             <Footer />
           </Route>
           <Route exact path="/all-projects">
