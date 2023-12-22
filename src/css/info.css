@@ -98,4 +98,8 @@
   .bio-section {
     width: 95vw;
   }
+
+  .social-section {
+    justify-content: center;
+  }
 }
