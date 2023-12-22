@@ -8,9 +8,40 @@
   width: 75%;
 }
 
+.landing-container {
+  display: block;
+}
+
+.landing-container-mobile {
+  display: none;
+}
+
 @media (max-width: 920px) {
   .landing-video {
     margin-top: 40%;
     width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-section {
+    height: 70vh;
+  }
+
+  .landing-container {
+    display: none;
+  }
+  
+  .landing-container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    height: 70vh;
+  }
+
+  .landing-img {
+    width: 80%;
+    margin-bottom: 10px;
   }
 }

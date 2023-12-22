@@ -10,10 +10,18 @@ const Landing = () => {
       >
         {(props) => (
           <div style={props}>
-            {/* <img className="landing-video" src="/video/landing_video_converted.gif" /> */}
+            <div className="landing-container">
             <video className="landing-video" autoplay="autoplay" loop="loop" muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  id="myVideo">
               <source src="/video/landing_vid.mp4" type="video/mp4" />
             </video>
+            </div>
+            <div className="landing-container-mobile">
+              <img className="landing-img" src="/images/inMyRoom-1.jpg" alt="" />
+              <img className="landing-img" src="/images/inMyRoom-2.jpg" alt="" />
+              <img className="landing-img" src="/images/inMyRoom-3.jpg" alt="" />
+              <img className="landing-img" src="/images/inMyRoom-4.jpg" alt="" />
+            </div>
+        
           </div>
         )}
       </Spring>
