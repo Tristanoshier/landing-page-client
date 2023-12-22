@@ -10,7 +10,7 @@ const Landing = () => {
       >
         {(props) => (
           <div style={props}>
-            <video className="landing-video" autoPlay loop muted>
+            <video className="landing-video" playsinline autoPlay loop muted>
               <source src="/video/landing_vid.mp4" type="video/mp4" />
             </video>
           </div>
