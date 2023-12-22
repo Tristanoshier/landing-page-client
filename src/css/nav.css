@@ -8,7 +8,6 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  border-bottom: 1px var(--darkgray) solid;
 }
 
 .navbar.active {
@@ -58,6 +57,10 @@
 .nav-link {
   text-decoration: none;
   color: var(--black);
+}
+
+.nav-link:hover {
+  color: var(--gray);
 }
 
 #logo {
@@ -202,10 +205,10 @@
 }
 
 .menu-wrap .menu > div {
-  background-color: var(--darkgray);
+  background-color: var(--blue);
   border-radius: 50%;
-  width: 200vw;
-  height: 200vw;
+  width: 300vw;
+  height: 300vw;
   display: flex;
   flex: none;
   align-items: center;
@@ -225,9 +228,9 @@
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
   color: var(--ivory);
-  font-family: var(--font);
+  font-family: var(--font-text);
   font-weight: var(--main);
-  font-size: 5rem;
+  font-size: 4rem;
   padding: 1rem;
 }
 

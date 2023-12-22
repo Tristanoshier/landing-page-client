@@ -1,25 +1,24 @@
-@import 'main';
+@import 'landing';
 @import 'nav';
-@import 'page';
-@import 'blog';
-@import 'contact';
-@import 'colorMode';
-@import 'card';
-@import 'projects';
-@import 'services';
-@import 'footer';
+@import 'photography';
+@import 'webDesign';
+@import 'info';
 @import 'imageCarousel';
 @import 'loadingSkeleton';
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 :root {
     /* color variables */
-    --ivory: #EFF3E5;
+    --ivory: white;
     --darkgray: #212930;
+    --gray: #787276;
+    --blue: #1190D0;
 
     /* font variables */
     --font: 'Manrope', sans-serif;
+    --font-text: 'Playfair Display', sans-serif;
 
     /* font weight variables */
     --main: 800;

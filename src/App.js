@@ -1,68 +1,38 @@
-import React from 'react';
+import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Navbar from './components/Navigation/Navbar';
-import Landing from './components/Pages/Landing';
-import FocusedBlog from './components/Pages/Blog/FocusedBlog';
-import FocusedProject from './components/Pages/Projects/FocusedProject';
-import Footer from './components/Pages/Footer';
-import Projects from './components/Pages/Projects/Projects';
-import Contact from './components/Pages/Contact/Contact';
-import AllProjects from './components/Pages/Projects/AllProjects';
-import ContactForm from  './components/Pages/Contact/ContactForm';
-import FocusNavbar from './components/Navigation/FocusNavbar';
-import { PortfolioService } from './components/Pages/Services/PortfolioService';
-import { StoreService } from './components/Pages/Services/StoreService';
-import { ConsultationService } from './components/Pages/Services/ConsultationService';
-
-import './css/app.scss';
+import Navbar from "./components/Navigation/Navbar";
+import Landing from "./components/Pages/Landing";
+import Info from "./components/Pages/Info/Info";
+import { WebDesign } from "./components/Pages/WebDesign/WebDesign";
+import { Photography } from "./components/Pages/Photography/Photography";
+import "./css/app.scss";
+import PhotographyProject from "./components/Pages/Photography/PhotographyProject";
 
 function App() {
   return (
-    <div className='app'>
-        <Switch>
-          <Route exact path="/">
-            <Navbar />
-            <Landing />
-            <Projects />
-            <Contact />
-            <Footer />
-          </Route>
-          <Route exact path="/post-details/:post">
-            <FocusNavbar />
-            <FocusedBlog />
-            <Footer />
-          </Route>  
-          <Route exact path="/project-details/:project">
-            <FocusNavbar />
-            <FocusedProject />
-            <Footer />
-          </Route>
-          <Route exact path="/portfolio-service">
-            <FocusNavbar />
-            <PortfolioService />
-            <Footer />
-          </Route>
-          <Route exact path="/store-service">
-            <FocusNavbar />
-            <StoreService />
-            <Footer />
-          </Route>
-          <Route exact path="/consultation-service">
-            <FocusNavbar />
-            <ConsultationService />
-            <Footer />
-          </Route>
-          <Route exact path="/all-projects">
-            <FocusNavbar />
-            <AllProjects />
-            <Footer />
-          </Route>
-          <Route exact path="/contact-form">
-            <FocusNavbar />
-            <ContactForm />
-            <Footer />
-          </Route>
-        </Switch>
+    <div className="app">
+      <Switch>
+        <Route exact path="/">
+          <Navbar />
+          <Landing />
+        </Route>
+        <Route exact path="/photography">
+          <Navbar />
+          <Photography />
+        </Route>
+        <Route exact path="/photography/:photoProject">
+          <Navbar />
+          <PhotographyProject />
+        </Route>
+        <Route exact path="/web-design">
+          <Navbar />
+          <WebDesign />
+        </Route>
+        <Route exact path="/info">
+          <Navbar />
+          <Info />
+        </Route>
+      </Switch>
     </div>
   );
 }

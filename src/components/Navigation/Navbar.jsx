@@ -24,19 +24,24 @@ const Navbar = () => {
           </a>
         </h3>
         <div className="nav-items">
-          <li className="nav-item">
-            <a className="nav-link" href="/#">
+        <li className="nav-item">
+            <Link className="nav-link" to="/">
               home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#projects">
-              portfolio
-            </a>
+            <Link className="nav-link" to="/photography">
+              photography
+            </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/contact-form">
-            contact
+            <Link className="nav-link" to="/web-design">
+              web design
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/info">
+              info
             </Link>
           </li>
         </div>

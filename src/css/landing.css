@@ -1,0 +1,16 @@
+.landing-section {
+  width: 100%;
+  height: 80vh;
+  text-align: center;
+}
+
+.landing-video {
+  width: 75%;
+}
+
+@media (max-width: 920px) {
+  .landing-video {
+    margin-top: 40%;
+    width: 95%;
+  }
+}

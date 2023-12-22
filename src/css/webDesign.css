@@ -1,0 +1,36 @@
+.web-design-section {
+  text-align: center;
+}
+
+.web-project-container {
+  font-family: var(--font);
+  margin-bottom: 10%;
+}
+
+.web-project-image {
+  width: 75%;
+  transition: opacity 1s;
+}
+
+.web-project-image:hover {
+  cursor: pointer;
+  opacity: 75%;
+}
+
+.web-project-title {
+  font-size: 18px;
+  font-family: var(--font-text);
+  color: var(--gray);
+}
+
+.web-project-description {
+  font-size: 14px;
+  font-family: var(--font);
+  color: var(--gray);
+}
+
+@media (max-width: 920px) {
+  .web-design-section {
+    margin-top: 100px;
+  }
+}
