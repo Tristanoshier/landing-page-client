@@ -86,6 +86,10 @@
 }
 
 @media (max-width: 675px) {
+  .info-section-mobile {
+    text-align: center;
+  }
+
   .self-portrait {
     width: 95vw;
     margin-bottom: 5%;
