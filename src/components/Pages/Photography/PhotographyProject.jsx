@@ -14,8 +14,6 @@ const PhotographyProject = (props) => {
   let focusedProject = project === undefined ? storedProject : project;
 
   let [sampleImages, setSampleImages] = useState([]);
-  let [imageIdx, setImageIdx] = useState(0);
-  let [showControlsMessage, setShowControlsMessage] = useState(true);
 
   useEffect(() => {
     let filteredPhotos = photos.filter(
@@ -23,28 +21,8 @@ const PhotographyProject = (props) => {
     );
 
     setSampleImages(filteredPhotos);
-    // loadImages();
   }, []);
 
-  // useEffect(() => {
-  //   loadImage();
-  // }, [imageIdx]);
-
-  const loadImage = () => {
-    return (
-      <div className="photo-container">
-        <div>
-          <img
-            src={sampleImages[imageIdx]?.path}
-            alt={sampleImages[imageIdx]?.alt}
-            onClick={() => showNextImage()}
-            className="photo"
-          />
-        </div>
-        <p className="photo-title">{sampleImages[imageIdx]?.title}</p>
-      </div>
-    );
-  };
 
   const loadImages = () => {
     return sampleImages.map((photo) => (
@@ -59,51 +37,6 @@ const PhotographyProject = (props) => {
       </div>
     ));
   }
-
-  function checkKey(e) {
-    e = e || window.event;
-    if (e.keyCode == "37") {
-      showPreviousImage();
-    } else if (e.keyCode == "39") {
-      showNextImage();
-    }
-
-    if (showControlsMessage) {
-      setShowControlsMessage(false);
-    }
-  }
-
-  const showNextImage = () => {
-    if (imageIdx === sampleImages.length - 1) {
-      setImageIdx(0);
-    } else {
-      let newIdx = imageIdx + 1;
-      setImageIdx(newIdx);
-    }
-
-    if (showControlsMessage) setShowControlsMessage(false);
-
-    if (showControlsMessage) {
-      setShowControlsMessage(false);
-    }
-  };
-
-  const showPreviousImage = () => {
-    if (imageIdx === 0) {
-      setImageIdx(sampleImages.length - 1);
-    } else {
-      let newIdx = imageIdx - 1;
-      setImageIdx(newIdx);
-    }
-
-    if (showControlsMessage) setShowControlsMessage(false);
-
-    if (showControlsMessage) {
-      setShowControlsMessage(false);
-    }
-  };
-
-  document.onkeydown = checkKey;
 
   return (
     <>
@@ -122,15 +55,6 @@ const PhotographyProject = (props) => {
             <div style={props}>
               <div className="photo-section">
                 {loadImages()}
-                {/* <p
-                  className={
-                    showControlsMessage
-                      ? "controlsMessage"
-                      : "controlsMessage hide"
-                  }
-                >
-                  Click or use arrow keys to navigate
-                </p> */}
               </div>
             </div>
           )}
