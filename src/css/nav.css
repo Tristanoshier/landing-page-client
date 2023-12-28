@@ -228,7 +228,7 @@
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
   color: var(--ivory);
-  font-family: var(--font-text);
+  font-family: var(--font);
   font-weight: var(--main);
   font-size: 4rem;
   padding: 1rem;
