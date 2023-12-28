@@ -32,7 +32,6 @@ const PhotographyProject = (props) => {
             alt={photo.alt}
             className="photo"
           />
-        <p className="photo-title">{photo.title}</p>
         <br />
       </div>
     ));
