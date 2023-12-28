@@ -9,6 +9,7 @@
 .photo {
   max-width: 50vw;
   max-height: 80vh;
+  margin-bottom: 100px;
 }
 
 .photo-title {
@@ -72,6 +73,6 @@
 
 @media (max-width: 450px) {
   .photo {
-    margin-top: 150px;
+    margin-bottom: 50px;
   }
 }

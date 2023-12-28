@@ -36,7 +36,7 @@
 
 @media (max-width: 675px) {
   .web-project-image {
-    width: 75%;
+    width: 95vw;
     transition: opacity 1s;
   }
 }
