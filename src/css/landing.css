@@ -16,6 +16,20 @@
   display: none;
 }
 
+.title-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.landing-title {
+  color: var(--blue);
+  font-family: 'Anton', sans-serif;
+  font-size: 100px;
+
+}
+
 @media (max-width: 920px) {
   .landing-video {
     margin-top: 40%;

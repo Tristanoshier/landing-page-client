@@ -52,21 +52,27 @@ const Landing = () => {
             {(props) => (
               <div style={props}>
                 <div className="landing-container-mobile">
-                  <img
-                    className="landing-img"
-                    src="/images/inMyRoom-1.jpg"
-                    alt=""
-                  />
-                  <img
-                    className="landing-img"
-                    src="/images/inMyRoom-2.jpg"
-                    alt=""
-                  />
-                  <img
-                    className="landing-img"
-                    src="/images/inMyRoom-4.jpg"
-                    alt=""
-                  />
+                  <div className="title-section">
+                    <div className="landing-title">TRISTAN</div>
+                    <div className="landing-title">OSHIER</div>
+                  </div>
+                  <div className="image-section">
+                    <img
+                      className="landing-img"
+                      src="/images/inMyRoom-1.jpg"
+                      alt=""
+                    />
+                    <img
+                      className="landing-img"
+                      src="/images/inMyRoom-2.jpg"
+                      alt=""
+                    />
+                    <img
+                      className="landing-img"
+                      src="/images/inMyRoom-4.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             )}
