@@ -20,7 +20,7 @@ const Navbar = () => {
       <nav className={topNav ? "navbar active" : "navbar"}>
         <h3 id="logo">
           <a className="nav-link" href="/#">
-            Tristan Oshier.
+            TRISTAN OSHIER
           </a>
         </h3>
         <div className="nav-items">

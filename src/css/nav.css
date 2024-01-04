@@ -66,10 +66,11 @@
 #logo {
   grid-column: 2/3;
   font-size: 22px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: capitalize;
-  font-family: var(--font);
+  font-family: var(--bold);
   font-weight: var(--main);
+  color: var(--blue);
   cursor: pointer;
 }
 
@@ -205,7 +206,7 @@
 }
 
 .menu-wrap .menu > div {
-  background-color: var(--darkgray);
+  background-color: var(--blue);
   border-radius: 50%;
   width: 300vw;
   height: 300vw;
@@ -248,5 +249,10 @@
   .menu-wrap .menu > div {
     width: 250vw;
     height: 250vw;
+  }
+
+  .nav-link {
+    font-family: var(--bold);
+    letter-spacing: 2px;
   }
 }

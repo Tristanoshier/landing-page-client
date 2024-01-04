@@ -24,22 +24,22 @@ export const MobileNavbar = () => {
               <ul>
               <li onClick={() => toggleCheckbox()}>
                   <Link className="nav-link" to="/">
-                    Home
+                    HOME
                   </Link>
                 </li>
                 <li onClick={() => toggleCheckbox()}>
                   <Link className="nav-link" to="/photography">
-                    Photography
+                    PHOTOGRAPHY
                   </Link>
                 </li>
                 <li onClick={() => toggleCheckbox()}>
                   <Link className="nav-link" to="/web-design">
-                    Web Design
+                    WEB DESIGN
                   </Link>
                 </li>
                 <li onClick={() => toggleCheckbox()}>
                   <Link className="nav-link" to="/info">
-                    Info
+                    INFO
                   </Link>
                 </li>
               </ul>

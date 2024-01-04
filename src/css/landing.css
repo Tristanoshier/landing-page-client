@@ -26,8 +26,8 @@
 .landing-title {
   color: var(--blue);
   font-family: 'Anton', sans-serif;
+  letter-spacing: 2px;
   font-size: 110px;
-
 }
 
 @media (max-width: 920px) {

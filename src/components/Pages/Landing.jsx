@@ -64,12 +64,12 @@ const Landing = () => {
                     />
                     <img
                       className="landing-img"
-                      src="/images/inMyRoom-2.jpg"
+                      src="/images/inMyRoom-4.jpg"
                       alt=""
                     />
-                    <img
+                     <img
                       className="landing-img"
-                      src="/images/inMyRoom-4.jpg"
+                      src="/images/inMyRoom-2.jpg"
                       alt=""
                     />
                   </div>
