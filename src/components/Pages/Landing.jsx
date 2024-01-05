@@ -28,7 +28,7 @@ const Landing = () => {
             muted
             defaultmuted="true"
             playsInline
-            onContextMenu="return false;"
+            onContextMenu={() => false}
             preload="auto"
             id="myVideo"
           >

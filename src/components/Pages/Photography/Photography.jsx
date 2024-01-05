@@ -41,7 +41,6 @@ export const Photography = () => {
             className="photo-project"
           />
         </Link>
-        <p className="photo-project-title">{photoProject.title}</p>
       </div>
     ));
   };

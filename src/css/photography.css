@@ -21,6 +21,7 @@
 
 .photo-project {
   width: 40vw;
+  margin-bottom: 100px;
 }
 
 .photo-project:hover {
