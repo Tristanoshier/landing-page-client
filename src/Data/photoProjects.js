@@ -2,12 +2,12 @@ var photoProjects = [
   {
     id: 1,
     title: "Eli for Asmara",
-    thumbnailImage: "/images/asmaranycCover.jpg",
+    thumbnailImage: "/images/asmaranyc-01.jpg",
   },
   {
     id: 2,
     title: "Dan for CARMEN & CO.",
-    thumbnailImage: "/images/carmenAndCoDanCover.jpg",
+    thumbnailImage: "/images/carmenAndCoDan-02.jpg",
   },
 ];
 
