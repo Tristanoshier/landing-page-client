@@ -9,10 +9,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Rubik+Glitch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 
 :root {
     /* color variables */
-    --ivory: white;
+    --ivory: #F9F7E8;
     --darkgray: #212930;
     --gray: #787276;
     --blue: #2b9bd2;
@@ -21,6 +22,7 @@
     --font: 'Manrope', sans-serif;
     --font-text: 'Playfair Display', sans-serif;
     --bold: 'Anton', sans-serif;
+    --logo: 'Cedarville Cursive', cursive;
 
     /* font weight variables */
     --main: 800;

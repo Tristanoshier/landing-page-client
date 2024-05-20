@@ -50,7 +50,7 @@
 .nav-item {
   font-size: 16px;
   list-style-type: none;
-  font-family: var(--font);
+  font-family: var(--logo);
   font-weight: var(--text);
 }
 
@@ -67,10 +67,9 @@
   grid-column: 2/3;
   font-size: 22px;
   letter-spacing: 2px;
-  text-transform: capitalize;
-  font-family: var(--bold);
-  font-weight: var(--main);
-  color: var(--blue);
+  font-family: var(--logo);
+  font-weight: var(--text);
+  color: var(--darkgray);
   cursor: pointer;
 }
 
@@ -206,7 +205,7 @@
 }
 
 .menu-wrap .menu > div {
-  background-color: var(--blue);
+  background-color: var(--darkgray);
   border-radius: 50%;
   width: 300vw;
   height: 300vw;
@@ -229,9 +228,9 @@
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
   color: var(--ivory);
-  font-family: var(--font);
+  font-family: var(--logo);
   font-weight: var(--main);
-  font-size: 4rem;
+  font-size: 3rem;
   padding: 1rem;
 }
 
@@ -252,7 +251,7 @@
   }
 
   .nav-link {
-    font-family: var(--bold);
+    font-family: var(--logo);
     letter-spacing: 2px;
   }
 }

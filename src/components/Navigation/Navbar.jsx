@@ -20,7 +20,7 @@ const Navbar = () => {
       <nav className={topNav ? "navbar active" : "navbar"}>
         <h3 id="logo">
           <a className="nav-link" href="/#">
-            TRISTAN OSHIER
+            Tristan Oshier
           </a>
         </h3>
         <div className="nav-items">
@@ -31,12 +31,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/photography">
-              photography
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/web-design">
-              web design
+              projects
             </Link>
           </li>
           <li className="nav-item">

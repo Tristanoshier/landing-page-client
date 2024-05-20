@@ -7,6 +7,7 @@ import { WebDesign } from "./components/Pages/WebDesign/WebDesign";
 import { Photography } from "./components/Pages/Photography/Photography";
 import "./css/app.scss";
 import PhotographyProject from "./components/Pages/Photography/PhotographyProject";
+import Frida from "./components/Pages/Photography/Frida";
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
         <Route exact path="/photography/:photoProject">
           <Navbar />
           <PhotographyProject />
+        </Route>
+        <Route exact path="/photography/frida-in-paris">
+          <Navbar />
+          <Frida />
         </Route>
         <Route exact path="/web-design">
           <Navbar />

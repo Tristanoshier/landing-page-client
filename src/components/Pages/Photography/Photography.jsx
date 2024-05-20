@@ -51,7 +51,6 @@ export const Photography = () => {
       {!imagesPreloaded ? (
         <div className="loading-spinner-container">
           <LoadingSpinner />
-          <p className="photo-title">Loading photo projects...</p>
         </div>
       ) : (
         <Spring
@@ -59,7 +58,7 @@ export const Photography = () => {
           to={{ opacity: 1 }}
           config={{ delay: 500, duration: 1000 }}
         >
-          {(props) => <div style={props}>{loadPhotoProjects()}</div>}
+          {(props) => <div className="photo-projects-grid" style={props}>{loadPhotoProjects()}</div>}
         </Spring>
       )}
     </div>

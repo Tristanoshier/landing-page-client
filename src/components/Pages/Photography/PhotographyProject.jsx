@@ -41,7 +41,6 @@ const PhotographyProject = (props) => {
       {!imagesPreloaded ? (
         <div className="loading-spinner-container">
           <LoadingSpinner />
-          <p className="photo-title">Loading images...</p>
         </div>
       ) : (
         <Spring

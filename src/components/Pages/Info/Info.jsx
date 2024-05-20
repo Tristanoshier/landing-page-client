@@ -38,10 +38,10 @@ const Info = () => {
                   <br />
                   <div>
                     In addition to his role as a senior software engineer at
-                    Crowe, he also dedicates his free time to freelancing in web
-                    design and photography. For inquiries regarding website
-                    development or photography services, reach out via the email
-                    provided below:
+                    Crowe, he also dedicates his free time to freelancing in
+                    photography. For inquiries regarding website development or
+                    photography services, reach out via the email provided
+                    below:
                   </div>
                   <br />
                   <p>
@@ -113,9 +113,8 @@ const Info = () => {
                   <div>
                     In addition to his role as a senior software engineer at
                     Crowe, he also dedicates his free time to freelancing in web
-                    design and photography. For inquiries regarding website
-                    development or photography services, reach out via the email
-                    provided below:
+                    design and photography. For inquiries regarding photography
+                    services, reach out via the email provided below:
                   </div>
                   <br />
                   <p>

@@ -37,7 +37,6 @@ export const WebDesign = () => {
       {!imagesPreloaded ? (
         <div className="loading-spinner-container">
           <LoadingSpinner />
-          <p className="photo-title">Loading web projects...</p>
         </div>
       ) : (
         <Spring
