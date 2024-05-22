@@ -7,11 +7,8 @@ import photos from "../../../Data/fridaPhotos";
 
 const preloadSrcList = [...photos.map((photo) => photo.path)];
 
-const Frida = (props) => {
+const Frida = () => {
   const { imagesPreloaded } = useImagePreloader(preloadSrcList);
-  const project = props.location.photoProject;
-  let storedProject = JSON.parse(localStorage.getItem("photoProject"));
-  let focusedProject = project === undefined ? storedProject : project;
 
   let [sampleImages, setSampleImages] = useState([]);
 
@@ -19,18 +16,13 @@ const Frida = (props) => {
     setSampleImages(photos);
   }, []);
 
-
   const loadImages = () => {
     return sampleImages.map((photo) => (
       <div key={photo.id}>
-          <img
-            src={photo.path}
-            alt={photo.alt}
-            className="photo"
-          />
+        <img src={photo.path} alt={photo.alt} className="photo" />
       </div>
     ));
-  }
+  };
 
   return (
     <>
@@ -46,9 +38,7 @@ const Frida = (props) => {
         >
           {(props) => (
             <div style={props}>
-              <div className="photo-section">
-                {loadImages()}
-              </div>
+              <div className="photo-section">{loadImages()}</div>
             </div>
           )}
         </Spring>

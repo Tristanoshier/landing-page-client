@@ -21,7 +21,7 @@ const PhotographyProject = (props) => {
     );
 
     setSampleImages(filteredPhotos);
-  }, []);
+  }, [focusedProject.id]);
 
 
   const loadImages = () => {

@@ -6,8 +6,12 @@ import Info from "./components/Pages/Info/Info";
 import { WebDesign } from "./components/Pages/WebDesign/WebDesign";
 import { Photography } from "./components/Pages/Photography/Photography";
 import "./css/app.scss";
-import PhotographyProject from "./components/Pages/Photography/PhotographyProject";
 import Frida from "./components/Pages/Photography/Frida";
+import Paul from "./components/Pages/Photography/Paul";
+import RunningFrida from "./components/Pages/Photography/RunningFrida";
+import Duina from "./components/Pages/Photography/Duina";
+import NiceFrance from "./components/Pages/Photography/NiceFrance";
+import EliAsmara from "./components/Pages/Photography/EliAsmara";
 
 function App() {
   return (
@@ -21,9 +25,25 @@ function App() {
           <Navbar />
           <Photography />
         </Route>
-        <Route exact path="/photography/:photoProject">
+        <Route exact path="/photography/eli-for-asmara">
           <Navbar />
-          <PhotographyProject />
+          <EliAsmara />
+        </Route>
+        <Route exact path="/photography/nice,-france">
+          <Navbar />
+          <NiceFrance />
+        </Route>
+        <Route exact path="/photography/duina-in-paris">
+          <Navbar />
+          <Duina />
+        </Route>
+        <Route exact path="/photography/running-around-paris-with-frida">
+          <Navbar />
+          <RunningFrida />
+        </Route>
+        <Route exact path="/photography/paul-for-carmen-&-co">
+          <Navbar />
+          <Paul />
         </Route>
         <Route exact path="/photography/frida-in-paris">
           <Navbar />
