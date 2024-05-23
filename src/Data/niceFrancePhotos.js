@@ -166,21 +166,7 @@ var niceFrancePhotos = [
     alt: "sample alt",
     path: "/images/NiceFrance-24.JPG",
     categoryId: 2,
-  },
-  {
-    id: 25,
-    title: "002",
-    alt: "sample alt",
-    path: "/images/NiceFrance-25.JPG",
-    categoryId: 2,
-  },
-  {
-    id: 26,
-    title: "002",
-    alt: "sample alt",
-    path: "/images/NiceFrance-26.JPG",
-    categoryId: 2,
-  },
+  }
 ];
 
 export default niceFrancePhotos;

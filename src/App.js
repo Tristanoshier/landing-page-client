@@ -12,6 +12,7 @@ import RunningFrida from "./components/Pages/Photography/RunningFrida";
 import Duina from "./components/Pages/Photography/Duina";
 import NiceFrance from "./components/Pages/Photography/NiceFrance";
 import EliAsmara from "./components/Pages/Photography/EliAsmara";
+import DennyLV from "./components/Pages/Photography/DennyLV";
 
 function App() {
   return (
@@ -48,6 +49,10 @@ function App() {
         <Route exact path="/photography/frida-in-paris">
           <Navbar />
           <Frida />
+        </Route>
+        <Route exact path="/photography/denny-pham-for-athletica-&-louis-vuitton">
+          <Navbar />
+          <DennyLV />
         </Route>
         <Route exact path="/web-design">
           <Navbar />

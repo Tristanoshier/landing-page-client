@@ -76,6 +76,27 @@ var fridaPhotos = [
     path: "/images/frida-11.jpg",
     categoryId: 6,
   },
+  {
+    id: 82,
+    title: "001",
+    alt: "sample alt",
+    path: "/images/frida-12.jpg",
+    categoryId: 6,
+  },
+  {
+    id: 82,
+    title: "001",
+    alt: "sample alt",
+    path: "/images/frida-13.jpg",
+    categoryId: 6,
+  },
+  {
+    id: 82,
+    title: "001",
+    alt: "sample alt",
+    path: "/images/frida-14.jpg",
+    categoryId: 6,
+  },
 ];
 
 export default fridaPhotos;

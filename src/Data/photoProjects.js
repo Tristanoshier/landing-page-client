@@ -12,7 +12,7 @@ var photoProjects = [
   {
     id: 3,
     title: "Duina in Paris",
-    thumbnailImage: "/images/duina-04.jpg",
+    thumbnailImage: "/images/duina-07.jpg",
   },
   {
     id: 4,
@@ -27,13 +27,18 @@ var photoProjects = [
   {
     id: 6,
     title: "Frida in Paris",
-    thumbnailImage: "/images/frida-07.jpg",
+    thumbnailImage: "/images/frida-08.jpg",
   },
   // {
   //   id: 7,
   //   title: "Bojana in Acne Studios",
   //   thumbnailImage: "",
   // },
+  {
+    id: 7, 
+    title: "Denny Pham for Athletica & Louis Vuitton", 
+    thumbnailImage: "/images/dennyLV-20.jpg",
+  }
 ];
 
 export default photoProjects.reverse();

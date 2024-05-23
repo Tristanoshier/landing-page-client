@@ -4,24 +4,89 @@ import { Spring } from "react-spring/renderprops";
 import { LoadingSpinner } from "../../Shared/LoadingSpinner";
 import useImagePreloader from "../../Hooks/UseImagePreloader";
 import photos from "../../../Data/fridaPhotos";
+import Gallery from "react-photo-gallery";
 
 const preloadSrcList = [...photos.map((photo) => photo.path)];
+
+const fridaPhotos = [
+  {
+    src: "/images/frida-11.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/frida-01.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/frida-09.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/frida-06.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/frida-08.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/frida-05.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/frida-02.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/frida-04.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/frida-11.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/frida-12.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/frida-13.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/frida-14.jpg",
+    width: 3,
+    height: 4,
+  },
+];
 
 const Frida = () => {
   const { imagesPreloaded } = useImagePreloader(preloadSrcList);
 
   let [sampleImages, setSampleImages] = useState([]);
 
-  useEffect(() => {
-    setSampleImages(photos);
-  }, []);
+  // useEffect(() => {
+  //   setSampleImages(photos);
+  // }, []);
 
   const loadImages = () => {
-    return sampleImages.map((photo) => (
-      <div key={photo.id}>
-        <img src={photo.path} alt={photo.alt} className="photo" />
-      </div>
-    ));
+    return <Gallery photos={fridaPhotos} direction={"column"} />
+    // return sampleImages.map((photo) => (
+    //   <div key={photo.id}>
+    //     <img src={photo.path} alt={photo.alt} className="photo" />
+    //   </div>
+    // ));
   };
 
   return (
