@@ -67,6 +67,11 @@ const dennyLVPhotos = [
     height: 3,
   },
   {
+    src: "/images/dennyLV-19.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
     src: "/images/dennyLV-05.jpg",
     width: 3,
     height: 4,
@@ -81,11 +86,7 @@ const dennyLVPhotos = [
     width: 3,
     height: 4,
   },
-  {
-    src: "/images/dennyLV-19.jpg",
-    width: 3,
-    height: 4,
-  },
+  
  
 ];
 

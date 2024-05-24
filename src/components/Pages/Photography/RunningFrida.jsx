@@ -4,24 +4,71 @@ import { Spring } from "react-spring/renderprops";
 import { LoadingSpinner } from "../../Shared/LoadingSpinner";
 import useImagePreloader from "../../Hooks/UseImagePreloader";
 import photos from "../../../Data/runningFridaPhotos";
+import Gallery from "react-photo-gallery";
 
 const preloadSrcList = [...photos.map((photo) => photo.path)];
+
+const runningFridaPhotos = [
+  {
+    src: "/images/runningFrida-9.jpg",
+    width: 4,
+    height: 3
+  }, 
+  {
+    src: "/images/runningFrida-3.jpg",
+    width: 3,
+    height: 4
+  }, 
+  {
+    src: "/images/runningFrida-2.jpg",
+    width: 4,
+    height: 3
+  }, 
+  
+  {
+    src: "/images/runningFrida-4.jpg",
+    width: 4,
+    height: 3,
+  }, 
+  {
+    src: "/images/runningFrida-5.jpg",
+    width: 3,
+    height: 4
+  }, 
+  {
+    src: "/images/runningFrida-1.jpg",
+    width: 3,
+    height: 4
+  }, 
+  {
+    src: "/images/runningFrida-6.jpg",
+    width: 4,
+    height: 3
+  }, 
+  {
+    src: "/images/runningFrida-7.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/runningFrida-8.jpg",
+    width: 3,
+    height: 4
+  },
+
+]
 
 const RunningFrida = () => {
   const { imagesPreloaded } = useImagePreloader(preloadSrcList);
 
   let [sampleImages, setSampleImages] = useState([]);
 
-  useEffect(() => {
-    setSampleImages(photos);
-  }, []);
+  // useEffect(() => {
+  //   setSampleImages(photos);
+  // }, []);
 
   const loadImages = () => {
-    return sampleImages.map((photo) => (
-      <div key={photo.id}>
-        <img src={photo.path} alt={photo.alt} className="photo" />
-      </div>
-    ));
+    return <Gallery photos={runningFridaPhotos} direction={"column"} />;
   };
 
   return (

@@ -11,6 +11,11 @@ const preloadSrcList = [...photos.map((photo) => photo.path)];
 const fridaPhotos = [
   {
     src: "/images/frida-11.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/frida-08.jpg",
     width: 4,
     height: 3,
   },
@@ -29,11 +34,7 @@ const fridaPhotos = [
     width: 3,
     height: 4,
   },
-  {
-    src: "/images/frida-08.jpg",
-    width: 3,
-    height: 4,
-  },
+ 
   {
     src: "/images/frida-05.jpg",
     width: 3,
@@ -41,8 +42,8 @@ const fridaPhotos = [
   },
   {
     src: "/images/frida-02.jpg",
-    width: 3,
-    height: 4,
+    width: 2,
+    height: 3,
   },
   {
     src: "/images/frida-04.jpg",
@@ -61,13 +62,13 @@ const fridaPhotos = [
   },
   {
     src: "/images/frida-13.jpg",
-    width: 3,
-    height: 4,
+    width: 4,
+    height: 3,
   },
   {
     src: "/images/frida-14.jpg",
-    width: 3,
-    height: 4,
+    width: 4,
+    height: 3,
   },
 ];
 

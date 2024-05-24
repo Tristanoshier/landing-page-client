@@ -5,24 +5,24 @@ var photoProjects = [
     thumbnailImage: "/images/asmaranyc-01.jpg",
   },
   {
-    id: 2,
-    title: "Nice, France",
-    thumbnailImage: "/images/NiceFrance-09.JPG",
-  },
-  {
     id: 3,
-    title: "Duina in Paris",
-    thumbnailImage: "/images/duina-07.jpg",
-  },
-  {
-    id: 4,
     title: "Running around Paris with Frida",
     thumbnailImage: "/images/runningFrida-9.jpg",
   },
   {
-    id: 5,
+    id: 4,
     title: "Paul for CARMEN & CO",
     thumbnailImage: "/images/PAUL_INSTA-16.jpg",
+  },
+  {
+    id: 5,
+    title: "Duina in Paris",
+    thumbnailImage: "/images/duina-07.jpg",
+  },
+  {
+    id: 2,
+    title: "Nice, France",
+    thumbnailImage: "/images/NiceFrance-15.jpg",
   },
   {
     id: 6,
