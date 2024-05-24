@@ -13,6 +13,11 @@ export const MobileNavbar = () => {
 
   return (
     <div className="mobile-navbar">
+       <h3 id="mobile-logo">
+          <a className="nav-link" href="/#">
+            Tristan Oshier
+          </a>
+        </h3>
       <div className="menu-wrap">
         <input type="checkbox" className="toggler" id="toggler" />
         <div className="hamburger">

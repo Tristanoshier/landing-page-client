@@ -73,6 +73,16 @@
   cursor: pointer;
 }
 
+#mobile-logo {
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-family: var(--logo);
+  font-weight: var(--text);
+  color: var(--darkgray);
+  margin-left: 5%;
+  margin-top: 15px;
+}
+
 @media (max-width: 1050px) {
   .nav-item {
     font-size: 12px;
