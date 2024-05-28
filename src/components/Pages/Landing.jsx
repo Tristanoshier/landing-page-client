@@ -5,32 +5,8 @@ import { LoadingSpinner } from "../Shared/LoadingSpinner";
 import Gallery from "react-photo-gallery";
 
 const preloadSrcList = [
-  "/images/profilePicture.jpg",
+  "/images/dennyLV-12.jpg",
 ];
-
-const landingPhotos = [
-  { 
-    src: "/images/dennyLV-12.jpg",
-    width: 3,
-    height: 4
-  },
-  { 
-    src: "/images/frida-08.jpg",
-    width: 4,
-    height: 3
-  },
-
-  { 
-    src: "/images/duina-07.jpg",
-    width: 4,
-    height: 3
-  },
-  { 
-    src: "/images/NiceFrance-13.jpg",
-    width: 4,
-    height: 3
-  },
-]
 
 const Landing = () => {
   const { imagesPreloaded } = useImagePreloader(preloadSrcList);
