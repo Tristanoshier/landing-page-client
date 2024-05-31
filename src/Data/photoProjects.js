@@ -29,13 +29,13 @@ var photoProjects = [
     title: "Frida in Paris",
     thumbnailImage: "/images/frida-08.jpg",
   },
-  // {
-  //   id: 7,
-  //   title: "Bojana in Acne Studios",
-  //   thumbnailImage: "",
-  // },
   {
-    id: 7, 
+    id: 7,
+    title: "Bojana in Acne Studios",
+    thumbnailImage: "/images/Bojana-11.jpg",
+  },
+  {
+    id: 8, 
     title: "Denny Pham for Athletica & Louis Vuitton", 
     thumbnailImage: "/images/dennyLV-20.jpg",
   }
