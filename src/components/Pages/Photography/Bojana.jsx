@@ -14,7 +14,6 @@ const bojanaPhotos = [
     width: 3,
     height: 4,
   },
-
   {
     src: "/images/Bojana-16.jpg",
     width: 4,

@@ -32,7 +32,7 @@ var photoProjects = [
   {
     id: 7,
     title: "Bojana in Acne Studios",
-    thumbnailImage: "/images/Bojana-11.jpg",
+    thumbnailImage: "/images/Bojana-14.jpg",
   },
   {
     id: 8, 
