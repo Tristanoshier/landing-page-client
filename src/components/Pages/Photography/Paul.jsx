@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
 import { Spring } from "react-spring/renderprops";
 import { LoadingSpinner } from "../../Shared/LoadingSpinner";
@@ -74,7 +74,6 @@ const paulPhotos = [
     width: 4,
     height: 3,
   },
-
   {
     src: "/images/PAUL_INSTA-16.jpg",
     width: 4,
@@ -90,19 +89,8 @@ const paulPhotos = [
 const Paul = () => {
   const { imagesPreloaded } = useImagePreloader(preloadSrcList);
 
-  let [sampleImages, setSampleImages] = useState([]);
-
-  // useEffect(() => {
-  //   setSampleImages(photos);
-  // }, []);
-
   const loadImages = () => {
-    return <Gallery photos={paulPhotos} direction={"column"} />
-    // return sampleImages.map((photo) => (
-    //   <div key={photo.id}>
-    //     <img src={photo.path} alt={photo.alt} className="photo" />
-    //   </div>
-    // ));
+    return <Gallery photos={paulPhotos} direction={"column"} />;
   };
 
   return (

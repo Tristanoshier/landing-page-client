@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
 import { Spring } from "react-spring/renderprops";
 import { LoadingSpinner } from "../../Shared/LoadingSpinner";
@@ -19,7 +19,6 @@ const bojanaPhotos = [
     width: 4,
     height: 3,
   },
-
   {
     src: "/images/Bojana-2.jpg",
     width: 3,
@@ -60,7 +59,6 @@ const bojanaPhotos = [
     width: 4,
     height: 3,
   },
-
   {
     src: "/images/Bojana-11.jpg",
     width: 5,

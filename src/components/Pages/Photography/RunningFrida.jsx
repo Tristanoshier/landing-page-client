@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
 import { Spring } from "react-spring/renderprops";
 import { LoadingSpinner } from "../../Shared/LoadingSpinner";
@@ -12,39 +12,39 @@ const runningFridaPhotos = [
   {
     src: "/images/runningFrida-9.jpg",
     width: 4,
-    height: 3
-  }, 
+    height: 3,
+  },
   {
     src: "/images/runningFrida-3.jpg",
     width: 3,
-    height: 4
-  }, 
+    height: 4,
+  },
   {
     src: "/images/runningFrida-2.jpg",
     width: 4,
-    height: 3
-  }, 
-  
+    height: 3,
+  },
+
   {
     src: "/images/runningFrida-4.jpg",
     width: 4,
     height: 3,
-  }, 
+  },
   {
     src: "/images/runningFrida-5.jpg",
     width: 3,
-    height: 4
-  }, 
+    height: 4,
+  },
   {
     src: "/images/runningFrida-1.jpg",
     width: 3,
-    height: 4
-  }, 
+    height: 4,
+  },
   {
     src: "/images/runningFrida-6.jpg",
     width: 4,
-    height: 3
-  }, 
+    height: 3,
+  },
   {
     src: "/images/runningFrida-7.jpg",
     width: 4,
@@ -53,19 +53,12 @@ const runningFridaPhotos = [
   {
     src: "/images/runningFrida-8.jpg",
     width: 3,
-    height: 4
+    height: 4,
   },
-
-]
+];
 
 const RunningFrida = () => {
   const { imagesPreloaded } = useImagePreloader(preloadSrcList);
-
-  let [sampleImages, setSampleImages] = useState([]);
-
-  // useEffect(() => {
-  //   setSampleImages(photos);
-  // }, []);
 
   const loadImages = () => {
     return <Gallery photos={runningFridaPhotos} direction={"column"} />;

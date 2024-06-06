@@ -2,10 +2,9 @@ import React from "react";
 import { Spring } from "react-spring/renderprops";
 import useImagePreloader from "../Hooks/UseImagePreloader";
 import { LoadingSpinner } from "../Shared/LoadingSpinner";
-import Gallery from "react-photo-gallery";
 
 const preloadSrcList = [
-  "/images/dennyLV-12.jpg",
+  "/images/NilParis.jpg",
 ];
 
 const Landing = () => {
@@ -26,7 +25,7 @@ const Landing = () => {
           {(props) => (
             <div style={props}>
               <div className="landing-container">
-                <img class="img-one" src="/images/dennyLV-12.jpg" alt="Sample photo" />
+                <img class="img-one" src="/images/NilParis.jpg" alt="picture of women with painted background" />
               </div>
             </div>
           )}
